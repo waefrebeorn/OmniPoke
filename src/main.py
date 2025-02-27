@@ -3,39 +3,32 @@ import utils
 import config
 from emulator import Emulator
 from vision import Vision
-from decision import DecisionModel
+from decision import Decision
 
 class PokemonTrainerAI:
     def __init__(self):
-        # Initialize emulator first so we have window detection
-        self.emulator = Emulator()
-        
-        # Initialize vision with reference to emulator for screen capture
-        self.vision = Vision(self.emulator)
-        
-        # Decision model will also need vision with proper screen capture
-        self.decision_model = DecisionModel()
-        # Update the vision instance in the decision model
-        self.decision_model.vision = self.vision
-        
+        self.emulator = Emulator()         # For capturing screen & gamepad button presses
+        self.vision = Vision(self.emulator)  # Moondream-based vision+decision
+        self.decision = Decision(self.vision)
+
         self.action_count = 0
         self.game_completed = False
 
     def run(self):
-        """Main AI loop that sends controller input based on AI decisions."""
-        utils.log("Starting Pokémon Blue AI training...")
+        utils.log("Starting Pokémon Blue AI training (All Moondream)...")
         while not self.game_completed:
-            # Get game state description using vision module that uses emulator's window detection
-            game_state_description = self.vision.get_game_state()
-            action = self.decision_model.get_next_action()
-            keypress = config.KEY_MAPPING.get(action)
-            if keypress:
-                self.emulator.press_key(keypress)
-                self.action_count += 1
-            if "Hall of Fame" in game_state_description:
+            # Get next action from Decision (which calls Vision -> Moondream)
+            action = self.decision.get_next_action()
+            # Use the gamepad to press the corresponding button
+            self.emulator.press_button(action)
+            self.action_count += 1
+
+            # Optional: Check if we see "Hall of Fame" in the screen text
+            game_state_text = self.vision.get_game_state_text()
+            if "Hall of Fame" in game_state_text:
                 utils.log(f"Game completed in {self.action_count} actions!")
                 self.game_completed = True
-                break
+
             time.sleep(config.POLLING_INTERVAL)
 
 if __name__ == "__main__":

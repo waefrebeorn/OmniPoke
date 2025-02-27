@@ -24,5 +24,3 @@ def save_frame(frame, filename=None):
 def map_action_to_key(action):
     """Maps an action string to the emulator's keybinds."""
     return config.KEY_MAPPING.get(action.upper(), None)
-
-# Remove OCR helper since LLaVA now handles text extraction.

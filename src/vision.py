@@ -1,80 +1,85 @@
 import torch
 from transformers import AutoModelForCausalLM, AutoProcessor
-import utils
 import config
+import utils
 import cv2
 import numpy as np
 import os
 from PIL import Image
 
 class Vision:
+    """
+    Moondream-based vision & decision. One class that:
+      1. Captures the screen from the emulator.
+      2. Uses Moondream to pick the next button to press.
+    """
     def __init__(self, emulator=None):
-        """
-        Initialize the Moondream model for vision-based game state extraction.
-        Moondream extracts detailed game information from Pokémon Blue screenshots.
-        
-        Args:
-            emulator: Optional Emulator instance for screen capture.
-        """
+        self.emulator = emulator
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
 
-        # ✅ Fix: Trust remote code to resolve loading issues
+        # Load Moondream
         self.processor = AutoProcessor.from_pretrained(
             config.VISION_MODEL_PATH,
-            trust_remote_code=True  # Required to allow execution of Moondream’s custom code
+            trust_remote_code=True
         )
         self.model = AutoModelForCausalLM.from_pretrained(
             config.VISION_MODEL_PATH,
             revision="2025-01-09",
-            trust_remote_code=True,  # Required to execute Moondream's model code
-            device_map={"": self.device}  # Auto-assign to GPU if available
+            trust_remote_code=True,
+            device_map={"": self.device}
         )
-        utils.log(f"Moondream vision model initialized on: {self.device}")
-        
-        self.emulator = emulator  # Store emulator reference
+        utils.log(f"Moondream model initialized on: {self.device}")
+
+        # Valid buttons
+        self.valid_buttons = ["UP", "DOWN", "LEFT", "RIGHT", "A", "B", "START", "SELECT"]
 
     def capture_screen(self):
         """
-        Capture the Game Boy emulator screen.
-        Returns a PIL Image.
+        Capture the emulator screen as a PIL image.
         """
-        if self.emulator:
-            frame = self.emulator.capture_screen()
-            return Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
-        else:
-            utils.log("WARNING: No emulator available for screen capture.")
-            return Image.new('RGB', (480, 320), color=(0, 0, 0))
+        if not self.emulator:
+            utils.log("WARNING: No emulator provided to Vision. Returning blank image.")
+            return Image.new('RGB', (160, 144), color=(0, 0, 0))
 
-    def get_game_state(self):
+        frame = self.emulator.capture_screen()
+        return Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
+
+    def get_game_state_text(self):
         """
-        Use Moondream to analyze the captured screen and extract game state information.
+        Optional: Return a descriptive text about the current screen, for debugging or logs.
         """
         image = self.capture_screen()
-        encoded_image = self.model.encode_image(image)
+        encoded = self.model.encode_image(image)
 
-        # Extract all visible on-screen text (acts as OCR)
-        screen_text = self.model.caption(encoded_image, length="normal")["caption"]
-        utils.log(f"Extracted Screen Text: {screen_text}")
+        # Basic caption from Moondream
+        caption = self.model.caption(encoded, length="normal")["caption"]
+        utils.log(f"Moondream Screen Caption: {caption}")
+        return caption
 
-        # Advanced prompt engineering for game state analysis
-        moondream_prompt = """
-        Analyze this Pokémon Blue game screen and provide a structured breakdown of the game state.
-        
-        1. **Screen Text:** List all visible dialogue, menu options, and in-game messages.
-        2. **Player Location:** Describe where the player is as a general screen region and describe the screen scenery.
-        3. **Available Movement:** List available movement directions, this is an rpg game so sometimes you are in a menu and cannot move.
-        4. **Menu State:** Identify if a menu is open (Party, Inventory, Battle, Shop, etc.), and list key visible options.
-        5. **Battle Context:** If a battle is happening, determine if it’s wild or a trainer battle. List Pokémon names, HP, and battle status.
-        6. **Nearby Objects & NPCs:** Identify visible NPCs, obstacles, or interactable objects.
-        7. **Logical Next Action:** Suggest the most optimal button press for progressing in the game.
-        
-        Provide a concise, structured response without unnecessary commentary.
+    def get_next_action(self):
         """
+        Use Moondream to directly choose the next button press from [UP, DOWN, LEFT, RIGHT, A, B, START, SELECT].
+        We'll retry infinitely if Moondream doesn't produce a valid single action.
+        """
+        while True:
+            image = self.capture_screen()
+            encoded = self.model.encode_image(image)
 
-        # Query Moondream with the enhanced prompt
-        game_state_description = self.model.query(encoded_image, moondream_prompt)["answer"]
-        utils.log(f"Moondream Game State Analysis: {game_state_description}")
+            # Improved prompt: if on title screen or in a menu, the best action is to press START.
+            moondream_prompt = f"""
+You are playing Pokémon Blue on a Game Boy.
+Analyze this screenshot carefully. If the screen shows the title screen or a menu, the best action is to press START to begin or continue the game.
+Otherwise, decide the single best button to press from the following options: {", ".join(self.valid_buttons)}.
+Return ONLY one of these words (UP, DOWN, LEFT, RIGHT, A, B, START, SELECT) with no extra text.
+"""
+            response = self.model.query(encoded, moondream_prompt)["answer"]
+            utils.log(f"Moondream Raw Decision: {response}")
 
-        # Combine screen text with extracted game state
-        full_game_state = f"{screen_text}\n\n{game_state_description}"
-        return full_game_state
+            # Clean up the response, uppercase it
+            action = response.strip().upper()
+
+            # If the action is valid, return it. Otherwise, retry.
+            if action in self.valid_buttons:
+                return action
+            else:
+                utils.log(f"Invalid Moondream action '{action}'. Retrying...")

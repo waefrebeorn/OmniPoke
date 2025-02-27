@@ -1,10 +1,5 @@
 import os
 
-# === LLaMA Settings ===
-LLAMA_MODEL_PATH = "meta-llama/Llama-3.2-3B"  # 3B model path
-LLAMA_TEMPERATURE = 0.7  # Lower = more deterministic
-LLAMA_MAX_TOKENS = 80  # Increased for better decision-making
-LLAMA_TOP_K = 5  # Limits output randomness
 
 # === Vision Model Settings ===
 VISION_MODEL_PATH = "vikhyatk/moondream2"
