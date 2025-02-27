@@ -1,0 +1,58 @@
+[2025-02-26 14:20:50] Pressing gamepad button: UP (vJoy Button 11)
+[2025-02-26 14:21:28] Pressing gamepad button: START (vJoy Button 9)
+[2025-02-26 14:21:30] Pressing gamepad button: START (vJoy Button 9)
+[2025-02-26 14:21:33] Pressing gamepad button: START (vJoy Button 9)
+[2025-02-26 14:21:36] Pressing gamepad button: START (vJoy Button 9)
+[2025-02-26 14:26:22] Pressing gamepad button: UP (vJoy Button 11)
+[2025-02-26 14:27:41] Waiting 5 seconds before pressing: UP
+[2025-02-26 14:27:46] Pressing gamepad button: UP (vJoy Button 11)
+[2025-02-26 14:28:01] Waiting 5 seconds before pressing: UP
+[2025-02-26 14:28:06] Pressing gamepad button: UP (vJoy Button 11)
+[2025-02-26 14:29:34] Waiting 5 seconds before pressing: A
+[2025-02-26 14:29:39] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-26 14:29:43] Waiting 5 seconds before pressing: UP
+[2025-02-26 14:29:48] Pressing gamepad button: UP (vJoy Button 11)
+[2025-02-26 14:29:58] Waiting 5 seconds before pressing: START
+[2025-02-26 14:30:03] Pressing gamepad button: START (vJoy Button 9)
+[2025-02-26 14:30:10] Waiting 5 seconds before pressing: START
+[2025-02-26 14:30:15] Pressing gamepad button: START (vJoy Button 9)
+[2025-02-26 14:30:20] Waiting 5 seconds before pressing: SELECT
+[2025-02-26 14:30:25] Pressing gamepad button: SELECT (vJoy Button 10)
+[2025-02-26 14:30:28] Waiting 5 seconds before pressing: B
+[2025-02-26 14:30:33] Pressing gamepad button: B (vJoy Button 2)
+[2025-02-26 14:32:22] vJoy gamepad reset to default state.
+[2025-02-26 14:32:26] Waiting 5 seconds before pressing: UP
+[2025-02-26 14:32:31] Pressing gamepad button: UP (vJoy Button 11)
+[2025-02-26 14:32:37] Waiting 5 seconds before pressing: START
+[2025-02-26 14:32:42] Pressing gamepad button: START (vJoy Button 9)
+[2025-02-26 14:35:03] vJoy gamepad reset to default state.
+[2025-02-26 14:35:10] Waiting 5 seconds before pressing: START
+[2025-02-26 14:35:15] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-26 14:35:18] Waiting 5 seconds before pressing: SELECT
+[2025-02-26 14:35:23] Pressing gamepad button: SELECT (vJoy Button 7)
+[2025-02-26 14:35:26] Waiting 5 seconds before pressing: A
+[2025-02-26 14:35:31] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-26 14:35:33] Waiting 5 seconds before pressing: B
+[2025-02-26 14:35:38] Pressing gamepad button: B (vJoy Button 2)
+[2025-02-26 14:35:42] Waiting 5 seconds before pressing D-Pad: LEFT
+[2025-02-26 14:35:47] Pressing D-Pad: LEFT (vJoy POV 27000)
+[2025-02-26 14:36:47] vJoy gamepad reset to default state.
+[2025-02-26 14:36:51] Waiting 5 seconds before pressing D-Pad: UP
+[2025-02-26 14:36:56] Pressing D-Pad: UP (vJoy POV 0)
+[2025-02-26 14:38:19] vJoy gamepad reset to default state.
+[2025-02-26 14:38:24] Waiting 5 seconds before pressing: UP
+[2025-02-26 14:38:29] Pressing gamepad button: UP (vJoy Button 3)
+[2025-02-26 14:38:33] Waiting 5 seconds before pressing: RIGHT
+[2025-02-26 14:38:38] Pressing gamepad button: RIGHT (vJoy Button 6)
+[2025-02-26 14:38:40] Waiting 5 seconds before pressing: DOWN
+[2025-02-26 14:38:45] Pressing gamepad button: DOWN (vJoy Button 4)
+[2025-02-26 14:38:48] Waiting 5 seconds before pressing: LEFT
+[2025-02-26 14:38:53] Pressing gamepad button: LEFT (vJoy Button 5)
+[2025-02-26 14:38:56] Waiting 5 seconds before pressing: A
+[2025-02-26 14:39:01] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-26 14:39:03] Waiting 5 seconds before pressing: B
+[2025-02-26 14:39:08] Pressing gamepad button: B (vJoy Button 2)
+[2025-02-26 14:39:11] Waiting 5 seconds before pressing: START
+[2025-02-26 14:39:16] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-26 14:39:19] Waiting 5 seconds before pressing: SELECT
+[2025-02-26 14:39:24] Pressing gamepad button: SELECT (vJoy Button 7)

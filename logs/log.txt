@@ -1,0 +1,180 @@
+[2025-02-26 16:32:09] vJoy gamepad reset to default state.
+[2025-02-26 16:32:09] Launching mGBA emulator...
+[2025-02-26 16:32:12] Attached to existing mGBA process (PID 17436)
+[2025-02-26 16:32:12] Updated mGBA window (HWND: 723788)
+[2025-02-26 16:32:13] Brought mGBA to the front
+[2025-02-26 16:32:17] Vision model initialized on: cuda
+[2025-02-26 16:32:19] Vision model initialized on: cuda
+[2025-02-26 16:32:23] Starting Pokémon Blue AI training...
+[2025-02-26 16:32:23] Saved emulator screenshot: C:\Projects\OmniPoke\logs\frames\debug_screen.png
+[2025-02-26 16:36:33] vJoy gamepad reset to default state.
+[2025-02-26 16:36:33] Launching mGBA emulator...
+[2025-02-26 16:36:36] Attached to existing mGBA process (PID 13356)
+[2025-02-26 16:36:36] Found mGBA window (HWND: 4851360, Title: mGBA - Pokemon - Blue Version (USA, Europe) (SGB Enhanced) (61.1 fps) - 0.10.4)
+[2025-02-26 16:36:37] Brought mGBA to the front
+[2025-02-26 16:36:41] Vision model initialized on: cuda
+[2025-02-26 16:36:44] Vision model initialized on: cuda
+[2025-02-26 16:36:47] Starting Pokémon Blue AI training...
+[2025-02-26 16:36:48] Saved emulator screenshot: C:\Projects\OmniPoke\logs\frames\debug_screen.png
+[2025-02-26 16:38:31] vJoy gamepad reset to default state.
+[2025-02-26 16:38:31] Launching mGBA emulator...
+[2025-02-26 16:38:34] Attached to existing mGBA process (PID 5632)
+[2025-02-26 16:38:34] Found mGBA window (HWND: 13175978, Title: mGBA - Pokemon - Blue Version (USA, Europe) (SGB Enhanced) (61.4 fps) - 0.10.4)
+[2025-02-26 16:38:35] Brought mGBA to the front
+[2025-02-26 16:38:39] Vision model initialized on: cuda
+[2025-02-26 16:38:41] Vision model initialized on: cuda
+[2025-02-26 16:38:45] Starting Pokémon Blue AI training...
+[2025-02-26 16:38:45] Saved emulator screenshot: C:\Projects\OmniPoke\logs\frames\debug_screen.png
+[2025-02-26 16:42:06] LLaVA Raw Output: USER:  
+
+Analyze the following Pokémon Blue screen and provide a detailed, unambiguous description of the game state.
+Consider the following aspects:
+1. **Screen Text:** List all visible text (dialogue, menu headers, option labels).
+2. **Location & Movement:** Describe where the player is (e.g., "in the center of Viridian City", "top-left corner of the overworld") and list available movement directions (e.g., "can move UP and LEFT, but blocked on the RIGHT").
+3. **Menu State:** Indicate if a menu is open and, if so, specify which menu (e.g., "Party Menu", "Item Inventory", "Battle Menu"). List key options visible.
+4. **Battle Context:** If in battle, specify whether it is a wild Pokémon battle or a trainer battle, and note the names/HP of the Pokémon if visible.
+5. **Other Cues:** Note if the player is near an NPC, facing a wall or obstacle, or in an area that requires puzzle solving.
+Provide your description in plain, clear language. Do not include any extra commentary or formatting tags.
+                     ASSISTANT: The screen displays a text-based environment, likely a virtual environment, with various options and information. The text is displayed in a black color, and the environment appears to be a computer-generated space.
+
+There are no visible Pokémon or other characters in the scene. The focus is on the text and the options provided. The environment seems to be a mix of a computer-generated space and a text-based interface.
+[2025-02-26 16:42:06] Saved emulator screenshot: C:\Projects\OmniPoke\logs\frames\debug_screen.png
+[2025-02-26 16:42:25] vJoy gamepad reset to default state.
+[2025-02-26 16:42:26] Launching mGBA emulator...
+[2025-02-26 16:42:29] Attached to existing mGBA process (PID 7116)
+[2025-02-26 16:42:29] Found mGBA window (HWND: 5442668, Title: mGBA - Pokemon - Blue Version (USA, Europe) (SGB Enhanced) (61.3 fps) - 0.10.4)
+[2025-02-26 16:42:29] Brought mGBA to the front
+[2025-02-26 16:42:34] Vision model initialized on: cuda
+[2025-02-26 16:42:36] Vision model initialized on: cuda
+[2025-02-26 16:42:40] Starting Pokémon Blue AI training...
+[2025-02-26 16:42:40] Saved emulator screenshot: C:\Projects\OmniPoke\logs\frames\debug_screen.png
+[2025-02-26 16:44:51] LLaVA Raw Output: USER:  
+
+Analyze the following Pokémon Blue screen and provide a detailed, unambiguous description of the game state.
+Consider the following aspects:
+1. **Screen Text:** List all visible text (dialogue, menu headers, option labels).
+2. **Location & Movement:** Describe where the player is (e.g., "in the center of Viridian City", "top-left corner of the overworld") and list available movement directions (e.g., "can move UP and LEFT, but blocked on the RIGHT").
+3. **Menu State:** Indicate if a menu is open and, if so, specify which menu (e.g., "Party Menu", "Item Inventory", "Battle Menu"). List key options visible.
+4. **Battle Context:** If in battle, specify whether it is a wild Pokémon battle or a trainer battle, and note the names/HP of the Pokémon if visible.
+5. **Other Cues:** Note if the player is near an NPC, facing a wall or obstacle, or in an area that requires puzzle solving.
+Provide your description in plain, clear language. Do not include any extra commentary or formatting tags.
+                     ASSISTANT: The screen displays a text-based interface, likely a programming or debugging tool. There are no visual elements such as a game or graphical user interface. The text is displayed in a black font on a black background.
+[2025-02-26 16:44:51] Saved emulator screenshot: C:\Projects\OmniPoke\logs\frames\debug_screen.png
+[2025-02-26 16:54:26] vJoy gamepad reset to default state.
+[2025-02-26 16:54:26] Launching mGBA emulator...
+[2025-02-26 16:54:29] Attached to existing mGBA process (PID 2632)
+[2025-02-26 17:01:55] vJoy gamepad reset to default state.
+[2025-02-26 17:01:56] Launching mGBA emulator...
+[2025-02-26 17:01:59] Attached to existing mGBA process (PID 14004)
+[2025-02-26 17:15:17] vJoy gamepad reset to default state.
+[2025-02-26 17:15:17] Launching mGBA emulator...
+[2025-02-26 17:15:20] Attached to existing mGBA process (PID 13900)
+[2025-02-26 17:16:43] vJoy gamepad reset to default state.
+[2025-02-26 17:16:43] Launching mGBA emulator...
+[2025-02-26 17:16:46] Attached to existing mGBA process (PID 6152)
+[2025-02-26 17:17:46] vJoy gamepad reset to default state.
+[2025-02-26 17:17:46] Launching mGBA emulator...
+[2025-02-26 17:17:49] Attached to existing mGBA process (PID 14232)
+[2025-02-26 17:17:50] Brought mGBA to the front
+[2025-02-26 17:17:54] Vision model initialized on: cuda
+[2025-02-26 17:17:56] Vision model initialized on: cuda
+[2025-02-26 17:18:00] Starting Pokémon Blue AI training...
+[2025-02-26 17:18:00] Saved emulator screenshot: C:\Projects\OmniPoke\logs\frames\debug_screen.png
+[2025-02-26 17:20:02] vJoy gamepad reset to default state.
+[2025-02-26 17:20:02] Launching mGBA emulator...
+[2025-02-26 17:20:05] Attached to existing mGBA process (PID 20260)
+[2025-02-26 17:20:06] Brought mGBA to the front
+[2025-02-26 17:20:10] Vision model initialized on: cuda
+[2025-02-26 17:20:13] Vision model initialized on: cuda
+[2025-02-26 17:20:16] Starting Pokémon Blue AI training...
+[2025-02-26 17:20:16] Saved emulator screenshot: C:\Projects\OmniPoke\logs\frames\debug_screen.png
+[2025-02-26 17:22:31] vJoy gamepad reset to default state.
+[2025-02-26 17:22:32] Launching mGBA emulator...
+[2025-02-26 17:22:35] Attached to existing mGBA process (PID 15308)
+[2025-02-26 17:22:35] Brought mGBA to the front
+[2025-02-26 17:22:40] Vision model initialized on: cuda
+[2025-02-26 17:26:14] vJoy gamepad reset to default state.
+[2025-02-26 17:26:14] Launching mGBA emulator...
+[2025-02-26 17:26:17] Attached to existing mGBA process (PID 8300)
+[2025-02-26 17:26:18] Brought mGBA to the front
+[2025-02-26 17:26:21] Vision model initialized on: cuda
+[2025-02-26 17:26:23] Vision model initialized on: cuda
+[2025-02-26 17:26:27] Starting Pokémon Blue AI training...
+[2025-02-26 17:26:27] Saved emulator screenshot: C:\Projects\OmniPoke\logs\frames\debug_screen.png
+[2025-02-26 17:29:46] vJoy gamepad reset to default state.
+[2025-02-26 17:29:47] Launching mGBA emulator...
+[2025-02-26 17:29:50] Attached to existing mGBA process (PID 15432)
+[2025-02-26 17:29:54] Vision model initialized on: cuda
+[2025-02-26 17:29:56] Vision model initialized on: cuda
+[2025-02-26 17:30:00] Starting Pokémon Blue AI training...
+[2025-02-26 17:30:00] Saved emulator screenshot: C:\Projects\OmniPoke\logs\frames\debug_screen.png
+[2025-02-26 17:34:41] vJoy gamepad reset to default state.
+[2025-02-26 17:34:41] Launching mGBA emulator...
+[2025-02-26 17:34:44] Attached to existing mGBA process (PID 23704)
+[2025-02-26 17:34:49] Vision model initialized on: cuda
+[2025-02-26 17:34:51] Vision model initialized on: cuda
+[2025-02-26 17:34:55] Starting Pokémon Blue AI training...
+[2025-02-26 17:34:55] Saved emulator screenshot: C:\Projects\OmniPoke\logs\frames\debug_screen.png
+[2025-02-26 17:41:34] vJoy gamepad reset to default state.
+[2025-02-26 17:41:35] Attached to existing mGBA process (PID 20084)
+[2025-02-26 17:41:42] Vision model initialized on: cuda
+[2025-02-26 17:41:44] Vision model initialized on: cuda
+[2025-02-26 17:41:48] Starting Pokémon Blue AI training...
+[2025-02-26 17:41:48] Saved emulator screenshot: C:\Projects\OmniPoke\logs\frames\debug_screen.png
+[2025-02-27 12:15:34] vJoy gamepad reset to default state.
+[2025-02-27 12:15:34] Launching mGBA emulator...
+[2025-02-27 12:15:38] Brought mGBA window to the front.
+[2025-02-27 12:15:51] Vision model initialized on: cuda
+[2025-02-27 12:15:53] Vision model initialized on: cuda
+[2025-02-27 12:16:05] Starting Pokémon Blue AI training...
+[2025-02-27 12:16:05] Saved emulator screenshot: C:\Projects\OmniPoke\logs\frames\debug_screen.png
+[2025-02-27 12:19:33] vJoy gamepad reset to default state.
+[2025-02-27 12:19:34] Launching mGBA emulator...
+[2025-02-27 12:19:37] Brought mGBA window to the front.
+[2025-02-27 12:19:37] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 12:19:37] Failed to save debug capture: name 'os' is not defined
+[2025-02-27 12:19:37] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 12:19:37] Failed to save debug capture: name 'os' is not defined
+[2025-02-27 12:19:41] Vision model initialized on: cuda
+[2025-02-27 12:19:43] Vision model initialized on: cuda
+[2025-02-27 12:19:47] Starting Pokémon Blue AI training...
+[2025-02-27 12:19:47] Saved emulator screenshot: C:\Projects\OmniPoke\logs\frames\debug_screen.png
+[2025-02-27 12:21:04] vJoy gamepad reset to default state.
+[2025-02-27 12:21:04] Launching mGBA emulator...
+[2025-02-27 12:21:07] Brought mGBA window to the front.
+[2025-02-27 12:21:07] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 12:21:07] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 12:21:07] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 12:21:07] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 12:21:11] Vision model initialized on: cuda
+[2025-02-27 12:21:13] Vision model initialized on: cuda
+[2025-02-27 12:21:17] Starting Pokémon Blue AI training...
+[2025-02-27 12:23:21] vJoy gamepad reset to default state.
+[2025-02-27 12:23:22] Launching mGBA emulator...
+[2025-02-27 12:23:25] Brought mGBA window to the front.
+[2025-02-27 12:23:25] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 12:23:25] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 12:23:25] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 12:23:25] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 12:23:29] Vision model initialized on: cuda
+[2025-02-27 12:23:31] Vision model initialized on: cuda
+[2025-02-27 12:23:35] Starting Pokémon Blue AI training...
+[2025-02-27 12:23:35] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 12:23:35] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 12:23:35] Saved emulator screenshot: C:\Projects\OmniPoke\logs\frames\debug_screen.png
+[2025-02-27 12:30:11] LLaVA Raw Output: USER:  
+
+Analyze the following Pokémon Blue screen and provide a detailed, unambiguous description of the game state.
+Consider the following aspects:
+1. **Screen Text:** List all visible text (dialogue, menu headers, option labels).
+2. **Location & Movement:** Describe where the player is (e.g., "in the center of Viridian City", "top-left corner of the overworld") and list available movement directions (e.g., "can move UP and LEFT, but blocked on the RIGHT").
+3. **Menu State:** Indicate if a menu is open and, if so, specify which menu (e.g., "Party Menu", "Item Inventory", "Battle Menu"). List key options visible.
+4. **Battle Context:** If in battle, specify whether it is a wild Pokémon battle or a trainer battle, and note the names/HP of the Pokémon if visible.
+5. **Other Cues:** Note if the player is near an NPC, facing a wall or obstacle, or in an area that requires puzzle solving.
+Provide your description in plain, clear language. Do not include any extra commentary or formatting tags.
+                     ASSISTANT: The Pokémon Blue screen displays a black background with a few Pokémon sprites scattered around. There are two Pokémon in the foreground, with one being a small white creature and the other being a larger purple creature. The small white creature is standing next to the purple creature, which is positioned behind it.
+
+In the background, there are several other Pokémon sprites, including a few that are larger and more prominent than the ones in the foreground. The screen also displays a menu at the top, which includes options such as "Party Menu", "Item Inventory", and "Battle Menu". The player is currently in the center of the overworld, with the option to move
+[2025-02-27 12:30:11] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 12:30:11] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 12:30:11] Saved emulator screenshot: C:\Projects\OmniPoke\logs\frames\debug_screen.png

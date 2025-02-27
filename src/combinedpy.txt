@@ -1,0 +1,569 @@
+======================== 
+config.py 
+======================== 
+import os
+
+# === LLaMA Settings ===
+LLAMA_MODEL_PATH = "meta-llama/Llama-3.2-3B"  # 3B model path
+LLAMA_TEMPERATURE = 0.7  # Lower = more deterministic
+LLAMA_MAX_TOKENS = 80  # Increased for better decision-making
+LLAMA_TOP_K = 5  # Limits output randomness
+
+# === LLaVA Vision Model ===
+LLAVA_MODEL_PATH = "llava-hf/llava-1.5-7b-hf"  # Using LLaVA
+
+# === ROM & Emulator Settings ===
+ROM_PATH = "roms/pokemon_blue.gb"
+POLLING_INTERVAL = 1  # Default polling interval in seconds
+EMULATOR_PATH = "C:\\Program Files\\mGBA\\mGBA.exe"
+
+# Screenshot location (same as ROM directory)
+SCREENSHOT_PATH = os.path.join(os.path.dirname(ROM_PATH), "screenshot.png")
+
+# === Debugging & Logging ===
+LOG_DIR = os.path.join(os.getcwd(), "logs")
+os.makedirs(LOG_DIR, exist_ok=True)  # Ensure log directory exists
+SAVE_FRAMES = True
+FRAME_SAVE_DIR = os.path.join(os.getcwd(), "logs", "frames")
+os.makedirs(FRAME_SAVE_DIR, exist_ok=True)
+
+# === Input Settings ===
+KEY_MAPPING = {
+    "UP": "up",
+    "DOWN": "down",
+    "LEFT": "left",
+    "RIGHT": "right",
+    "A": "z",      # Adjust based on emulator key mapping
+    "B": "x",
+    "START": "enter",
+    "SELECT": "backspace",
+    "SCREENSHOT": "F12"  # New key for triggering mGBA screenshot
+}
+ 
+ 
+======================== 
+decision.py 
+======================== 
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import config
+import utils
+from vision import Vision
+
+class DecisionModel:
+    def __init__(self):
+        """
+        Initialize the decision model.
+        This uses LLaMA to decide which Game Boy button to press based on the game state description provided by LLaVA.
+        """
+        self.vision = Vision()
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.tokenizer = AutoTokenizer.from_pretrained(config.LLAMA_MODEL_PATH)
+        self.model = AutoModelForCausalLM.from_pretrained(
+            config.LLAMA_MODEL_PATH,
+            torch_dtype=torch.float16,
+            device_map={"": self.device}
+        )
+        self.recent_moves = []
+
+    def generate_action(self, game_state_description):
+        """
+        Generate the next action as a controller input.
+        The prompt instructs LLaMA to consider the detailed Pokémon Blue game state (menus, overworld, battle, etc.)
+        and to output a single button press (one of: UP, DOWN, LEFT, RIGHT, A, B, START, SELECT).
+        """
+        llama_prompt = f"""
+You are controlling a Game Boy emulator playing Pokémon Blue.
+Your goal is to reach the Hall of Fame in as few moves as possible.
+You may press only one button at a time: UP, DOWN, LEFT, RIGHT, A, B, START, or SELECT.
+
+Based on the current game state described below, decide which button to press next.
+If a menu is open, use the appropriate directional button to navigate or press A to select.
+If in overworld, choose the optimal direction to move.
+If in battle, press A to confirm selections or use directional input if needed.
+
+Current Game State Description:
+{game_state_description}
+
+Recent moves: {self.recent_moves[-5:]}
+
+Respond with a single word that is one of: UP, DOWN, LEFT, RIGHT, A, B, START, SELECT.
+"""
+        inputs = self.tokenizer(llama_prompt, return_tensors="pt", truncation=True, max_length=512).to(self.device)
+        with torch.no_grad():
+            output = self.model.generate(
+                **inputs,
+                max_new_tokens=config.LLAMA_MAX_TOKENS,
+                temperature=config.LLAMA_TEMPERATURE,
+                top_k=config.LLAMA_TOP_K,
+                pad_token_id=self.tokenizer.eos_token_id,
+                do_sample=False
+            )
+        action = self.tokenizer.decode(output[0], skip_special_tokens=True).strip().upper()
+        utils.log(f"LLaMA Raw Decision: {action}")
+
+        valid_buttons = {"UP", "DOWN", "LEFT", "RIGHT", "A", "B", "START", "SELECT"}
+        if action not in valid_buttons:
+            utils.log(f"Invalid action '{action}' received. Defaulting to 'A'.")
+            action = "A"
+
+        self.recent_moves.append(action)
+        if len(self.recent_moves) > 10:
+            self.recent_moves.pop(0)
+        return action
+
+    def get_next_action(self):
+        """
+        Obtain the current game state description from the Vision module,
+        and use LLaMA to determine the next controller input.
+        """
+        game_state_description = self.vision.get_game_state()
+        return self.generate_action(game_state_description)
+ 
+ 
+======================== 
+emulator.py 
+======================== 
+import pyautogui
+import pygetwindow as gw
+import time
+import cv2
+import numpy as np
+import config
+import utils
+import subprocess
+import psutil
+import win32gui
+import win32con
+import os
+from gamepad import Gamepad  # Virtual gamepad control
+
+class Emulator:
+    def __init__(self):
+        self.polling_interval = config.POLLING_INTERVAL
+        self.window_region = None  # No initial value - will be set by detection
+        self.last_keypress_time = 0
+        self.process = None
+        self.gamepad = Gamepad()  # Virtual controller support
+        self.window_title = "mGBA"  # Window title to search for
+
+        # Ensure only one emulator instance runs
+        self.attach_or_launch_emulator()
+        
+        # Set window region after launching
+        success = self.update_window_region()
+        if not success:
+            utils.log("WARNING: Failed to detect mGBA window. Capturing may not work correctly.")
+
+    def is_emulator_running(self):
+        """Checks if the emulator process is still running."""
+        if self.process is None:
+            return False
+        return self.process.poll() is None if hasattr(self.process, 'poll') else self.process.is_running()
+
+    def find_existing_emulator(self):
+        """Finds and attaches to an existing mGBA process if running."""
+        for proc in psutil.process_iter(attrs=["pid", "name"]):
+            if "mgba" in proc.info["name"].lower():
+                utils.log(f"Attached to existing mGBA process (PID {proc.info['pid']})")
+                return psutil.Process(proc.info["pid"])
+        return None
+
+    def update_window_region(self):
+        """Detects and updates the mGBA window position and dimensions. 
+        Returns True if successful, False otherwise."""
+        try:
+            windows = gw.getWindowsWithTitle(self.window_title)
+            if windows:
+                window = windows[0]
+                # Check if window is minimized
+                if window.isMinimized:
+                    win32gui.ShowWindow(window._hWnd, win32con.SW_RESTORE)
+                    time.sleep(0.5)  # Give time for the window to restore
+                
+                # Get window position and size
+                x, y, width, height = window.left, window.top, window.width, window.height
+                
+                # Adjust for window borders and title bar (approximate)
+                # These values might need adjustment based on Windows theme and scaling
+                content_x = x + 8  # Adjust for left border
+                content_y = y + 32  # Adjust for title bar
+                content_width = width - 16  # Adjust for left and right borders
+                content_height = height - 40  # Adjust for title bar and bottom border
+                
+                self.window_region = (content_x, content_y, content_width, content_height)
+                utils.log(f"Updated mGBA window region to: {self.window_region}")
+                
+                # Save a screenshot for debugging
+                self.debug_capture()
+                return True
+            else:
+                utils.log("No mGBA window found to update region.")
+                return False
+        except Exception as e:
+            utils.log(f"Error updating window region: {e}")
+            return False
+
+    def debug_capture(self):
+        """Capture and save the current window region for debugging."""
+        if self.window_region is None:
+            utils.log("Cannot save debug capture: No window region detected.")
+            return
+            
+        try:
+            screenshot = pyautogui.screenshot(region=self.window_region)
+            debug_path = os.path.join(config.FRAME_SAVE_DIR, "window_debug.png")
+            screenshot.save(debug_path)
+            utils.log(f"Saved debug capture of window region: {debug_path}")
+        except Exception as e:
+            utils.log(f"Failed to save debug capture: {e}")
+
+    def bring_emulator_to_front(self):
+        """Brings the mGBA window to the foreground to ensure key presses register."""
+        try:
+            windows = gw.getWindowsWithTitle(self.window_title)
+            if windows:
+                window = windows[0]
+                win32gui.ShowWindow(window._hWnd, win32con.SW_RESTORE)
+                win32gui.SetForegroundWindow(window._hWnd)
+                utils.log("Brought mGBA window to the front.")
+                # Update window region after bringing to front
+                self.update_window_region()
+            else:
+                utils.log("No mGBA window found to bring to front.")
+        except Exception as e:
+            utils.log(f"Failed to bring mGBA to front: {e}")
+
+    def attach_or_launch_emulator(self):
+        """Attaches to an existing emulator process or launches a new one."""
+        existing_process = self.find_existing_emulator()
+        if existing_process:
+            self.process = existing_process
+        else:
+            self.launch_emulator()
+
+    def launch_emulator(self):
+        """Launches the emulator with the Pokémon Blue ROM."""
+        if not self.is_emulator_running():
+            utils.log("Launching mGBA emulator...")
+            self.process = subprocess.Popen([config.EMULATOR_PATH, config.ROM_PATH])
+            time.sleep(3)  # Give emulator time to start
+            self.bring_emulator_to_front()
+
+    def restart_emulator_if_closed(self):
+        """Restarts the emulator if it was closed."""
+        if self.process is None or (isinstance(self.process, psutil.Process) and not self.process.is_running()):
+            utils.log("Emulator closed unexpectedly. Restarting...")
+            self.launch_emulator()
+
+    def capture_screen(self):
+        """Captures the emulator screen within the defined region using PyAutoGUI."""
+        self.restart_emulator_if_closed()
+        
+        # Always update window region before capture
+        if not self.update_window_region():
+            utils.log("ERROR: Failed to update window region for screen capture")
+            # Return a black frame if we can't detect the window
+            if self.window_region:
+                # Create a black frame matching the last known dimensions
+                black_frame = np.zeros((self.window_region[3], self.window_region[2], 3), dtype=np.uint8)
+                return black_frame
+            else:
+                # Create a default size black frame if we never had a valid window region
+                utils.log("No valid window region has been detected yet")
+                return np.zeros((320, 480, 3), dtype=np.uint8)
+                
+        # Capture the screen now that we have a valid window region
+        screenshot = pyautogui.screenshot(region=self.window_region)
+        return cv2.cvtColor(np.array(screenshot), cv2.COLOR_RGB2BGR)
+
+    def press_key(self, key):
+        """Simulates pressing a key in the emulator, with a delay to prevent spam."""
+        current_time = time.time()
+        if current_time - self.last_keypress_time < 0.3:  # Prevents rapid key spam
+            return
+        
+        self.restart_emulator_if_closed()
+        self.bring_emulator_to_front()
+        pyautogui.press(key)
+        self.last_keypress_time = current_time
+        utils.log(f"Pressed key: {key}")
+
+    def trigger_screenshot(self):
+        """Triggers an mGBA screenshot via the virtual gamepad."""
+        utils.log("Triggering mGBA screenshot via gamepad...")
+        self.gamepad.press_button("SCREENSHOT")
+
+if __name__ == "__main__":
+    emulator = Emulator()
+    utils.log("Emulator test mode: Capturing frames every 5 seconds.")
+    utils.log(f"Initial window region: {emulator.window_region}")
+    count = 0
+    while count < 5:  # Capture 5 frames for testing
+        frame = emulator.capture_screen()
+        utils.save_frame(frame, f"test_frame_{count}.png")
+        utils.log(f"Captured test frame {count}")
+        count += 1
+        time.sleep(5) 
+ 
+======================== 
+gamepad.py 
+======================== 
+import pyvjoy
+import time
+import config
+import utils
+
+class Gamepad:
+    def __init__(self):
+        """Initialize virtual gamepad using vJoy."""
+        self.j = pyvjoy.VJoyDevice(1)  # Use vJoy Device 1
+
+        # Updated Gamepad Mapping
+        self.button_map = {
+            "A": 1,
+            "B": 2,
+            "START": 8,
+            "SELECT": 7,
+            "UP": 3,
+            "DOWN": 4,
+            "LEFT": 5,
+            "RIGHT": 6,
+            "SCREENSHOT": 9  # New button mapped for mGBA screenshot
+        }
+
+        self.reset()
+
+    def reset(self):
+        """Reset all buttons on the virtual gamepad."""
+        self.j.reset()
+        self.j.reset_buttons()
+        utils.log("vJoy gamepad reset to default state.")
+
+    def press_button(self, action, is_manual=False):
+        """Press a mapped button using vJoy.
+        
+        If is_manual=True, wait 5 seconds before pressing.
+        """
+        if action in self.button_map:
+            button_id = self.button_map[action]
+
+            if is_manual:
+                utils.log(f"Waiting 5 seconds before pressing: {action}")
+                time.sleep(5)
+
+            utils.log(f"Pressing gamepad button: {action} (vJoy Button {button_id})")
+            self.j.set_button(button_id, 1)
+            time.sleep(0.2)  # Hold duration
+            self.j.set_button(button_id, 0)  # Release button
+
+        else:
+            utils.log(f"Invalid action '{action}' sent to gamepad.")
+
+if __name__ == "__main__":
+    gp = Gamepad()
+    print("Manual Gamepad Test Mode: Enter button names to simulate input.")
+    while True:
+        action = input("Enter button (A, B, START, SELECT, UP, DOWN, LEFT, RIGHT, SCREENSHOT) or 'exit': ").strip().upper()
+        if action == "EXIT":
+            break
+        gp.press_button(action, is_manual=True)
+ 
+ 
+======================== 
+main.py 
+======================== 
+import time
+import utils
+import config
+from emulator import Emulator
+from vision import Vision
+from decision import DecisionModel
+
+class PokemonTrainerAI:
+    def __init__(self):
+        # Initialize emulator first so we have window detection
+        self.emulator = Emulator()
+        
+        # Initialize vision with reference to emulator for screen capture
+        self.vision = Vision(self.emulator)
+        
+        # Decision model will also need vision with proper screen capture
+        self.decision_model = DecisionModel()
+        # Update the vision instance in the decision model
+        self.decision_model.vision = self.vision
+        
+        self.action_count = 0
+        self.game_completed = False
+
+    def run(self):
+        """Main AI loop that sends controller input based on AI decisions."""
+        utils.log("Starting Pokémon Blue AI training...")
+        while not self.game_completed:
+            # Get game state description using vision module that uses emulator's window detection
+            game_state_description = self.vision.get_game_state()
+            action = self.decision_model.get_next_action()
+            keypress = config.KEY_MAPPING.get(action)
+            if keypress:
+                self.emulator.press_key(keypress)
+                self.action_count += 1
+            if "Hall of Fame" in game_state_description:
+                utils.log(f"Game completed in {self.action_count} actions!")
+                self.game_completed = True
+                break
+            time.sleep(config.POLLING_INTERVAL)
+
+if __name__ == "__main__":
+    PokemonTrainerAI().run() 
+ 
+======================== 
+utils.py 
+======================== 
+import os
+import cv2
+import datetime
+import config
+
+def log(message):
+    """Logs a message with a timestamp."""
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    log_message = f"[{timestamp}] {message}"
+    print(log_message)
+    log_file = os.path.join(config.LOG_DIR, "log.txt")
+    with open(log_file, "a") as f:
+        f.write(log_message + "\n")
+
+def save_frame(frame, filename=None):
+    """Saves a frame for debugging if enabled."""
+    if config.SAVE_FRAMES:
+        if filename is None:
+            filename = f"frame_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
+        filepath = os.path.join(config.FRAME_SAVE_DIR, filename)
+        cv2.imwrite(filepath, frame)
+        log(f"Saved frame: {filepath}")
+
+def map_action_to_key(action):
+    """Maps an action string to the emulator's keybinds."""
+    return config.KEY_MAPPING.get(action.upper(), None)
+
+# Remove OCR helper since LLaVA now handles text extraction.
+ 
+ 
+======================== 
+vision.py 
+======================== 
+import torch
+from transformers import AutoProcessor, LlavaForConditionalGeneration
+import utils
+import config
+import cv2
+import numpy as np
+import pyautogui
+import os
+from PIL import Image
+
+class Vision:
+    def __init__(self, emulator=None):
+        """
+        Initialize the LLaVA model and processor.
+        This model is used to extract a detailed description of the Pokémon Blue game state.
+        
+        Args:
+            emulator: Optional Emulator instance to use for screen capture
+        """
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.processor = AutoProcessor.from_pretrained(config.LLAVA_MODEL_PATH)
+        # Let Accelerate manage device placement (no manual .to(self.device) on model)
+        self.model = LlavaForConditionalGeneration.from_pretrained(
+            config.LLAVA_MODEL_PATH,
+            torch_dtype=torch.float16,
+            device_map="auto"
+        )
+        utils.log(f"Vision model initialized on: {self.device}")
+        
+        # Store reference to emulator for screen capture
+        self.emulator = emulator
+        
+    def set_emulator(self, emulator):
+        """Set the emulator instance to use for screen capture"""
+        self.emulator = emulator
+        utils.log("Vision module linked to emulator for screen capture")
+
+    def capture_screen(self):
+        """
+        Capture the current screen of the mGBA emulator.
+        Returns a PIL Image in RGB format.
+        
+        If an emulator instance is available, uses its capture method.
+        """
+        if self.emulator:
+            # Use the emulator's capture method which has automatic window detection
+            frame = self.emulator.capture_screen()
+            # Convert OpenCV BGR format to PIL RGB format
+            image = Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
+        else:
+            utils.log("WARNING: No emulator instance available for capture. Vision may not work correctly.")
+            # Fallback to a blank image if no emulator is available
+            image = Image.new('RGB', (480, 320), color=(0, 0, 0))
+        
+        # Save debug image
+        debug_path = os.path.join(config.FRAME_SAVE_DIR, "debug_screen.png")
+        image.save(debug_path)
+        utils.log(f"Saved emulator screenshot: {debug_path}")
+        return image
+
+    def get_game_state(self):
+        """
+        Use LLaVA to analyze the captured screen and return a detailed description of the current game state.
+        The description is crafted to capture important Pokémon Blue details:
+          - Visible on-screen text (e.g., dialogue, menu options)
+          - Whether a menu is open (main menu, party menu, inventory, battle menu, etc.)
+          - Overworld information: player position, obstacles (walls, ledges), available movement options
+          - Battle context: if in battle, what type (wild Pokémon vs. trainer), which Pokémon are displayed, etc.
+          - Additional contextual cues (e.g., "Party Menu: Pikachu (HP 23/35), Bulbasaur (Full)", "In Shop", etc.)
+        """
+        image = self.capture_screen()
+
+        # If the title screen is detected, we simply return that state.
+        # (Assuming LLaVA itself will extract text; if the title screen is up, it will include phrases like "Pokémon Blue Version" or "Press Start".)
+        # We rely on LLaVA to capture this in its output.
+        conversation = [
+            {
+                "role": "user",
+                "content": [
+                    {"type": "image"},
+                    {"type": "text", "text": """
+Analyze the following Pokémon Blue screen and provide a detailed, unambiguous description of the game state.
+Consider the following aspects:
+1. **Screen Text:** List all visible text (dialogue, menu headers, option labels).
+2. **Location & Movement:** Describe where the player is (e.g., "in the center of Viridian City", "top-left corner of the overworld") and list available movement directions (e.g., "can move UP and LEFT, but blocked on the RIGHT").
+3. **Menu State:** Indicate if a menu is open and, if so, specify which menu (e.g., "Party Menu", "Item Inventory", "Battle Menu"). List key options visible.
+4. **Battle Context:** If in battle, specify whether it is a wild Pokémon battle or a trainer battle, and note the names/HP of the Pokémon if visible.
+5. **Other Cues:** Note if the player is near an NPC, facing a wall or obstacle, or in an area that requires puzzle solving.
+Provide your description in plain, clear language. Do not include any extra commentary or formatting tags.
+                    """}
+                ]
+            }
+        ]
+
+        # Generate a prompt using the chat template (the processor will format it appropriately)
+        text_prompt = self.processor.apply_chat_template(conversation, add_generation_prompt=True)
+        # Process both the image and the text prompt
+        inputs = self.processor(
+            text=text_prompt,
+            images=image,
+            return_tensors="pt"
+        )
+        # Move inputs to the device
+        inputs = {k: v.to(self.device) for k, v in inputs.items()}
+        with torch.no_grad():
+            output_ids = self.model.generate(
+                input_ids=inputs["input_ids"],
+                pixel_values=inputs["pixel_values"],
+                attention_mask=inputs["attention_mask"],
+                max_new_tokens=150
+            )
+        response = self.processor.batch_decode(output_ids, skip_special_tokens=True)[0]
+        utils.log(f"LLaVA Raw Output: {response}")
+        return response 
+ 

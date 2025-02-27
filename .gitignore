@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.log
+.huggingface/
+.cache/
+.DS_Store
+*.pyc
+stored_tokens
+*.gb
