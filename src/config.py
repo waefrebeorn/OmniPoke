@@ -1,6 +1,5 @@
 import os
 
-
 # === Vision Model Settings ===
 VISION_MODEL_PATH = "vikhyatk/moondream2"
 

@@ -3,7 +3,6 @@ config.py
 ======================== 
 import os
 
-
 # === Vision Model Settings ===
 VISION_MODEL_PATH = "vikhyatk/moondream2"
 
@@ -39,20 +38,64 @@ KEY_MAPPING = {
 ======================== 
 decision.py 
 ======================== 
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
 import utils
 
 class Decision:
     """
-    A simple class that delegates to Vision for the next action.
-    This keeps the 'decision' logic in a separate file, but
-    all the real work is done by Moondream in vision.py.
+    Decision layer that leverages Llama-3.2-3B to generate concise task instructions
+    from the game state and then delegates to Moondream (via Vision) to determine the
+    next button press.
     """
-    def __init__(self, vision):
+    def __init__(self, vision, device=None):
         self.vision = vision
+        self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
+        self.llama_model_name = "meta-llama/Llama-3.2-3B"
+        
+        # Initialize Llama tokenizer and model.
+        self.tokenizer = AutoTokenizer.from_pretrained(self.llama_model_name)
+        self.llama_model = AutoModelForCausalLM.from_pretrained(
+            self.llama_model_name,
+            device_map={"": self.device}
+        )
+        utils.log(f"Llama model initialized on: {self.device}")
+
+    def get_llama_instruction(self, game_state):
+        """
+        Uses Llama to convert a game state description into a concise instruction task.
+        The instruction should direct Moondream to use its tasks/point endpoint to decide
+        the appropriate button press.
+        """
+        prompt = f"""
+You are an assistant that helps decide the next action in a Pokémon Blue game.
+Given the following game state description:
+\"\"\"{game_state}\"\"\"
+Generate one concise instruction that directs Moondream to choose the appropriate
+button press. End your response with the phrase: "Call Moondream point endpoint."
+Do not include any extra explanation.
+"""
+        input_ids = self.tokenizer(prompt, return_tensors="pt").input_ids.to(self.device)
+        output_ids = self.llama_model.generate(input_ids, max_new_tokens=50)
+        instruction = self.tokenizer.decode(output_ids[0], skip_special_tokens=True)
+        return instruction.strip()
 
     def get_next_action(self):
-        # Just call vision.get_next_action()
-        action = self.vision.get_next_action()
+        """
+        Uses Vision to obtain the game state text, then calls Llama to generate a task
+        instruction. This instruction is passed to Vision (which uses Moondream) to get the final
+        button press decision.
+        """
+        # Obtain game state description from Vision.
+        game_state = self.vision.get_game_state_text()
+        utils.log(f"Game state from vision: {game_state}")
+        
+        # Generate a concise task instruction using Llama.
+        instruction = self.get_llama_instruction(game_state)
+        utils.log(f"Llama instruction: {instruction}")
+        
+        # Pass the instruction to Vision's get_next_action, which now accepts a task_instruction.
+        action = self.vision.get_next_action(task_instruction=instruction)
         utils.log(f"Decision: {action}")
         return action
  
@@ -316,9 +359,9 @@ class PokemonTrainerAI:
         self.game_completed = False
 
     def run(self):
-        utils.log("Starting Pokémon Blue AI training (All Moondream)...")
+        utils.log("Starting Pokémon Blue AI training (All Moondream + Llama)...")
         while not self.game_completed:
-            # Get next action from Decision (which calls Vision -> Moondream)
+            # Get next action from Decision (which calls Vision and then Moondream)
             action = self.decision.get_next_action()
             # Use the gamepad to press the corresponding button
             self.emulator.press_button(action)
@@ -381,9 +424,10 @@ from PIL import Image
 
 class Vision:
     """
-    Moondream-based vision & decision. One class that:
-      1. Captures the screen from the emulator.
-      2. Uses Moondream to pick the next button to press.
+    Updated Moondream-based vision & decision class.
+    This class captures the screen from the emulator and uses the Moondream model
+    to choose the next button press based on the current game state.
+    It also accepts an optional task_instruction from Llama.
     """
     def __init__(self, emulator=None):
         self.emulator = emulator
@@ -402,8 +446,36 @@ class Vision:
         )
         utils.log(f"Moondream model initialized on: {self.device}")
 
-        # Valid buttons
+        # Valid button actions
         self.valid_buttons = ["UP", "DOWN", "LEFT", "RIGHT", "A", "B", "START", "SELECT"]
+
+        # Base Moondream prompt with clear instructions
+        self.base_prompt = """
+You are playing Pokémon Blue on a Game Boy. Your goal is to complete the game as efficiently as possible by selecting the best button press for the current situation.
+
+### Game Controls:
+- UP, DOWN, LEFT, RIGHT → Move the player character or navigate menus.
+- A → Confirm selections, talk to NPCs, progress dialogue.
+- B → Cancel selections, close menus, or speed up text if needed.
+- START → Start the game from the title screen or open the main menu.
+- SELECT → Open secondary menus in specific cases.
+
+### Decision Strategy:
+1. **Title Screen:**  
+   If the screen shows "Blue Version" or the Pokémon logo, PRESS START. Do NOT press A.
+2. **Dialogue/Reading Text:**  
+   If text is present, press A to continue (unless you are in a menu).
+3. **Menus:**  
+   Use UP/DOWN to navigate and A to confirm.
+4. **Battles:**  
+   Use directional buttons (UP/DOWN/LEFT/RIGHT) to choose moves or switch options and confirm with A.
+5. **Overworld Movement:**  
+   Use directional buttons to move around.
+
+### IMPORTANT:
+Return ONLY a single valid action (UP, DOWN, LEFT, RIGHT, A, B, START, SELECT) with no extra text.
+Do not output any additional words.
+"""
 
     def capture_screen(self):
         """
@@ -412,66 +484,58 @@ class Vision:
         if not self.emulator:
             utils.log("WARNING: No emulator provided to Vision. Returning blank image.")
             return Image.new('RGB', (160, 144), color=(0, 0, 0))
-
         frame = self.emulator.capture_screen()
         return Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
-
+    
     def get_game_state_text(self):
         """
-        Optional: Return a descriptive text about the current screen, for debugging or logs.
+        Return a descriptive text about the current screen for debugging/logging.
         """
         image = self.capture_screen()
         encoded = self.model.encode_image(image)
-
-        # Basic caption from Moondream
         caption = self.model.caption(encoded, length="normal")["caption"]
         utils.log(f"Moondream Screen Caption: {caption}")
         return caption
 
-    def get_next_action(self):
+    def get_next_action(self, task_instruction=None):
         """
-        Use Moondream to directly choose the next button press from [UP, DOWN, LEFT, RIGHT, A, B, START, SELECT].
+        Use the Moondream model to choose the next button press.
+        If a task_instruction (from Llama) is provided, it is appended to the prompt.
+        If the response is invalid, post-process and retry until a valid action is returned.
         """
+        # Build the prompt. If a task_instruction exists, append it.
+        if task_instruction:
+            prompt = self.base_prompt + "\n" + task_instruction
+        else:
+            prompt = self.base_prompt
+
         while True:
             image = self.capture_screen()
             encoded = self.model.encode_image(image)
-
-            # Context-aware Moondream Prompt
-            moondream_prompt = """
-            You are playing Pokémon Blue on a Game Boy. Your goal is to complete the game as efficiently as possible by selecting the best button press for the current situation.
-
-            Here are the possible controls you can choose from:
-            - UP, DOWN, LEFT, RIGHT → Move the player character or navigate menus.
-            - A → Confirm selections, talk to NPCs, progress dialogue.
-            - B → Cancel selections, close menus, sometimes speeds up text.
-            - START → Open the main menu (only use when necessary).
-            - SELECT → Rarely used, but opens secondary menu in certain cases.
-
-            Decision Strategy:
-            1. If on the title screen and the text includes "Blue Version" press START.
-            2. If there is text on screen determine an action, A reads the text and moves on unless in menus.
-            3. If navigating menus, choose UP/DOWN to move and A to confirm selections.
-            4. If in battle, select the appropriate action:
-               - A to confirm an attack or select a move.
-               - UP/DOWN to navigate between move options.
-               - LEFT/RIGHT if switching Pokémon or selecting an item.
-            5. If walking around, use UP/DOWN/LEFT/RIGHT to navigate the map.
-            6. If reading dialogue, use A to continue. If text is slow, B can sometimes speed it up.
-
-            IMPORTANT:
-            - Return ONLY a single action (UP, DOWN, LEFT, RIGHT, A, B, START, SELECT) with no extra text.
-            - Do not press START or A repeatedly unless it is required.
-            - Ensure your decision matches the context of the screen.
-            """
-            response = self.model.query(encoded, moondream_prompt)["answer"]
+            
+            response = self.model.query(encoded, prompt)["answer"]
             utils.log(f"Moondream Raw Decision: {response}")
-
-            # Clean up the response, uppercase it
+            
+            # Clean and uppercase the response
             action = response.strip().upper()
-
-            # If the action is valid, return it. Otherwise, retry.
+            
+            # Post-process: if Moondream outputs "BLUE VERSION", override to "START"
+            if "BLUE VERSION" in action:
+                utils.log("Detected 'BLUE VERSION' in response, overriding decision to 'START'.")
+                action = "START"
+            
+            # Attempt to map partial matches if the action is not directly valid.
+            if action not in self.valid_buttons:
+                for button in self.valid_buttons:
+                    if button in action:
+                        utils.log(f"Mapping partial match '{action}' to '{button}'.")
+                        action = button
+                        break
+            
             if action in self.valid_buttons:
                 return action
             else:
-                utils.log(f"Invalid Moondream action '{action}'. Retrying...") 
+                utils.log(f"Invalid Moondream action '{action}'. Retrying...")
+                continue
+ 
  

@@ -7271,3 +7271,279 @@ A'. Retrying...
 [2025-02-27 16:25:32] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
 [2025-02-27 16:25:32] Updated mGBA window region to: (1359, 418, 338, 278)
 [2025-02-27 16:25:32] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 16:57:08] vJoy gamepad reset to default state.
+[2025-02-27 16:57:09] Launching mGBA emulator...
+[2025-02-27 16:57:12] Brought mGBA window to the front.
+[2025-02-27 16:57:12] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 16:57:12] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 16:57:12] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 16:57:12] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 16:57:18] Moondream model initialized on: cuda
+[2025-02-27 16:58:59] Llama model initialized on: cuda
+[2025-02-27 16:58:59] Starting Pokémon Blue AI training (All Moondream + Llama)...
+[2025-02-27 16:58:59] Brought mGBA window to the front.
+[2025-02-27 16:58:59] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 16:58:59] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 16:58:59] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 16:58:59] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 16:59:42] Moondream Screen Caption:  The image is a vibrant digital illustration featuring the iconic Pokémon logo. The logo, rendered in a pixelated style, is set against a light purple background. The word "Pok\u00e9mon" is written in a stylized, pixelated font in the top left corner, and "Blue Version" is written in the bottom center. In the bottom right corner, there is a pixelated image of a Pokémon character, possibly a Pokéball, holding a Pokéstick. The character is wearing a white baseball cap and a dark-colored outfit.
+[2025-02-27 16:59:42] Game state from vision:  The image is a vibrant digital illustration featuring the iconic Pokémon logo. The logo, rendered in a pixelated style, is set against a light purple background. The word "Pok\u00e9mon" is written in a stylized, pixelated font in the top left corner, and "Blue Version" is written in the bottom center. In the bottom right corner, there is a pixelated image of a Pokémon character, possibly a Pokéball, holding a Pokéstick. The character is wearing a white baseball cap and a dark-colored outfit.
+[2025-02-27 17:00:22] Llama instruction: You are an assistant that helps decide the next action in a Pokémon Blue game.
+Given the following game state description:
+""" The image is a vibrant digital illustration featuring the iconic Pokémon logo. The logo, rendered in a pixelated style, is set against a light purple background. The word "Pok\u00e9mon" is written in a stylized, pixelated font in the top left corner, and "Blue Version" is written in the bottom center. In the bottom right corner, there is a pixelated image of a Pokémon character, possibly a Pokéball, holding a Pokéstick. The character is wearing a white baseball cap and a dark-colored outfit."""
+Generate one concise instruction that directs Moondream to choose the appropriate
+button press. End your response with the phrase: "Call Moondream point endpoint."
+Do not include any extra explanation.
+[2025-02-27 17:00:22] Brought mGBA window to the front.
+[2025-02-27 17:00:22] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:00:22] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:00:22] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:00:22] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:00:43] Moondream Raw Decision:  Call Moondream point endpoint.
+[2025-02-27 17:00:43] Mapping partial match 'CALL MOONDREAM POINT ENDPOINT.' to 'A'.
+[2025-02-27 17:00:43] Decision: A
+[2025-02-27 17:00:43] Brought mGBA window to the front.
+[2025-02-27 17:00:43] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:00:43] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:00:43] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-27 17:00:43] Pressed gamepad button: A
+[2025-02-27 17:00:43] Brought mGBA window to the front.
+[2025-02-27 17:00:43] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:00:43] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:00:43] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:00:43] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:01:27] Moondream Screen Caption:  The image is a vibrant digital illustration featuring the iconic Pokémon logo, rendered in a pixelated style with a blue border. The logo is displayed in a light pink background. Below the logo, the text "Blue Version" is written in a blue font. The illustration also includes a pixelated depiction of Pikachu, the Pokémon character, and a pixelated depiction of Charizard, the Pokémon villain. The Pikachu and Charizard are depicted in a playful, cartoonish manner. Pikachu is shown in a standing position, while Charizard is in a crouched position.
+[2025-02-27 17:01:28] Brought mGBA window to the front.
+[2025-02-27 17:01:28] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:01:28] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:01:28] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:01:28] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:02:17] Moondream Screen Caption:  The image is a vibrant digital illustration featuring the iconic Pokémon logo. The logo, rendered in a pixelated style, is displayed in a light blue frame against a light pink background. Below the logo, the text "Blue Version" is written in a light blue font. The illustration also includes a pixelated character, possibly a Pokémon, and a pixelated character, possibly a Pokémon, standing next to each other. The character on the left appears to be a larger, rounder Pokémon, while the character on the right is smaller and more slender. The character on the right is wearing a dark-colored baseball cap and a dark-colored shirt.
+[2025-02-27 17:02:17] Game state from vision:  The image is a vibrant digital illustration featuring the iconic Pokémon logo. The logo, rendered in a pixelated style, is displayed in a light blue frame against a light pink background. Below the logo, the text "Blue Version" is written in a light blue font. The illustration also includes a pixelated character, possibly a Pokémon, and a pixelated character, possibly a Pokémon, standing next to each other. The character on the left appears to be a larger, rounder Pokémon, while the character on the right is smaller and more slender. The character on the right is wearing a dark-colored baseball cap and a dark-colored shirt.
+[2025-02-27 17:02:43] Llama instruction: You are an assistant that helps decide the next action in a Pokémon Blue game.
+Given the following game state description:
+""" The image is a vibrant digital illustration featuring the iconic Pokémon logo. The logo, rendered in a pixelated style, is displayed in a light blue frame against a light pink background. Below the logo, the text "Blue Version" is written in a light blue font. The illustration also includes a pixelated character, possibly a Pokémon, and a pixelated character, possibly a Pokémon, standing next to each other. The character on the left appears to be a larger, rounder Pokémon, while the character on the right is smaller and more slender. The character on the right is wearing a dark-colored baseball cap and a dark-colored shirt."""
+Generate one concise instruction that directs Moondream to choose the appropriate
+button press. End your response with the phrase: "Call Moondream point endpoint."
+Do not include any extra explanation.
+[2025-02-27 17:02:43] Brought mGBA window to the front.
+[2025-02-27 17:02:43] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:02:43] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:02:43] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:02:43] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:03:09] Moondream Raw Decision:  Call Moondream point endpoint.
+[2025-02-27 17:03:09] Mapping partial match 'CALL MOONDREAM POINT ENDPOINT.' to 'A'.
+[2025-02-27 17:03:09] Decision: A
+[2025-02-27 17:03:09] Brought mGBA window to the front.
+[2025-02-27 17:03:09] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:03:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:03:09] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-27 17:03:09] Pressed gamepad button: A
+[2025-02-27 17:03:09] Brought mGBA window to the front.
+[2025-02-27 17:03:09] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:03:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:03:09] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:03:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:03:56] Moondream Screen Caption:  The image is a vibrant digital illustration featuring the iconic Pokémon logo in a playful, cartoonish style. The logo, rendered in a pixelated yellow and blue color scheme, is positioned at the top of the image. Below the logo, the text "Blue Version" is written in a bold, white font. At the bottom of the image, there is a pixelated illustration of a young boy wearing a baseball cap and a dark-colored shirt, holding a Pokéball. The Pokéball is depicted in a pixelated, dark gray/black color. The boy and Pokéball are set against a light purple background.
+[2025-02-27 17:03:57] Brought mGBA window to the front.
+[2025-02-27 17:03:57] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:03:57] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:03:57] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:03:57] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:04:52] Moondream Screen Caption:  The image is a vibrant display of the iconic Pokémon logo, rendered in a pixelated style reminiscent of the Pokémon franchise. The logo, a stylized yellow "P" with a blue outline, is set against a light purple background. Below the logo, the text "Blue Version" is written in a simple, sans-serif font. The logo is positioned at the top of the image, while the text is located at the bottom. The logo and text are set against a light purple background, which is framed by a light blue border. In the bottom right corner, there is a small illustration of a Pokémon character, possibly a fox or similar creature, with a young boy, who appears to be a Pokémon, standing beside it.
+[2025-02-27 17:04:52] Game state from vision:  The image is a vibrant display of the iconic Pokémon logo, rendered in a pixelated style reminiscent of the Pokémon franchise. The logo, a stylized yellow "P" with a blue outline, is set against a light purple background. Below the logo, the text "Blue Version" is written in a simple, sans-serif font. The logo is positioned at the top of the image, while the text is located at the bottom. The logo and text are set against a light purple background, which is framed by a light blue border. In the bottom right corner, there is a small illustration of a Pokémon character, possibly a fox or similar creature, with a young boy, who appears to be a Pokémon, standing beside it.
+[2025-02-27 17:05:18] Llama instruction: You are an assistant that helps decide the next action in a Pokémon Blue game.
+Given the following game state description:
+""" The image is a vibrant display of the iconic Pokémon logo, rendered in a pixelated style reminiscent of the Pokémon franchise. The logo, a stylized yellow "P" with a blue outline, is set against a light purple background. Below the logo, the text "Blue Version" is written in a simple, sans-serif font. The logo is positioned at the top of the image, while the text is located at the bottom. The logo and text are set against a light purple background, which is framed by a light blue border. In the bottom right corner, there is a small illustration of a Pokémon character, possibly a fox or similar creature, with a young boy, who appears to be a Pokémon, standing beside it."""
+Generate one concise instruction that directs Moondream to choose the appropriate
+button press. End your response with the phrase: "Call Moondream point endpoint."
+Do not include any extra explanation.
+[2025-02-27 17:05:18] Brought mGBA window to the front.
+[2025-02-27 17:05:18] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:05:18] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:05:18] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:05:18] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:14:56] vJoy gamepad reset to default state.
+[2025-02-27 17:14:57] Launching mGBA emulator...
+[2025-02-27 17:15:00] Brought mGBA window to the front.
+[2025-02-27 17:15:00] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:15:00] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:15:00] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:15:01] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:15:05] Moondream model initialized on: cuda
+[2025-02-27 17:15:15] Llama model initialized on: cuda
+[2025-02-27 17:15:15] Starting Pokémon Blue AI training (All Moondream + Llama)...
+[2025-02-27 17:15:15] Pressing START button to begin game...
+[2025-02-27 17:15:15] Brought mGBA window to the front.
+[2025-02-27 17:15:15] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:15:15] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:15:15] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 17:15:15] Pressed gamepad button: START
+[2025-02-27 17:15:17] Brought mGBA window to the front.
+[2025-02-27 17:15:17] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:15:18] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:15:18] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:15:18] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:16:14] Moondream Screen Description:  The image shows a blue game screen for Pokémon Blue. The top portion is a dark blue rectangle, while the bottom is a lighter shade of blue. The background is a light purple color. The bottom portion of the screen shows two characters: a purple, star-shaped Pokémon and a white, round Pokémon with glasses. The white Pokémon is standing, while the purple Pokémon is lying down. The screen does not show any text or other game elements.
+[2025-02-27 17:16:14] Game state from vision:  The image shows a blue game screen for Pokémon Blue. The top portion is a dark blue rectangle, while the bottom is a lighter shade of blue. The background is a light purple color. The bottom portion of the screen shows two characters: a purple, star-shaped Pokémon and a white, round Pokémon with glasses. The white Pokémon is standing, while the purple Pokémon is lying down. The screen does not show any text or other game elements.
+[2025-02-27 17:16:14] State transition: UNKNOWN -> DIALOGUE
+[2025-02-27 17:16:14] Generating instruction for state: DIALOGUE
+[2025-02-27 17:17:04] Attempt 1 (temp=0.7, max_tokens=30): Instruction: 
+[2025-02-27 17:18:16] vJoy gamepad reset to default state.
+[2025-02-27 17:18:17] Launching mGBA emulator...
+[2025-02-27 17:18:20] Brought mGBA window to the front.
+[2025-02-27 17:18:20] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:18:20] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:18:20] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:18:20] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:18:24] Moondream model initialized on: cuda
+[2025-02-27 17:18:33] Llama model initialized on: cuda
+[2025-02-27 17:18:33] Starting Pokémon Blue AI training (All Moondream + Llama)...
+[2025-02-27 17:18:33] Pressing START button to begin game...
+[2025-02-27 17:18:33] Brought mGBA window to the front.
+[2025-02-27 17:18:33] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:18:34] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:18:34] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 17:18:34] Pressed gamepad button: START
+[2025-02-27 17:18:49] Brought mGBA window to the front.
+[2025-02-27 17:18:49] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:18:49] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:18:49] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:18:49] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:19:46] Moondream Screen Description:  The image shows a Pokémon Blue game screen. The title screen displays the game's title, "Pokémon", in a stylized font. Below the title, the text "Blue Version" indicates the game's color scheme. The bottom portion of the screen features two pixelated characters, a male and a female, seemingly in a fighting stance. The male character is holding a weapon, and the female character is holding a staff. The background is a light pink color.
+[2025-02-27 17:19:46] Title screen detection count: 1
+[2025-02-27 17:19:46] Game state from vision:  The image shows a Pokémon Blue game screen. The title screen displays the game's title, "Pokémon", in a stylized font. Below the title, the text "Blue Version" indicates the game's color scheme. The bottom portion of the screen features two pixelated characters, a male and a female, seemingly in a fighting stance. The male character is holding a weapon, and the female character is holding a staff. The background is a light pink color.
+[2025-02-27 17:19:46] State transition: UNKNOWN -> TITLE_SCREEN
+[2025-02-27 17:19:46] Generating instruction for state: TITLE_SCREEN
+[2025-02-27 17:20:31] Attempt 1 (temp=0.7, max_tokens=30): Instruction: 
+[2025-02-27 17:21:18] Attempt 2 (temp=0.7999999999999999, max_tokens=30): Instruction: 
+[2025-02-27 17:22:04] Attempt 3 (temp=0.8999999999999999, max_tokens=30): Instruction: 
+[2025-02-27 17:22:50] Attempt 4 (temp=1.0, max_tokens=30): Instruction: 
+[2025-02-27 17:23:35] Attempt 5 (temp=1.1, max_tokens=30): Instruction: 
+[2025-02-27 17:27:20] vJoy gamepad reset to default state.
+[2025-02-27 17:27:20] Launching mGBA emulator...
+[2025-02-27 17:27:23] Brought mGBA window to the front.
+[2025-02-27 17:27:23] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:27:23] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:27:23] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:27:23] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:27:28] Moondream model initialized on: cuda
+[2025-02-27 17:27:37] Llama model initialized on: cuda
+[2025-02-27 17:27:37] Starting Pokémon Blue AI training (All Moondream + Llama)...
+[2025-02-27 17:27:37] Pressing START button to begin game...
+[2025-02-27 17:27:37] Brought mGBA window to the front.
+[2025-02-27 17:27:37] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:27:37] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:27:37] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 17:27:37] Pressed gamepad button: START
+[2025-02-27 17:28:02] Brought mGBA window to the front.
+[2025-02-27 17:28:02] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:28:03] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:28:03] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:28:03] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:33:06] Moondream Screen Description:  The image shows a Pokémon Blue game screen. The title screen displays the game's title, "Pokémon", in a stylized font. Below the title, the text "Blue Version" indicates the game's color scheme. The bottom portion of the screen features a pixelated illustration of a Pokémon and a Pokémon-like character, likely a Pokémon trainer. The character is standing next to the Pokémon, and the overall color scheme is predominantly blue and white.
+[2025-02-27 17:33:06] Title screen detection count: 1
+[2025-02-27 17:33:06] Game state from vision:  The image shows a Pokémon Blue game screen. The title screen displays the game's title, "Pokémon", in a stylized font. Below the title, the text "Blue Version" indicates the game's color scheme. The bottom portion of the screen features a pixelated illustration of a Pokémon and a Pokémon-like character, likely a Pokémon trainer. The character is standing next to the Pokémon, and the overall color scheme is predominantly blue and white.
+[2025-02-27 17:33:06] Title screen detected from game state. Forcing START button.
+[2025-02-27 17:33:06] Brought mGBA window to the front.
+[2025-02-27 17:33:06] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:33:06] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:33:06] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 17:33:06] Pressed gamepad button: START
+[2025-02-27 17:33:06] Brought mGBA window to the front.
+[2025-02-27 17:33:06] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:33:06] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:33:06] Updated mGBA window region to: (1567, 629, 338, 278)
+[2025-02-27 17:33:06] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:34:02] vJoy gamepad reset to default state.
+[2025-02-27 17:34:36] Waiting 5 seconds before pressing: UP
+[2025-02-27 17:34:41] Pressing gamepad button: UP (vJoy Button 3)
+[2025-02-27 17:34:44] Waiting 5 seconds before pressing: RIGHT
+[2025-02-27 17:34:49] Pressing gamepad button: RIGHT (vJoy Button 6)
+[2025-02-27 17:34:52] Waiting 5 seconds before pressing: DOWN
+[2025-02-27 17:34:57] Pressing gamepad button: DOWN (vJoy Button 4)
+[2025-02-27 17:34:59] Waiting 5 seconds before pressing: LEFT
+[2025-02-27 17:35:04] Pressing gamepad button: LEFT (vJoy Button 5)
+[2025-02-27 17:36:23] Waiting 5 seconds before pressing: A
+[2025-02-27 17:36:28] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-27 17:36:31] Waiting 5 seconds before pressing: B
+[2025-02-27 17:36:36] Pressing gamepad button: B (vJoy Button 2)
+[2025-02-27 17:36:38] Waiting 5 seconds before pressing: START
+[2025-02-27 17:36:43] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 17:36:46] Waiting 5 seconds before pressing: SELECT
+[2025-02-27 17:36:51] Pressing gamepad button: SELECT (vJoy Button 7)
+[2025-02-27 17:37:11] Waiting 5 seconds before pressing: SCREENSHOT
+[2025-02-27 17:37:16] Pressing gamepad button: SCREENSHOT (vJoy Button 9)
+[2025-02-27 17:37:22] Waiting 5 seconds before pressing: SCREENSHOT
+[2025-02-27 17:37:27] Pressing gamepad button: SCREENSHOT (vJoy Button 9)
+[2025-02-27 17:37:43] Waiting 5 seconds before pressing: SCREENSHOT
+[2025-02-27 17:37:48] Pressing gamepad button: SCREENSHOT (vJoy Button 9)
+[2025-02-27 17:38:14] vJoy gamepad reset to default state.
+[2025-02-27 17:38:15] Launching mGBA emulator...
+[2025-02-27 17:38:18] Brought mGBA window to the front.
+[2025-02-27 17:38:18] Updated mGBA window region to: (2011, 614, 306, 159)
+[2025-02-27 17:38:18] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:38:18] Updated mGBA window region to: (2011, 614, 306, 159)
+[2025-02-27 17:38:18] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:38:22] Moondream model initialized on: cuda
+[2025-02-27 17:38:32] Llama model initialized on: cuda
+[2025-02-27 17:38:32] Starting Pokémon Blue AI training (All Moondream + Llama)...
+[2025-02-27 17:38:32] Pressing START button to begin game...
+[2025-02-27 17:38:32] Brought mGBA window to the front.
+[2025-02-27 17:38:32] Updated mGBA window region to: (2011, 614, 306, 159)
+[2025-02-27 17:38:32] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:38:32] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 17:38:32] Pressed gamepad button: START
+[2025-02-27 17:38:57] Brought mGBA window to the front.
+[2025-02-27 17:38:57] Updated mGBA window region to: (2011, 614, 265, 215)
+[2025-02-27 17:38:57] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:38:57] Updated mGBA window region to: (2011, 614, 265, 215)
+[2025-02-27 17:38:57] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:40:20] Moondream Screen Description:  The image shows a screenshot of the Pokémon Blue game screen. The title screen displays the game's title, "Pokémon Blue", in a stylized font. Below the title, the text "Blue Version" indicates the game's color scheme. A pixelated character, possibly a Pokémon, is shown in the bottom right corner. The character appears to be in a fighting stance, holding a small, round object.
+[2025-02-27 17:40:20] Title screen detection count: 1
+[2025-02-27 17:40:20] Game state from vision:  The image shows a screenshot of the Pokémon Blue game screen. The title screen displays the game's title, "Pokémon Blue", in a stylized font. Below the title, the text "Blue Version" indicates the game's color scheme. A pixelated character, possibly a Pokémon, is shown in the bottom right corner. The character appears to be in a fighting stance, holding a small, round object.
+[2025-02-27 17:40:20] Title screen detected from game state. Forcing START button.
+[2025-02-27 17:40:20] Brought mGBA window to the front.
+[2025-02-27 17:40:21] Updated mGBA window region to: (2011, 614, 265, 216)
+[2025-02-27 17:40:21] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:40:21] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 17:40:21] Pressed gamepad button: START
+[2025-02-27 17:40:21] Brought mGBA window to the front.
+[2025-02-27 17:40:21] Updated mGBA window region to: (2011, 614, 265, 216)
+[2025-02-27 17:40:21] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:40:21] Updated mGBA window region to: (2011, 614, 265, 216)
+[2025-02-27 17:40:21] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:41:36] Moondream Screen Description:  The image shows a screenshot of the Pokémon Blue game screen. The title screen displays the game's title, "Pokémon Blue", in a stylized font. Below the title, the text "Blue Version" indicates the game's color scheme. The bottom right corner features a pixelated character, possibly a Pokémon, in a fighting stance. The character has a white hat, dark hair, and a dark outfit.
+[2025-02-27 17:41:36] Title screen detection count: 2
+[2025-02-27 17:41:37] Brought mGBA window to the front.
+[2025-02-27 17:41:37] Updated mGBA window region to: (2011, 614, 265, 216)
+[2025-02-27 17:41:37] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:41:37] Updated mGBA window region to: (2011, 614, 265, 216)
+[2025-02-27 17:41:37] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:42:38] Moondream Screen Description:  The image shows the title screen of the Pokémon Blue game. The top portion displays the game's title in a stylized, pixelated font. Below the title, the text "Blue Version" is displayed. The bottom portion features two cartoon characters, likely Pokémon, in a fighting stance.
+[2025-02-27 17:42:38] Title screen detection count: 3
+[2025-02-27 17:42:38] Game state from vision:  The image shows the title screen of the Pokémon Blue game. The top portion displays the game's title in a stylized, pixelated font. Below the title, the text "Blue Version" is displayed. The bottom portion features two cartoon characters, likely Pokémon, in a fighting stance.
+[2025-02-27 17:42:38] Title screen detected from game state. Forcing START button.
+[2025-02-27 17:42:38] Brought mGBA window to the front.
+[2025-02-27 17:42:38] Updated mGBA window region to: (2011, 614, 265, 216)
+[2025-02-27 17:42:38] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:42:38] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 17:42:38] Pressed gamepad button: START
+[2025-02-27 17:42:38] Brought mGBA window to the front.
+[2025-02-27 17:42:38] Updated mGBA window region to: (2011, 614, 265, 216)
+[2025-02-27 17:42:38] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:42:38] Updated mGBA window region to: (2011, 614, 265, 216)
+[2025-02-27 17:42:38] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:43:48] Moondream Screen Description:  The image shows the title screen of the Pokémon Blue game. The top portion displays the game's title in a stylized, pixelated font. Below the title, the text "Blue Version" is displayed. The bottom portion features a pixelated illustration of a Pokémon character and a Pokémon character, likely a Pokémon, standing next to each other.
+[2025-02-27 17:43:48] Title screen detection count: 4
+[2025-02-27 17:43:49] Brought mGBA window to the front.
+[2025-02-27 17:43:49] Updated mGBA window region to: (2011, 614, 265, 216)
+[2025-02-27 17:43:50] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:43:50] Updated mGBA window region to: (2011, 614, 265, 216)
+[2025-02-27 17:43:50] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:44:50] Moondream Screen Description:  The image shows a Pokémon Blue game screen. The title screen displays "NEW GAME" and "OPTION".  Dialogue options are not visible in the image.  Character positions and movement options are not shown.  Menu options are not visible.  Battle information is not shown.
+[2025-02-27 17:44:50] Title screen detection count: 5
+[2025-02-27 17:44:50] Game state from vision:  The image shows a Pokémon Blue game screen. The title screen displays "NEW GAME" and "OPTION".  Dialogue options are not visible in the image.  Character positions and movement options are not shown.  Menu options are not visible.  Battle information is not shown.
+[2025-02-27 17:44:50] State transition: TITLE_SCREEN -> DIALOGUE
+[2025-02-27 17:44:50] Generating instruction for state: DIALOGUE
+[2025-02-27 17:45:25] Attempt 1 (temp=0.7, max_tokens=30): Instruction: 
