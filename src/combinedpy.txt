@@ -206,6 +206,15 @@ class Emulator:
         self.last_keypress_time = current_time
         utils.log(f"Pressed key: {key}")
 
+    def press_button(self, action):
+        """
+        Use the virtual gamepad to press a button.
+        """
+        self.restart_emulator_if_closed()
+        self.bring_emulator_to_front()
+        self.gamepad.press_button(action)
+        utils.log(f"Pressed gamepad button: {action}")
+
     def trigger_screenshot(self):
         utils.log("Triggering mGBA screenshot via gamepad...")
         self.gamepad.press_button("SCREENSHOT")
@@ -299,7 +308,7 @@ from decision import Decision
 
 class PokemonTrainerAI:
     def __init__(self):
-        self.emulator = Emulator()         # For capturing screen & pressing keys
+        self.emulator = Emulator()         # For capturing screen & gamepad button presses
         self.vision = Vision(self.emulator)  # Moondream-based vision+decision
         self.decision = Decision(self.vision)
 
@@ -311,10 +320,9 @@ class PokemonTrainerAI:
         while not self.game_completed:
             # Get next action from Decision (which calls Vision -> Moondream)
             action = self.decision.get_next_action()
-            keypress = config.KEY_MAPPING.get(action)
-            if keypress:
-                self.emulator.press_key(keypress)
-                self.action_count += 1
+            # Use the gamepad to press the corresponding button
+            self.emulator.press_button(action)
+            self.action_count += 1
 
             # Optional: Check if we see "Hall of Fame" in the screen text
             game_state_text = self.vision.get_game_state_text()
@@ -423,21 +431,38 @@ class Vision:
     def get_next_action(self):
         """
         Use Moondream to directly choose the next button press from [UP, DOWN, LEFT, RIGHT, A, B, START, SELECT].
-        We'll retry infinitely if Moondream doesn't produce a valid single action.
         """
         while True:
             image = self.capture_screen()
             encoded = self.model.encode_image(image)
 
-            # We'll prompt Moondream to produce a single valid button
-            moondream_prompt = f"""
-You are playing Pokémon Blue on a Game Boy.
-Analyze this screenshot and decide the single best button to press.
-Valid buttons: {", ".join(self.valid_buttons)}.
+            # Context-aware Moondream Prompt
+            moondream_prompt = """
+            You are playing Pokémon Blue on a Game Boy. Your goal is to complete the game as efficiently as possible by selecting the best button press for the current situation.
 
-Return ONLY one of these words (UP, DOWN, LEFT, RIGHT, A, B, START, SELECT).
-No extra text.
-"""
+            Here are the possible controls you can choose from:
+            - UP, DOWN, LEFT, RIGHT → Move the player character or navigate menus.
+            - A → Confirm selections, talk to NPCs, progress dialogue.
+            - B → Cancel selections, close menus, sometimes speeds up text.
+            - START → Open the main menu (only use when necessary).
+            - SELECT → Rarely used, but opens secondary menu in certain cases.
+
+            Decision Strategy:
+            1. If on the title screen and the text includes "Blue Version" press START.
+            2. If there is text on screen determine an action, A reads the text and moves on unless in menus.
+            3. If navigating menus, choose UP/DOWN to move and A to confirm selections.
+            4. If in battle, select the appropriate action:
+               - A to confirm an attack or select a move.
+               - UP/DOWN to navigate between move options.
+               - LEFT/RIGHT if switching Pokémon or selecting an item.
+            5. If walking around, use UP/DOWN/LEFT/RIGHT to navigate the map.
+            6. If reading dialogue, use A to continue. If text is slow, B can sometimes speed it up.
+
+            IMPORTANT:
+            - Return ONLY a single action (UP, DOWN, LEFT, RIGHT, A, B, START, SELECT) with no extra text.
+            - Do not press START or A repeatedly unless it is required.
+            - Ensure your decision matches the context of the screen.
+            """
             response = self.model.query(encoded, moondream_prompt)["answer"]
             utils.log(f"Moondream Raw Decision: {response}")
 
@@ -448,6 +473,5 @@ No extra text.
             if action in self.valid_buttons:
                 return action
             else:
-                utils.log(f"Invalid Moondream action '{action}'. Retrying...")
- 
+                utils.log(f"Invalid Moondream action '{action}'. Retrying...") 
  
