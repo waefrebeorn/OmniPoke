@@ -178,3 +178,261 @@ In the background, there are several other Pokémon sprites, including a few that
 [2025-02-27 12:30:11] Updated mGBA window region to: (1272, 330, 512, 468)
 [2025-02-27 12:30:11] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
 [2025-02-27 12:30:11] Saved emulator screenshot: C:\Projects\OmniPoke\logs\frames\debug_screen.png
+[2025-02-27 13:36:54] vJoy gamepad reset to default state.
+[2025-02-27 13:36:54] Launching mGBA emulator...
+[2025-02-27 13:36:57] Brought mGBA window to the front.
+[2025-02-27 13:36:57] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:36:58] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:36:58] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:36:58] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:38:43] vJoy gamepad reset to default state.
+[2025-02-27 13:38:43] Launching mGBA emulator...
+[2025-02-27 13:38:46] Brought mGBA window to the front.
+[2025-02-27 13:38:46] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:38:46] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:38:46] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:38:46] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:40:27] Moondream vision model initialized on: cuda
+[2025-02-27 13:40:30] Moondream vision model initialized on: cuda
+[2025-02-27 13:40:34] Starting Pokémon Blue AI training...
+[2025-02-27 13:40:34] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:40:34] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:40:44] Extracted Screen Text:  The image shows a screenshot of a text conversation on a mobile phone. The conversation is between two individuals, with the sender's message displayed in blue text on a white background. The sender's message reads "thank you! looking into this asap! doing irr stuff today" and includes a heart emoji. The recipient's message is also displayed in blue text on a white background, and it reads "should let u run moondream with". The conversation is set against a black background, and the time displayed in the top right corner is 11:27 AM. The conversation is between two individuals, and the sender's message is from the sender's phone.
+[2025-02-27 13:40:48] Moondream Game State Analysis:  The game is currently in the "ready" state. The player is in the center of Viridian City, and the menu is open. The player has 10 HP and is currently blocking the right side of the screen. The player's health is at 100, and they have 10 HP remaining. The player's current location is the center of Viridian City.
+[2025-02-27 13:40:48] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:40:48] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:40:58] Extracted Screen Text:  The image shows a screenshot of a text conversation on a mobile phone. The conversation is between two individuals, with the sender's message displayed in blue text on a white background. The sender's message reads "thank you! looking into this asap! doing irr stuff today" and includes a heart emoji. The recipient's message is also displayed in blue text on a white background, and it reads "should let u run moondream with". The conversation is set against a black background, and the time displayed in the top right corner is 11:27 AM. The conversation is between two individuals, and the sender's message is from the sender's phone.
+[2025-02-27 13:41:02] Moondream Game State Analysis:  The game is currently in the "ready" state. The player is in the center of Viridian City. The available movement is UP and LEFT. The menu is open, and the player can move up, down, left, and right. The battle is currently a trainer battle. The player's inventory is full. The NPC is a shop. The NPC is a wild Pokémon. The player's health is at 100.
+[2025-02-27 13:41:06] LLaMA Raw Decision: YOU ARE CONTROLLING A GAME BOY EMULATOR PLAYING POKÉMON BLUE.
+YOUR GOAL IS TO REACH THE HALL OF FAME IN AS FEW MOVES AS POSSIBLE.
+YOU MAY PRESS ONLY ONE BUTTON AT A TIME: UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.
+
+GAME STATE BREAKDOWN:
+ THE IMAGE SHOWS A SCREENSHOT OF A TEXT CONVERSATION ON A MOBILE PHONE. THE CONVERSATION IS BETWEEN TWO INDIVIDUALS, WITH THE SENDER'S MESSAGE DISPLAYED IN BLUE TEXT ON A WHITE BACKGROUND. THE SENDER'S MESSAGE READS "THANK YOU! LOOKING INTO THIS ASAP! DOING IRR STUFF TODAY" AND INCLUDES A HEART EMOJI. THE RECIPIENT'S MESSAGE IS ALSO DISPLAYED IN BLUE TEXT ON A WHITE BACKGROUND, AND IT READS "SHOULD LET U RUN MOONDREAM WITH". THE CONVERSATION IS SET AGAINST A BLACK BACKGROUND, AND THE TIME DISPLAYED IN THE TOP RIGHT CORNER IS 11:27 AM. THE CONVERSATION IS BETWEEN TWO INDIVIDUALS, AND THE SENDER'S MESSAGE IS FROM THE SENDER'S PHONE.
+
+ THE GAME IS CURRENTLY IN THE "READY" STATE. THE PLAYER IS IN THE CENTER OF VIRIDIAN CITY. THE AVAILABLE MOVEMENT IS UP AND LEFT. THE MENU IS OPEN, AND THE PLAYER CAN MOVE UP, DOWN, LEFT, AND RIGHT. THE BATTLE IS CURRENTLY A TRAINER BATTLE. THE PLAYER'S INVENTORY IS FULL. THE NPC IS A SHOP. THE NPC IS A WILD POKÉMON. THE PLAYER'S HEALTH IS AT 100.
+
+RECENT MOVES: []
+
+DECIDE THE NEXT BUTTON TO PRESS. REPLY WITH A SINGLE WORD:
+UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.
+[2025-02-27 13:41:06] Invalid action 'YOU ARE CONTROLLING A GAME BOY EMULATOR PLAYING POKÉMON BLUE.
+YOUR GOAL IS TO REACH THE HALL OF FAME IN AS FEW MOVES AS POSSIBLE.
+YOU MAY PRESS ONLY ONE BUTTON AT A TIME: UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.
+
+GAME STATE BREAKDOWN:
+ THE IMAGE SHOWS A SCREENSHOT OF A TEXT CONVERSATION ON A MOBILE PHONE. THE CONVERSATION IS BETWEEN TWO INDIVIDUALS, WITH THE SENDER'S MESSAGE DISPLAYED IN BLUE TEXT ON A WHITE BACKGROUND. THE SENDER'S MESSAGE READS "THANK YOU! LOOKING INTO THIS ASAP! DOING IRR STUFF TODAY" AND INCLUDES A HEART EMOJI. THE RECIPIENT'S MESSAGE IS ALSO DISPLAYED IN BLUE TEXT ON A WHITE BACKGROUND, AND IT READS "SHOULD LET U RUN MOONDREAM WITH". THE CONVERSATION IS SET AGAINST A BLACK BACKGROUND, AND THE TIME DISPLAYED IN THE TOP RIGHT CORNER IS 11:27 AM. THE CONVERSATION IS BETWEEN TWO INDIVIDUALS, AND THE SENDER'S MESSAGE IS FROM THE SENDER'S PHONE.
+
+ THE GAME IS CURRENTLY IN THE "READY" STATE. THE PLAYER IS IN THE CENTER OF VIRIDIAN CITY. THE AVAILABLE MOVEMENT IS UP AND LEFT. THE MENU IS OPEN, AND THE PLAYER CAN MOVE UP, DOWN, LEFT, AND RIGHT. THE BATTLE IS CURRENTLY A TRAINER BATTLE. THE PLAYER'S INVENTORY IS FULL. THE NPC IS A SHOP. THE NPC IS A WILD POKÉMON. THE PLAYER'S HEALTH IS AT 100.
+
+RECENT MOVES: []
+
+DECIDE THE NEXT BUTTON TO PRESS. REPLY WITH A SINGLE WORD:
+UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.' received. Defaulting to 'A'.
+[2025-02-27 13:41:06] Failed to bring mGBA to front: (0, 'SetForegroundWindow', 'No error message is available')
+[2025-02-27 13:41:06] Pressed key: z
+[2025-02-27 13:41:07] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:41:07] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:41:17] Extracted Screen Text:  The image shows a screenshot of a text conversation on a mobile phone. The conversation is between two individuals, with the sender's message displayed in blue text on a white background. The sender's message reads "thank you! looking into this asap! doing irr stuff today" and includes a heart emoji. The recipient's message is also displayed in blue text on a white background, and it reads "should let u run moondream with". The conversation is set against a black background, and the time displayed in the top right corner is 11:27 AM. The conversation is between two individuals, and the sender's message is from the sender's phone.
+[2025-02-27 13:41:21] Moondream Game State Analysis:  The game is currently in the "ready" state. The player is in the center of Viridian City, and the menu is open. The player has 10 HP and is currently blocking the right side of the screen. The player's health is at 100. The player's current location is the center of Viridian City. The player's next move is to press the "right" button.
+[2025-02-27 13:41:21] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:41:21] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:41:30] Extracted Screen Text:  The image shows a screenshot of a text conversation on a mobile phone. The conversation is between two individuals, with the first person expressing gratitude for the other's help and asking a question about the purpose of the message. The second person, who is not the first person, responds with a question about the message. The conversation is set against a dark background, and the text is in a light blue color. The timestamp of the conversation is 11:27 AM. The conversation is enclosed within a blue border.
+[2025-02-27 13:41:34] Moondream Game State Analysis:  The game is currently in the "Menu" state. The player is currently in the "Center" of Viridian City. The available movement is "UP and LEFT". The menu is open, and the player can move up and left, but not right. The battle is currently in a trainer battle. The player's inventory is full. The player is currently in the "Shop" area.
+[2025-02-27 13:41:37] LLaMA Raw Decision: YOU ARE CONTROLLING A GAME BOY EMULATOR PLAYING POKÉMON BLUE.
+YOUR GOAL IS TO REACH THE HALL OF FAME IN AS FEW MOVES AS POSSIBLE.
+YOU MAY PRESS ONLY ONE BUTTON AT A TIME: UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.
+
+GAME STATE BREAKDOWN:
+ THE IMAGE SHOWS A SCREENSHOT OF A TEXT CONVERSATION ON A MOBILE PHONE. THE CONVERSATION IS BETWEEN TWO INDIVIDUALS, WITH THE FIRST PERSON EXPRESSING GRATITUDE FOR THE OTHER'S HELP AND ASKING A QUESTION ABOUT THE PURPOSE OF THE MESSAGE. THE SECOND PERSON, WHO IS NOT THE FIRST PERSON, RESPONDS WITH A QUESTION ABOUT THE MESSAGE. THE CONVERSATION IS SET AGAINST A DARK BACKGROUND, AND THE TEXT IS IN A LIGHT BLUE COLOR. THE TIMESTAMP OF THE CONVERSATION IS 11:27 AM. THE CONVERSATION IS ENCLOSED WITHIN A BLUE BORDER.
+
+ THE GAME IS CURRENTLY IN THE "MENU" STATE. THE PLAYER IS CURRENTLY IN THE "CENTER" OF VIRIDIAN CITY. THE AVAILABLE MOVEMENT IS "UP AND LEFT". THE MENU IS OPEN, AND THE PLAYER CAN MOVE UP AND LEFT, BUT NOT RIGHT. THE BATTLE IS CURRENTLY IN A TRAINER BATTLE. THE PLAYER'S INVENTORY IS FULL. THE PLAYER IS CURRENTLY IN THE "SHOP" AREA.
+
+RECENT MOVES: ['A']
+
+DECIDE THE NEXT BUTTON TO PRESS. REPLY WITH A SINGLE WORD:
+UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.
+[2025-02-27 13:41:37] Invalid action 'YOU ARE CONTROLLING A GAME BOY EMULATOR PLAYING POKÉMON BLUE.
+YOUR GOAL IS TO REACH THE HALL OF FAME IN AS FEW MOVES AS POSSIBLE.
+YOU MAY PRESS ONLY ONE BUTTON AT A TIME: UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.
+
+GAME STATE BREAKDOWN:
+ THE IMAGE SHOWS A SCREENSHOT OF A TEXT CONVERSATION ON A MOBILE PHONE. THE CONVERSATION IS BETWEEN TWO INDIVIDUALS, WITH THE FIRST PERSON EXPRESSING GRATITUDE FOR THE OTHER'S HELP AND ASKING A QUESTION ABOUT THE PURPOSE OF THE MESSAGE. THE SECOND PERSON, WHO IS NOT THE FIRST PERSON, RESPONDS WITH A QUESTION ABOUT THE MESSAGE. THE CONVERSATION IS SET AGAINST A DARK BACKGROUND, AND THE TEXT IS IN A LIGHT BLUE COLOR. THE TIMESTAMP OF THE CONVERSATION IS 11:27 AM. THE CONVERSATION IS ENCLOSED WITHIN A BLUE BORDER.
+
+ THE GAME IS CURRENTLY IN THE "MENU" STATE. THE PLAYER IS CURRENTLY IN THE "CENTER" OF VIRIDIAN CITY. THE AVAILABLE MOVEMENT IS "UP AND LEFT". THE MENU IS OPEN, AND THE PLAYER CAN MOVE UP AND LEFT, BUT NOT RIGHT. THE BATTLE IS CURRENTLY IN A TRAINER BATTLE. THE PLAYER'S INVENTORY IS FULL. THE PLAYER IS CURRENTLY IN THE "SHOP" AREA.
+
+RECENT MOVES: ['A']
+
+DECIDE THE NEXT BUTTON TO PRESS. REPLY WITH A SINGLE WORD:
+UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.' received. Defaulting to 'A'.
+[2025-02-27 13:41:37] Brought mGBA window to the front.
+[2025-02-27 13:41:37] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:41:37] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:41:37] Pressed key: z
+[2025-02-27 13:41:38] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:41:39] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:41:47] Extracted Screen Text:  The image shows a screenshot of a text conversation on a mobile phone. The conversation is between two individuals, with the first person expressing gratitude for the other's help and asking a question about the purpose of the message. The second person responds with a question about the message and a brief explanation. The conversation is framed within a blue chat bubble, and the text is in a dark gray or black font. The timestamp of the conversation is 11:27 AM. The conversation is set against a dark background.
+[2025-02-27 13:41:51] Moondream Game State Analysis:  The game is currently in the "Menu" state. The player is currently in the "Center" of Viridian City. The available movement is "UP and LEFT". The menu is open, and the player can move up and left, but not right. The battle is currently in a trainer battle. The player's inventory is full. The player is currently in the "Shop" area.
+[2025-02-27 13:41:51] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:41:52] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:42:02] Extracted Screen Text:  The image shows a screenshot of a text message conversation on a dark-colored phone. The conversation is between two individuals, with the first person's name being "Vips" and the second person's name being "moondream". The conversation is taking place in a chat window, with the first person's name being "Vips" and the second person's name being "moondream". The conversation is centered around the topic of executing a module named "moondream" and the first person's concern about the module's ability to load. The conversation is set to 1:40 PM. The chat window is framed by a dark gray border.
+[2025-02-27 13:42:05] Moondream Game State Analysis:  The player is currently in the "Menu" section of the game.  The available movement options are UP and LEFT. The player's current health is 100.  The menu is open.  The player is in a building.  The player is moving the Dills.
+[2025-02-27 13:42:09] LLaMA Raw Decision: YOU ARE CONTROLLING A GAME BOY EMULATOR PLAYING POKÉMON BLUE.
+YOUR GOAL IS TO REACH THE HALL OF FAME IN AS FEW MOVES AS POSSIBLE.
+YOU MAY PRESS ONLY ONE BUTTON AT A TIME: UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.
+
+GAME STATE BREAKDOWN:
+ THE IMAGE SHOWS A SCREENSHOT OF A TEXT MESSAGE CONVERSATION ON A DARK-COLORED PHONE. THE CONVERSATION IS BETWEEN TWO INDIVIDUALS, WITH THE FIRST PERSON'S NAME BEING "VIPS" AND THE SECOND PERSON'S NAME BEING "MOONDREAM". THE CONVERSATION IS TAKING PLACE IN A CHAT WINDOW, WITH THE FIRST PERSON'S NAME BEING "VIPS" AND THE SECOND PERSON'S NAME BEING "MOONDREAM". THE CONVERSATION IS CENTERED AROUND THE TOPIC OF EXECUTING A MODULE NAMED "MOONDREAM" AND THE FIRST PERSON'S CONCERN ABOUT THE MODULE'S ABILITY TO LOAD. THE CONVERSATION IS SET TO 1:40 PM. THE CHAT WINDOW IS FRAMED BY A DARK GRAY BORDER.
+
+ THE PLAYER IS CURRENTLY IN THE "MENU" SECTION OF THE GAME.  THE AVAILABLE MOVEMENT OPTIONS ARE UP AND LEFT. THE PLAYER'S CURRENT HEALTH IS 100.  THE MENU IS OPEN.  THE PLAYER IS IN A BUILDING.  THE PLAYER IS MOVING THE DILLS.
+
+RECENT MOVES: ['A', 'A']
+
+DECIDE THE NEXT BUTTON TO PRESS. REPLY WITH A SINGLE WORD:
+UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.
+[2025-02-27 13:42:09] Invalid action 'YOU ARE CONTROLLING A GAME BOY EMULATOR PLAYING POKÉMON BLUE.
+YOUR GOAL IS TO REACH THE HALL OF FAME IN AS FEW MOVES AS POSSIBLE.
+YOU MAY PRESS ONLY ONE BUTTON AT A TIME: UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.
+
+GAME STATE BREAKDOWN:
+ THE IMAGE SHOWS A SCREENSHOT OF A TEXT MESSAGE CONVERSATION ON A DARK-COLORED PHONE. THE CONVERSATION IS BETWEEN TWO INDIVIDUALS, WITH THE FIRST PERSON'S NAME BEING "VIPS" AND THE SECOND PERSON'S NAME BEING "MOONDREAM". THE CONVERSATION IS TAKING PLACE IN A CHAT WINDOW, WITH THE FIRST PERSON'S NAME BEING "VIPS" AND THE SECOND PERSON'S NAME BEING "MOONDREAM". THE CONVERSATION IS CENTERED AROUND THE TOPIC OF EXECUTING A MODULE NAMED "MOONDREAM" AND THE FIRST PERSON'S CONCERN ABOUT THE MODULE'S ABILITY TO LOAD. THE CONVERSATION IS SET TO 1:40 PM. THE CHAT WINDOW IS FRAMED BY A DARK GRAY BORDER.
+
+ THE PLAYER IS CURRENTLY IN THE "MENU" SECTION OF THE GAME.  THE AVAILABLE MOVEMENT OPTIONS ARE UP AND LEFT. THE PLAYER'S CURRENT HEALTH IS 100.  THE MENU IS OPEN.  THE PLAYER IS IN A BUILDING.  THE PLAYER IS MOVING THE DILLS.
+
+RECENT MOVES: ['A', 'A']
+
+DECIDE THE NEXT BUTTON TO PRESS. REPLY WITH A SINGLE WORD:
+UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.' received. Defaulting to 'A'.
+[2025-02-27 13:42:09] Brought mGBA window to the front.
+[2025-02-27 13:42:09] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:42:09] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:42:09] Pressed key: z
+[2025-02-27 13:42:10] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:42:10] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:42:21] Extracted Screen Text:  The image presents the cover art for the video game "Pokémon Blue Version". The title is prominently displayed in large, stylized letters, with the word "Pokémon" in a yellowish-gold color and the word "Blue" in a light blue color. The game's title is also displayed in a light blue color. The cover art features a pixelated character, possibly a Pokémon, standing in the center. The character is wearing a white baseball cap and a dark-colored shirt. The background is a light blue color with a border of small, light blue Pokéballs. The bottom of the cover art includes the copyright notice "©95.96.98 GAME FREAK INC."
+[2025-02-27 13:42:25] Moondream Game State Analysis:  The game screen displays the title "Pokémon Blue" with the player's location in Viridian City. The menu options include Party, Inventory, Battle, Shop, and Trainer. The player has 100 HP and is currently in a trainer battle. The screen also shows available movement directions and a list of nearby objects and NPCs.
+[2025-02-27 13:42:25] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:42:25] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:42:36] Extracted Screen Text:  The image presents the cover art for the video game "Pokémon Blue Version". The cover is predominantly blue, with a white border. The title "Pokémon Blue Version" is prominently displayed in a stylized font, with the word "Pokémon" in a larger, bolder font. The cover features a pixelated illustration of a Pokémon character, possibly a Catcher, standing next to a Pokémon. The character is wearing a baseball cap and a dark-colored shirt. The background of the cover art is a light blue color, with a repeating pattern of Pokémon images in the corners. The bottom of the cover art includes the copyright notice "©95.96.98 GAME FREAK INC."
+[2025-02-27 13:42:40] Moondream Game State Analysis:  The screen displays the title "Pokémon Blue" with the player's location in Viridian City. The menu options include Party, Inventory, Battle, Shop, and Trainer. The player has 100 HP and is currently in a trainer battle. The screen also shows available movement directions and a list of nearby objects and NPCs.
+[2025-02-27 13:42:43] LLaMA Raw Decision: YOU ARE CONTROLLING A GAME BOY EMULATOR PLAYING POKÉMON BLUE.
+YOUR GOAL IS TO REACH THE HALL OF FAME IN AS FEW MOVES AS POSSIBLE.
+YOU MAY PRESS ONLY ONE BUTTON AT A TIME: UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.
+
+GAME STATE BREAKDOWN:
+ THE IMAGE PRESENTS THE COVER ART FOR THE VIDEO GAME "POKÉMON BLUE VERSION". THE COVER IS PREDOMINANTLY BLUE, WITH A WHITE BORDER. THE TITLE "POKÉMON BLUE VERSION" IS PROMINENTLY DISPLAYED IN A STYLIZED FONT, WITH THE WORD "POKÉMON" IN A LARGER, BOLDER FONT. THE COVER FEATURES A PIXELATED ILLUSTRATION OF A POKÉMON CHARACTER, POSSIBLY A CATCHER, STANDING NEXT TO A POKÉMON. THE CHARACTER IS WEARING A BASEBALL CAP AND A DARK-COLORED SHIRT. THE BACKGROUND OF THE COVER ART IS A LIGHT BLUE COLOR, WITH A REPEATING PATTERN OF POKÉMON IMAGES IN THE CORNERS. THE BOTTOM OF THE COVER ART INCLUDES THE COPYRIGHT NOTICE "©95.96.98 GAME FREAK INC."
+
+ THE SCREEN DISPLAYS THE TITLE "POKÉMON BLUE" WITH THE PLAYER'S LOCATION IN VIRIDIAN CITY. THE MENU OPTIONS INCLUDE PARTY, INVENTORY, BATTLE, SHOP, AND TRAINER. THE PLAYER HAS 100 HP AND IS CURRENTLY IN A TRAINER BATTLE. THE SCREEN ALSO SHOWS AVAILABLE MOVEMENT DIRECTIONS AND A LIST OF NEARBY OBJECTS AND NPCS.
+
+RECENT MOVES: ['A', 'A', 'A']
+
+DECIDE THE NEXT BUTTON TO PRESS. REPLY WITH A SINGLE WORD:
+UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.
+[2025-02-27 13:42:43] Invalid action 'YOU ARE CONTROLLING A GAME BOY EMULATOR PLAYING POKÉMON BLUE.
+YOUR GOAL IS TO REACH THE HALL OF FAME IN AS FEW MOVES AS POSSIBLE.
+YOU MAY PRESS ONLY ONE BUTTON AT A TIME: UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.
+
+GAME STATE BREAKDOWN:
+ THE IMAGE PRESENTS THE COVER ART FOR THE VIDEO GAME "POKÉMON BLUE VERSION". THE COVER IS PREDOMINANTLY BLUE, WITH A WHITE BORDER. THE TITLE "POKÉMON BLUE VERSION" IS PROMINENTLY DISPLAYED IN A STYLIZED FONT, WITH THE WORD "POKÉMON" IN A LARGER, BOLDER FONT. THE COVER FEATURES A PIXELATED ILLUSTRATION OF A POKÉMON CHARACTER, POSSIBLY A CATCHER, STANDING NEXT TO A POKÉMON. THE CHARACTER IS WEARING A BASEBALL CAP AND A DARK-COLORED SHIRT. THE BACKGROUND OF THE COVER ART IS A LIGHT BLUE COLOR, WITH A REPEATING PATTERN OF POKÉMON IMAGES IN THE CORNERS. THE BOTTOM OF THE COVER ART INCLUDES THE COPYRIGHT NOTICE "©95.96.98 GAME FREAK INC."
+
+ THE SCREEN DISPLAYS THE TITLE "POKÉMON BLUE" WITH THE PLAYER'S LOCATION IN VIRIDIAN CITY. THE MENU OPTIONS INCLUDE PARTY, INVENTORY, BATTLE, SHOP, AND TRAINER. THE PLAYER HAS 100 HP AND IS CURRENTLY IN A TRAINER BATTLE. THE SCREEN ALSO SHOWS AVAILABLE MOVEMENT DIRECTIONS AND A LIST OF NEARBY OBJECTS AND NPCS.
+
+RECENT MOVES: ['A', 'A', 'A']
+
+DECIDE THE NEXT BUTTON TO PRESS. REPLY WITH A SINGLE WORD:
+UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.' received. Defaulting to 'A'.
+[2025-02-27 13:42:43] Brought mGBA window to the front.
+[2025-02-27 13:42:43] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:42:44] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:42:44] Pressed key: z
+[2025-02-27 13:42:45] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:42:45] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:42:56] Extracted Screen Text:  The image presents the cover art for the video game "Pokémon Blue Version". The title is prominently displayed in a stylized font, with the word "Pokémon" in a larger, bolder font. The subtitle "Blue Version" is written in a smaller font below the title. The cover art features a vibrant blue background with a repeating pattern of Pokémon images at the top and bottom. The main focus is a pixelated image of Pikachu and a Pokémon-like creature, possibly a Pokéball, standing together. Pikachu is wearing a baseball cap and a dark-colored shirt, while the Pokémon-like creature is a light brown/tan color. The bottom of the cover art includes the copyright information "©95.96.98 GAME FREAK INC."
+[2025-02-27 13:46:58] vJoy gamepad reset to default state.
+[2025-02-27 13:46:59] Launching mGBA emulator...
+[2025-02-27 13:47:02] Brought mGBA window to the front.
+[2025-02-27 13:47:02] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:47:02] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:47:02] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:47:02] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:47:06] Moondream vision model initialized on: cuda
+[2025-02-27 13:47:10] Moondream vision model initialized on: cuda
+[2025-02-27 13:47:14] Starting Pokémon Blue AI training...
+[2025-02-27 13:47:14] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:47:14] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:47:27] Extracted Screen Text:  The image shows a text conversation between two individuals. The conversation is displayed in a chat window with a blue background and white text. The sender's message is the first message in the conversation. The sender's message is "I just realized it's my own issue, sorry its a directory passing issue and I'm just moving the dlls". The recipient's message is the second message in the conversation. The recipient's message is "I've been having trouble with the dlls and I've just been moving them around to try and fix the issue". The conversation continues with the sender's message, "Do you have a retentive prompting guide for moondream? beyond the faq template? any effective "do's and don'ts" to get better non ocr tasks like screenshots description? notice that base prompts give heavy bias hallucination". The conversation is timestamped at 1:41 PM.
+[2025-02-27 13:47:29] Moondream Game State Analysis:  The player is currently in the "passing issue" mode, moving the dills. The dills are located in the "bin" mode. The player has a retreive prompting guide for moondream mode.
+[2025-02-27 13:47:29] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:47:29] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:47:40] Extracted Screen Text:  The image presents the cover art for the video game "Pokémon Blue Version". The title is prominently displayed in a stylized font, with the word "Pokémon" in a larger, bolder font. The subtitle "Blue Version" is written in a smaller font below the title. The cover art features a vibrant blue background with a repeating pattern of Pokémon images at the top and bottom. The center of the cover art features a pixelated image of Pikachu and Charizard, the main characters of the Pokémon franchise. Pikachu is depicted in a fiery orange/red color, while Charizard is shown in a more subdued orange/brown color. The cover art also includes a copyright notice at the bottom, reading "©95.96.98 GAME FREAK INC."
+[2025-02-27 13:47:45] Moondream Game State Analysis:  The screen displays the title "Pokémon Blue" with the subtitle "Blue Version".  Below the title, the player's character is shown, along with a list of available movement options. The screen also shows a menu, a partially visible inventory, and a battle in progress.  The player's location is indicated as a screen region, and the screen shows available movement options.  The screen also displays a list of nearby objects and NPCs, and a logical next action.
+[2025-02-27 13:47:48] LLaMA Raw Decision: YOU ARE CONTROLLING A GAME BOY EMULATOR PLAYING POKÉMON BLUE.
+YOUR GOAL IS TO REACH THE HALL OF FAME IN AS FEW MOVES AS POSSIBLE.
+YOU MAY PRESS ONLY ONE BUTTON AT A TIME: UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.
+
+GAME STATE BREAKDOWN:
+ THE IMAGE PRESENTS THE COVER ART FOR THE VIDEO GAME "POKÉMON BLUE VERSION". THE TITLE IS PROMINENTLY DISPLAYED IN A STYLIZED FONT, WITH THE WORD "POKÉMON" IN A LARGER, BOLDER FONT. THE SUBTITLE "BLUE VERSION" IS WRITTEN IN A SMALLER FONT BELOW THE TITLE. THE COVER ART FEATURES A VIBRANT BLUE BACKGROUND WITH A REPEATING PATTERN OF POKÉMON IMAGES AT THE TOP AND BOTTOM. THE CENTER OF THE COVER ART FEATURES A PIXELATED IMAGE OF PIKACHU AND CHARIZARD, THE MAIN CHARACTERS OF THE POKÉMON FRANCHISE. PIKACHU IS DEPICTED IN A FIERY ORANGE/RED COLOR, WHILE CHARIZARD IS SHOWN IN A MORE SUBDUED ORANGE/BROWN COLOR. THE COVER ART ALSO INCLUDES A COPYRIGHT NOTICE AT THE BOTTOM, READING "©95.96.98 GAME FREAK INC."
+
+ THE SCREEN DISPLAYS THE TITLE "POKÉMON BLUE" WITH THE SUBTITLE "BLUE VERSION".  BELOW THE TITLE, THE PLAYER'S CHARACTER IS SHOWN, ALONG WITH A LIST OF AVAILABLE MOVEMENT OPTIONS. THE SCREEN ALSO SHOWS A MENU, A PARTIALLY VISIBLE INVENTORY, AND A BATTLE IN PROGRESS.  THE PLAYER'S LOCATION IS INDICATED AS A SCREEN REGION, AND THE SCREEN SHOWS AVAILABLE MOVEMENT OPTIONS.  THE SCREEN ALSO DISPLAYS A LIST OF NEARBY OBJECTS AND NPCS, AND A LOGICAL NEXT ACTION.
+
+RECENT MOVES: []
+
+DECIDE THE NEXT BUTTON TO PRESS. REPLY WITH A SINGLE WORD:
+UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.
+[2025-02-27 13:47:48] Invalid action 'YOU ARE CONTROLLING A GAME BOY EMULATOR PLAYING POKÉMON BLUE.
+YOUR GOAL IS TO REACH THE HALL OF FAME IN AS FEW MOVES AS POSSIBLE.
+YOU MAY PRESS ONLY ONE BUTTON AT A TIME: UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.
+
+GAME STATE BREAKDOWN:
+ THE IMAGE PRESENTS THE COVER ART FOR THE VIDEO GAME "POKÉMON BLUE VERSION". THE TITLE IS PROMINENTLY DISPLAYED IN A STYLIZED FONT, WITH THE WORD "POKÉMON" IN A LARGER, BOLDER FONT. THE SUBTITLE "BLUE VERSION" IS WRITTEN IN A SMALLER FONT BELOW THE TITLE. THE COVER ART FEATURES A VIBRANT BLUE BACKGROUND WITH A REPEATING PATTERN OF POKÉMON IMAGES AT THE TOP AND BOTTOM. THE CENTER OF THE COVER ART FEATURES A PIXELATED IMAGE OF PIKACHU AND CHARIZARD, THE MAIN CHARACTERS OF THE POKÉMON FRANCHISE. PIKACHU IS DEPICTED IN A FIERY ORANGE/RED COLOR, WHILE CHARIZARD IS SHOWN IN A MORE SUBDUED ORANGE/BROWN COLOR. THE COVER ART ALSO INCLUDES A COPYRIGHT NOTICE AT THE BOTTOM, READING "©95.96.98 GAME FREAK INC."
+
+ THE SCREEN DISPLAYS THE TITLE "POKÉMON BLUE" WITH THE SUBTITLE "BLUE VERSION".  BELOW THE TITLE, THE PLAYER'S CHARACTER IS SHOWN, ALONG WITH A LIST OF AVAILABLE MOVEMENT OPTIONS. THE SCREEN ALSO SHOWS A MENU, A PARTIALLY VISIBLE INVENTORY, AND A BATTLE IN PROGRESS.  THE PLAYER'S LOCATION IS INDICATED AS A SCREEN REGION, AND THE SCREEN SHOWS AVAILABLE MOVEMENT OPTIONS.  THE SCREEN ALSO DISPLAYS A LIST OF NEARBY OBJECTS AND NPCS, AND A LOGICAL NEXT ACTION.
+
+RECENT MOVES: []
+
+DECIDE THE NEXT BUTTON TO PRESS. REPLY WITH A SINGLE WORD:
+UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.' received. Defaulting to 'A'.
+[2025-02-27 13:47:48] Brought mGBA window to the front.
+[2025-02-27 13:47:48] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:47:48] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:47:48] Pressed key: z
+[2025-02-27 13:47:49] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:47:49] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:47:59] Extracted Screen Text:  The image presents the cover art for the video game "Pokémon Blue Version". The title is prominently displayed in a stylized font, with the word "Pokémon" in a larger, bolder font. The subtitle "Blue Version" is written in a smaller font below the title. The cover art features a vibrant blue background with a repeating pattern of Pokémon images, including Charizard, Poison, and other Pokémon. The cover art also includes a pixelated image of Pikachu holding a Pokéball. The bottom of the cover art displays the copyright information "©95.96.98 GAME FREAK INC."
+[2025-02-27 13:48:05] Moondream Game State Analysis:  The screen displays the title "Pokémon Blue" with the subtitle "Blue Version".  Below the title, the player's character is shown, and the game's menu options are visible. The player is currently in a menu, and a battle is in progress.  The screen also shows available movement directions, a menu, and a list of Pokémon names, HP, and battle status.  Nearby objects and NPCs are also visible.  The player's current action is to press the "Next Action" button.
+[2025-02-27 13:48:05] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:48:05] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:48:16] Extracted Screen Text:  The image presents the cover art for the video game "Pokémon Blue Version". The cover is predominantly blue, with a white border. The title "Pokémon Blue Version" is prominently displayed in a yellow font, with the Pokémon logo in a light blue color. The cover features a pixelated illustration of a Pokémon character, possibly a Pokéball, and a character that appears to be a Pokémon, possibly a Pokéball. The character is standing next to a Pokéball. The background of the cover art is a light blue color, with a repeating pattern of Pokémon and Pokéballs. The bottom of the cover art includes copyright information for the game, "©95.96.98 GAME FREAK INC."
+[2025-02-27 13:48:19] Moondream Game State Analysis:  The screen displays the title "Pokémon Blue" with the player's name, "Blue", and the current game state.  The player is standing next to a Pokéball, and the menu options are visible.  The screen also shows available movement directions and a battle context.
+[2025-02-27 13:48:23] LLaMA Raw Decision: YOU ARE CONTROLLING A GAME BOY EMULATOR PLAYING POKÉMON BLUE.
+YOUR GOAL IS TO REACH THE HALL OF FAME IN AS FEW MOVES AS POSSIBLE.
+YOU MAY PRESS ONLY ONE BUTTON AT A TIME: UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.
+
+GAME STATE BREAKDOWN:
+ THE IMAGE PRESENTS THE COVER ART FOR THE VIDEO GAME "POKÉMON BLUE VERSION". THE COVER IS PREDOMINANTLY BLUE, WITH A WHITE BORDER. THE TITLE "POKÉMON BLUE VERSION" IS PROMINENTLY DISPLAYED IN A YELLOW FONT, WITH THE POKÉMON LOGO IN A LIGHT BLUE COLOR. THE COVER FEATURES A PIXELATED ILLUSTRATION OF A POKÉMON CHARACTER, POSSIBLY A POKÉBALL, AND A CHARACTER THAT APPEARS TO BE A POKÉMON, POSSIBLY A POKÉBALL. THE CHARACTER IS STANDING NEXT TO A POKÉBALL. THE BACKGROUND OF THE COVER ART IS A LIGHT BLUE COLOR, WITH A REPEATING PATTERN OF POKÉMON AND POKÉBALLS. THE BOTTOM OF THE COVER ART INCLUDES COPYRIGHT INFORMATION FOR THE GAME, "©95.96.98 GAME FREAK INC."
+
+ THE SCREEN DISPLAYS THE TITLE "POKÉMON BLUE" WITH THE PLAYER'S NAME, "BLUE", AND THE CURRENT GAME STATE.  THE PLAYER IS STANDING NEXT TO A POKÉBALL, AND THE MENU OPTIONS ARE VISIBLE.  THE SCREEN ALSO SHOWS AVAILABLE MOVEMENT DIRECTIONS AND A BATTLE CONTEXT.
+
+RECENT MOVES: ['A']
+
+DECIDE THE NEXT BUTTON TO PRESS. REPLY WITH A SINGLE WORD:
+UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.
+[2025-02-27 13:48:23] Invalid action 'YOU ARE CONTROLLING A GAME BOY EMULATOR PLAYING POKÉMON BLUE.
+YOUR GOAL IS TO REACH THE HALL OF FAME IN AS FEW MOVES AS POSSIBLE.
+YOU MAY PRESS ONLY ONE BUTTON AT A TIME: UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.
+
+GAME STATE BREAKDOWN:
+ THE IMAGE PRESENTS THE COVER ART FOR THE VIDEO GAME "POKÉMON BLUE VERSION". THE COVER IS PREDOMINANTLY BLUE, WITH A WHITE BORDER. THE TITLE "POKÉMON BLUE VERSION" IS PROMINENTLY DISPLAYED IN A YELLOW FONT, WITH THE POKÉMON LOGO IN A LIGHT BLUE COLOR. THE COVER FEATURES A PIXELATED ILLUSTRATION OF A POKÉMON CHARACTER, POSSIBLY A POKÉBALL, AND A CHARACTER THAT APPEARS TO BE A POKÉMON, POSSIBLY A POKÉBALL. THE CHARACTER IS STANDING NEXT TO A POKÉBALL. THE BACKGROUND OF THE COVER ART IS A LIGHT BLUE COLOR, WITH A REPEATING PATTERN OF POKÉMON AND POKÉBALLS. THE BOTTOM OF THE COVER ART INCLUDES COPYRIGHT INFORMATION FOR THE GAME, "©95.96.98 GAME FREAK INC."
+
+ THE SCREEN DISPLAYS THE TITLE "POKÉMON BLUE" WITH THE PLAYER'S NAME, "BLUE", AND THE CURRENT GAME STATE.  THE PLAYER IS STANDING NEXT TO A POKÉBALL, AND THE MENU OPTIONS ARE VISIBLE.  THE SCREEN ALSO SHOWS AVAILABLE MOVEMENT DIRECTIONS AND A BATTLE CONTEXT.
+
+RECENT MOVES: ['A']
+
+DECIDE THE NEXT BUTTON TO PRESS. REPLY WITH A SINGLE WORD:
+UP, DOWN, LEFT, RIGHT, A, B, START, OR SELECT.' received. Defaulting to 'A'.
+[2025-02-27 13:48:23] Brought mGBA window to the front.
+[2025-02-27 13:48:23] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:48:23] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 13:48:23] Pressed key: z
+[2025-02-27 13:48:24] Updated mGBA window region to: (1272, 330, 512, 468)
+[2025-02-27 13:48:24] Saved debug capture of window region: C:\Projects\OmniPoke\logs\frames\window_debug.png

@@ -6,8 +6,8 @@ LLAMA_TEMPERATURE = 0.7  # Lower = more deterministic
 LLAMA_MAX_TOKENS = 80  # Increased for better decision-making
 LLAMA_TOP_K = 5  # Limits output randomness
 
-# === LLaVA Vision Model ===
-LLAVA_MODEL_PATH = "llava-hf/llava-1.5-7b-hf"  # Using LLaVA
+# === Vision Model Settings ===
+VISION_MODEL_PATH = "vikhyatk/moondream2"
 
 # === ROM & Emulator Settings ===
 ROM_PATH = "roms/pokemon_blue.gb"
