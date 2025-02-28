@@ -1,6 +1,13 @@
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer, StoppingCriteria, StoppingCriteriaList
 import utils
+
+class StopOnTokens(StoppingCriteria):
+    def __init__(self, stop_token_ids):
+        self.stop_token_ids = stop_token_ids
+    
+    def __call__(self, input_ids, scores, **kwargs):
+        return any(input_ids[0][-1] == stop_id for stop_id in self.stop_token_ids)
 
 class Decision:
     """
@@ -13,47 +20,76 @@ class Decision:
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
         self.llama_model_name = "meta-llama/Llama-3.2-3B"
         
-        # Initialize Llama tokenizer and model.
+        # Initialize Llama tokenizer
         self.tokenizer = AutoTokenizer.from_pretrained(self.llama_model_name)
+        
+        # Load Llama with full float16 precision
         self.llama_model = AutoModelForCausalLM.from_pretrained(
             self.llama_model_name,
-            device_map={"": self.device}
+            device_map="auto",  # ✅ Auto-selects CUDA or CPU
+            torch_dtype=torch.float16,  # ✅ Full FP16 Mode
+            low_cpu_mem_usage=True
         )
-        utils.log(f"Llama model initialized on: {self.device}")
+
+        # Stop tokens for controlled generation
+        stop_words = [".", "\n"]
+        stop_token_ids = [self.tokenizer.encode(word, add_special_tokens=False)[-1] for word in stop_words]
+        self.stopping_criteria = StoppingCriteriaList([StopOnTokens(stop_token_ids)])
+        
+        utils.log(f"Llama model initialized on: {self.device} with full float16 precision")
+        
+        # Precompile prompts for faster generation
+        self.prompt_templates = self._create_prompt_templates()
         
         # Track the current game state
         self.current_state = "UNKNOWN"
         self.previous_states = []
         self.state_transitions = 0
+        
+        # Improved cache for recently seen game states
+        self.instruction_cache = {}
+        self.cache_size = 20  
+
+        # Direct action mapping for common states
+        self.common_state_actions = {
+            "TITLE_SCREEN": "START",
+            "DIALOGUE": "A",
+            "INTRO_SEQUENCE": "A"
+        }
+
+    def _create_prompt_templates(self):
+        """Create optimized prompt templates for Llama"""
+        return {
+            "TITLE_SCREEN": "You're at the Pokémon Blue title screen. Respond with: 'Press START button to begin the game.'",
+            "INTRO_SEQUENCE": "You're in Professor Oak's introduction. Respond with: 'Press A button to continue dialogue.'",
+            "DIALOGUE": "You're in a dialogue screen. Respond with: 'Press A button to continue dialogue.'",
+            "BATTLE": "You're in a Pokémon battle. Respond with exactly one of: 'Move UP', 'Move DOWN', or 'Press A'.",
+            "MENU": "You're navigating a menu. Respond with exactly one of: 'Move UP', 'Move DOWN', 'Press A', 'Press B'.",
+            "OVERWORLD": "You're exploring the overworld. Respond with exactly one of: 'Move UP', 'Move DOWN', 'Move LEFT', 'Move RIGHT', 'Press A'."
+        }
 
     def detect_game_state(self, game_state_text):
         """
-        Analyzes the game state description to determine what stage of the game we're in.
-        Returns a string representing the current game state.
+        Analyzes the game state description to determine the player's situation.
         """
-        if self.current_state != "UNKNOWN":
-            self.previous_states.append(self.current_state)
-            if len(self.previous_states) > 5:
-                self.previous_states.pop(0)
-        
-        if ("BLUE VERSION" in game_state_text.upper() or "POKÉMON LOGO" in game_state_text.upper()) and "OAK" not in game_state_text.upper():
+        game_state_upper = game_state_text.upper()
+
+        if "BLUE VERSION" in game_state_upper or "TITLE SCREEN" in game_state_upper:
             return "TITLE_SCREEN"
-        elif "OAK" in game_state_text.upper() or "PROFESSOR" in game_state_text.upper():
-            return "INTRO_SEQUENCE"
-        elif "TEXT" in game_state_text.upper() or "DIALOGUE" in game_state_text.upper():
-            return "DIALOGUE"
-        elif "BATTLE" in game_state_text.upper() or "FIGHT" in game_state_text.upper() or "ATTACK" in game_state_text.upper():
+        if "BATTLE" in game_state_upper or "FIGHT" in game_state_upper:
             return "BATTLE"
-        elif "MENU" in game_state_text.upper() or "OPTION" in game_state_text.upper() or "ITEMS" in game_state_text.upper():
+        if "TEXT" in game_state_upper or "DIALOGUE" in game_state_upper:
+            return "DIALOGUE"
+        if "OAK" in game_state_upper or "PROFESSOR" in game_state_upper:
+            return "INTRO_SEQUENCE"
+        if "MENU" in game_state_upper or "OPTION" in game_state_upper:
             return "MENU"
-        else:
-            return "OVERWORLD"
+        
+        return "OVERWORLD"
 
     def get_llama_instruction(self, game_state):
         """
-        Uses Llama to convert a game state description into a concise instruction task.
-        Instead of giving up after a fixed number of attempts, this method will
-        continuously modify generation settings until a valid instruction is produced.
+        Uses Llama-3.2-3B to generate a concise instruction based on the current game state.
         """
         new_state = self.detect_game_state(game_state)
         if new_state != self.current_state:
@@ -61,156 +97,63 @@ class Decision:
             utils.log(f"State transition: {self.current_state} -> {new_state}")
             self.current_state = new_state
 
-        # Build a state-specific prompt.
-        if self.current_state == "TITLE_SCREEN":
-            prompt = f"""
-You are an expert Pokémon Blue player. You're looking at the title screen now.
+        # Direct action mapping for common states
+        if new_state in self.common_state_actions:
+            return f"Press {self.common_state_actions[new_state]} button."
 
-Game state description:
-\"\"\"{game_state}\"\"\"
+        # Use state-based prompt
+        prompt = self.prompt_templates.get(new_state, self.prompt_templates["OVERWORLD"])
+        utils.log(f"Generating instruction for state: {new_state}")
 
-The correct action on the title screen is to press START (not A).
-Your response must be EXACTLY "Press START button to begin the game."
+        # Convert prompt into input tensor with float16 dtype
+        input_ids = self.tokenizer(prompt, return_tensors="pt").input_ids.to(self.device).to(torch.float16)
 
-Don't output any other buttons or explanations.
-"""
-        elif self.current_state == "INTRO_SEQUENCE":
-            prompt = f"""
-You are an expert Pokémon Blue player. You're in the introduction sequence with Professor Oak.
+        # Generate response
+        with torch.inference_mode():
+            output = self.llama_model.generate(
+                input_ids, 
+                max_new_tokens=25,
+                temperature=0.5,
+                top_p=0.85,
+                repetition_penalty=1.1,
+                stopping_criteria=self.stopping_criteria,
+                pad_token_id=self.tokenizer.eos_token_id
+            )
 
-Game state description:
-\"\"\"{game_state}\"\"\"
+        # Decode output
+        instruction = self.tokenizer.decode(output[0][input_ids.shape[1]:], skip_special_tokens=True).strip()
+        utils.log(f"Llama instruction: {instruction}")
 
-To progress through the introduction, we should press A to continue the dialogue.
-Your response must be EXACTLY "Press A button to continue dialogue."
-
-Don't output any other buttons or explanations.
-"""
-        elif self.current_state == "DIALOGUE":
-            prompt = f"""
-You are an expert Pokémon Blue player. You're in dialogue with an NPC or reading text.
-
-Game state description:
-\"\"\"{game_state}\"\"\"
-
-To continue reading text or progress the dialogue, press A.
-Your response must be EXACTLY "Press A button to continue dialogue."
-
-Don't output any other buttons or explanations.
-"""
-        elif self.current_state == "BATTLE":
-            prompt = f"""
-You are an expert Pokémon Blue player. You're in a Pokémon battle.
-
-Game state description:
-\"\"\"{game_state}\"\"\"
-
-Based on the battle screen, determine if you need to select a move (UP/DOWN then A) or perform another action.
-Respond with EXACTLY one of these formats:
-"Move UP to navigate battle menu."
-"Move DOWN to navigate battle menu."
-"Press A to select the current option."
-
-Don't output any other buttons or explanations.
-"""
-        elif self.current_state == "MENU":
-            prompt = f"""
-You are an expert Pokémon Blue player. You're navigating a menu.
-
-Game state description:
-\"\"\"{game_state}\"\"\"
-
-Based on the menu screen, determine how to navigate:
-Respond with EXACTLY one of these formats:
-"Move UP to navigate menu."
-"Move DOWN to navigate menu."
-"Press A to select the current option."
-"Press B to exit the menu."
-
-Don't output any other buttons or explanations.
-"""
-        else:  # OVERWORLD or UNKNOWN
-            prompt = f"""
-You are an expert Pokémon Blue player. You're exploring the overworld.
-
-Game state description:
-\"\"\"{game_state}\"\"\"
-
-Based on the screen, determine which direction to move or button to press:
-Respond with EXACTLY one of these formats:
-"Move UP to explore."
-"Move DOWN to explore."
-"Move LEFT to explore."
-"Move RIGHT to explore."
-"Press A to interact."
-"Press START to open menu."
-
-Don't output any other buttons or explanations.
-"""
-
-        utils.log(f"Generating instruction for state: {self.current_state}")
-        
-        attempt = 0
-        base_temperature = 0.7
-        base_max_tokens = 30
-        valid_indicators = ["PRESS A", "PRESS B", "PRESS START", "MOVE UP", "MOVE DOWN", "MOVE LEFT", "MOVE RIGHT"]
-        while True:
-            curr_temp = base_temperature + (0.1 * (attempt % 10))
-            curr_max_tokens = base_max_tokens + (2 * (attempt // 10))
-            input_ids = self.tokenizer(prompt, return_tensors="pt").input_ids.to(self.device)
-            output_ids = self.llama_model.generate(input_ids, max_new_tokens=curr_max_tokens, temperature=curr_temp)
-            instruction = self.tokenizer.decode(output_ids[0], skip_special_tokens=True)
-            instruction = instruction.replace(prompt, "").strip()
-            utils.log(f"Attempt {attempt+1} (temp={curr_temp}, max_tokens={curr_max_tokens}): Instruction: {instruction}")
-            if any(ind in instruction.upper() for ind in valid_indicators):
-                return instruction.strip()
-            attempt += 1
+        return instruction if instruction else "Press A button to continue."
 
     def get_next_action(self):
         """
-        Uses Vision to obtain the game state text, then returns a button press decision.
-        If the game state indicates the title screen, it immediately forces the START button,
-        bypassing instruction generation.
-        Otherwise, it continuously adjusts generation settings until a valid instruction
-        is parsed.
+        Uses Vision to obtain the game state and determine the next button press.
         """
         game_state = self.vision.get_game_state_text()
         utils.log(f"Game state from vision: {game_state}")
-        
-        # Immediately force START if title screen is detected.
-        if "BLUE VERSION" in game_state.upper() or "POKÉMON LOGO" in game_state.upper():
-            utils.log("Title screen detected from game state. Forcing START button.")
-            self.current_state = "TITLE_SCREEN"
+
+        if "TITLE SCREEN" in game_state.upper():
             return "START"
 
-        attempt = 0
-        while True:
-            try:
-                instruction = self.get_llama_instruction(game_state)
-            except Exception as e:
-                utils.log(f"Attempt {attempt+1}: Llama generation failed: {e}")
-                continue
+        # Generate task instruction
+        instruction = self.get_llama_instruction(game_state)
+        utils.log(f"Llama instruction: {instruction}")
 
-            utils.log(f"Llama instruction: {instruction}")
-            if self.current_state == "TITLE_SCREEN":
-                utils.log("Title screen detected. Forcing START button.")
-                return "START"
-
-            instruction_upper = instruction.upper()
-            if "PRESS A" in instruction_upper:
-                return "A"
-            elif "PRESS B" in instruction_upper:
-                return "B"
-            elif "PRESS START" in instruction_upper:
-                return "START"
-            elif "MOVE UP" in instruction_upper:
-                return "UP"
-            elif "MOVE DOWN" in instruction_upper:
-                return "DOWN"
-            elif "MOVE LEFT" in instruction_upper:
-                return "LEFT"
-            elif "MOVE RIGHT" in instruction_upper:
-                return "RIGHT"
-            else:
-                utils.log(f"Attempt {attempt+1}: No valid action parsed from instruction: '{instruction}'. Retrying with new generation settings...")
-            attempt += 1
+        action = instruction.upper()
+        if "PRESS A" in action:
+            return "A"
+        if "PRESS B" in action:
+            return "B"
+        if "PRESS START" in action:
+            return "START"
+        if "MOVE UP" in action:
+            return "UP"
+        if "MOVE DOWN" in action:
+            return "DOWN"
+        if "MOVE LEFT" in action:
+            return "LEFT"
+        if "MOVE RIGHT" in action:
+            return "RIGHT"
+        
+        return self.get_next_action()  # Recursive call to try again for AI PLAYTHROUGH

@@ -7547,3 +7547,1192 @@ Do not include any extra explanation.
 [2025-02-27 17:44:50] State transition: TITLE_SCREEN -> DIALOGUE
 [2025-02-27 17:44:50] Generating instruction for state: DIALOGUE
 [2025-02-27 17:45:25] Attempt 1 (temp=0.7, max_tokens=30): Instruction: 
+[2025-02-27 17:55:33] Attempt 2 (temp=0.7999999999999999, max_tokens=30): Instruction: If you don't press A, the game will exit.
+
+There are no additional challenges.
+[2025-02-27 17:55:33] Llama instruction: If you don't press A, the game will exit.
+
+There are no additional challenges.
+[2025-02-27 17:55:33] Brought mGBA window to the front.
+[2025-02-27 17:55:33] Updated mGBA window region to: (2011, 614, 265, 216)
+[2025-02-27 17:55:33] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:55:33] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-27 17:55:33] Pressed gamepad button: A
+[2025-02-27 17:55:33] Brought mGBA window to the front.
+[2025-02-27 17:55:33] Updated mGBA window region to: (2011, 614, 265, 216)
+[2025-02-27 17:55:33] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 17:55:33] Updated mGBA window region to: (2011, 614, 265, 216)
+[2025-02-27 17:55:33] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:04:41] Moondream Screen Description:  The image shows a Pokémon Blue game screen. The title screen displays "NEW GAME" and "OPTION".  Dialogue options are not visible in the image.  Character positions and movement options are not shown.  Menu options are not visible.  Battle information is not shown.
+[2025-02-27 18:04:41] Title screen detection count: 6
+[2025-02-27 18:04:42] Brought mGBA window to the front.
+[2025-02-27 18:04:42] Updated mGBA window region to: (2011, 614, 265, 216)
+[2025-02-27 18:04:42] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:04:42] Updated mGBA window region to: (2011, 614, 265, 216)
+[2025-02-27 18:04:42] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:12:15] vJoy gamepad reset to default state.
+[2025-02-27 18:12:16] Launching mGBA emulator...
+[2025-02-27 18:12:19] Brought mGBA window to the front.
+[2025-02-27 18:12:19] Updated mGBA window region to: (2011, 614, 306, 159)
+[2025-02-27 18:12:19] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:12:19] Updated mGBA window region to: (2011, 614, 306, 159)
+[2025-02-27 18:12:19] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:12:24] Moondream model initialized on: cuda
+[2025-02-27 18:12:30] Llama model initialized on: cuda with half precision
+[2025-02-27 18:12:30] Starting Pokémon Blue AI training (All Moondream + Llama)...
+[2025-02-27 18:12:30] Pressing START button to begin game...
+[2025-02-27 18:12:30] Brought mGBA window to the front.
+[2025-02-27 18:12:30] Updated mGBA window region to: (2123, 665, 27, 111)
+[2025-02-27 18:12:31] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:12:31] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 18:12:31] Pressed gamepad button: START
+[2025-02-27 18:12:56] Failed to bring mGBA to front: (0, 'SetForegroundWindow', 'No error message is available')
+[2025-02-27 18:12:56] Updated mGBA window region to: (2011, 614, 279, 228)
+[2025-02-27 18:12:56] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:18:26] Moondream Screen Description:  The image shows a Pokémon Blue game screen. The title screen displays the game's title, "Pokémon", in a stylized font. Below the title, the text "Blue Version" indicates the game's color scheme. The bottom portion of the screen features a character, likely a Pokémon, alongside a second character, possibly a Pokémon or a human. The character's position suggests they are in a fighting stance.
+[2025-02-27 18:18:26] Title screen detection count: 1
+[2025-02-27 18:18:26] Game state from vision:  The image shows a Pokémon Blue game screen. The title screen displays the game's title, "Pokémon", in a stylized font. Below the title, the text "Blue Version" indicates the game's color scheme. The bottom portion of the screen features a character, likely a Pokémon, alongside a second character, possibly a Pokémon or a human. The character's position suggests they are in a fighting stance.
+[2025-02-27 18:18:26] Title screen detected from game state. Forcing START button.
+[2025-02-27 18:18:26] Failed to bring mGBA to front: (0, 'SetForegroundWindow', 'No error message is available')
+[2025-02-27 18:18:26] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 18:18:26] Pressed gamepad button: START
+[2025-02-27 18:18:26] Failed to bring mGBA to front: (0, 'SetForegroundWindow', 'No error message is available')
+[2025-02-27 18:18:26] Updated mGBA window region to: (1321, 880, 279, 228)
+[2025-02-27 18:18:26] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:19:59] vJoy gamepad reset to default state.
+[2025-02-27 18:20:00] Launching mGBA emulator...
+[2025-02-27 18:20:03] Brought mGBA window to the front.
+[2025-02-27 18:20:03] Updated mGBA window region to: (2001, 614, 326, 159)
+[2025-02-27 18:20:03] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:20:03] Updated mGBA window region to: (2001, 614, 326, 159)
+[2025-02-27 18:20:03] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:20:17] vJoy gamepad reset to default state.
+[2025-02-27 18:20:18] Launching mGBA emulator...
+[2025-02-27 18:20:21] Brought mGBA window to the front.
+[2025-02-27 18:20:21] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:20:21] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:20:21] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:20:21] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:21:01] vJoy gamepad reset to default state.
+[2025-02-27 18:21:02] Launching mGBA emulator...
+[2025-02-27 18:21:05] Brought mGBA window to the front.
+[2025-02-27 18:21:05] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:21:05] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:21:05] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:21:05] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:21:10] Moondream model initialized on: cuda with 8-bit quantization
+[2025-02-27 18:21:16] Llama model initialized on: cuda with 8-bit quantization
+[2025-02-27 18:21:16] Starting Pokémon Blue AI training with optimized models...
+[2025-02-27 18:21:16] Pressing START button to begin game...
+[2025-02-27 18:21:16] Brought mGBA window to the front.
+[2025-02-27 18:21:16] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:21:16] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:21:16] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 18:21:17] Pressed gamepad button: START
+[2025-02-27 18:21:22] Brought mGBA window to the front.
+[2025-02-27 18:21:22] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:21:22] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:21:22] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:21:22] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:21:22] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 18:21:23] Brought mGBA window to the front.
+[2025-02-27 18:21:23] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:21:23] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:21:23] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:21:24] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:21:24] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 18:21:25] Brought mGBA window to the front.
+[2025-02-27 18:21:25] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:21:25] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:21:25] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:21:25] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:21:25] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 18:21:27] Brought mGBA window to the front.
+[2025-02-27 18:21:27] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:21:27] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:21:27] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:21:27] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:21:27] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 18:21:29] Brought mGBA window to the front.
+[2025-02-27 18:21:29] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:21:29] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:21:29] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:21:29] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:21:29] Frame unchanged, reusing last description
+[2025-02-27 18:21:29] Brought mGBA window to the front.
+[2025-02-27 18:21:29] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:21:29] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:21:29] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:21:29] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:22:55] vJoy gamepad reset to default state.
+[2025-02-27 18:22:56] Launching mGBA emulator...
+[2025-02-27 18:22:59] Brought mGBA window to the front.
+[2025-02-27 18:22:59] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:22:59] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:22:59] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:22:59] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:04] Moondream model initialized on: cuda with 8-bit quantization
+[2025-02-27 18:23:09] Llama model initialized on: cuda with 8-bit quantization
+[2025-02-27 18:23:09] Starting Pokémon Blue AI training with optimized models...
+[2025-02-27 18:23:09] Pressing START button to begin game...
+[2025-02-27 18:23:09] Brought mGBA window to the front.
+[2025-02-27 18:23:09] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:09] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 18:23:10] Pressed gamepad button: START
+[2025-02-27 18:23:15] Brought mGBA window to the front.
+[2025-02-27 18:23:15] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:15] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:15] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:15] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:15] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:23:16] Brought mGBA window to the front.
+[2025-02-27 18:23:16] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:17] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:17] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:17] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:17] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:23:18] Brought mGBA window to the front.
+[2025-02-27 18:23:18] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:18] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:18] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:18] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:18] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:23:20] Brought mGBA window to the front.
+[2025-02-27 18:23:20] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:20] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:20] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:20] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:20] Frame unchanged, reusing last description
+[2025-02-27 18:23:20] Brought mGBA window to the front.
+[2025-02-27 18:23:20] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:20] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:20] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:20] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:20] Frame unchanged, reusing last description
+[2025-02-27 18:23:20] Game state from vision: Game screen with no changes
+[2025-02-27 18:23:20] State transition: UNKNOWN -> OVERWORLD
+[2025-02-27 18:23:20] Generating instruction for state: OVERWORLD
+[2025-02-27 18:23:21] Llama instruction: 
+[2025-02-27 18:23:21] Llama instruction: Move RIGHT to explore.
+[2025-02-27 18:23:21] Brought mGBA window to the front.
+[2025-02-27 18:23:21] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:21] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:21] Pressing gamepad button: RIGHT (vJoy Button 6)
+[2025-02-27 18:23:21] Pressed gamepad button: RIGHT
+[2025-02-27 18:23:22] Brought mGBA window to the front.
+[2025-02-27 18:23:22] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:22] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:22] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:22] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:22] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:23:24] Brought mGBA window to the front.
+[2025-02-27 18:23:24] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:24] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:24] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:24] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:24] Frame unchanged, reusing last description
+[2025-02-27 18:23:24] Brought mGBA window to the front.
+[2025-02-27 18:23:24] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:24] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:24] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:24] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:24] Frame unchanged, reusing last description
+[2025-02-27 18:23:24] Game state from vision: Game screen with no changes
+[2025-02-27 18:23:24] Generating instruction for state: OVERWORLD
+[2025-02-27 18:23:25] Llama instruction: 
+[2025-02-27 18:23:25] Llama instruction: Move RIGHT to explore.
+[2025-02-27 18:23:25] Brought mGBA window to the front.
+[2025-02-27 18:23:25] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:25] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:25] Pressing gamepad button: RIGHT (vJoy Button 6)
+[2025-02-27 18:23:25] Pressed gamepad button: RIGHT
+[2025-02-27 18:23:42] vJoy gamepad reset to default state.
+[2025-02-27 18:23:43] Launching mGBA emulator...
+[2025-02-27 18:23:46] Brought mGBA window to the front.
+[2025-02-27 18:23:46] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:46] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:46] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:46] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:51] Moondream model initialized on: cuda with 8-bit quantization
+[2025-02-27 18:23:57] Llama model initialized on: cuda with 8-bit quantization
+[2025-02-27 18:23:57] Starting Pokémon Blue AI training with optimized models...
+[2025-02-27 18:23:57] Pressing START button to begin game...
+[2025-02-27 18:23:57] Brought mGBA window to the front.
+[2025-02-27 18:23:57] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:23:57] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:23:57] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 18:23:57] Pressed gamepad button: START
+[2025-02-27 18:24:02] Brought mGBA window to the front.
+[2025-02-27 18:24:02] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:24:02] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:24:02] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:24:02] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:24:02] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:24:04] Brought mGBA window to the front.
+[2025-02-27 18:24:04] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:24:04] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:24:04] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:24:04] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:24:04] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:24:06] Brought mGBA window to the front.
+[2025-02-27 18:24:06] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:24:06] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:24:06] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:24:06] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:24:06] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:24:08] Brought mGBA window to the front.
+[2025-02-27 18:24:08] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:24:08] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:24:08] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:24:08] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:24:08] Frame unchanged, reusing last description
+[2025-02-27 18:24:08] Brought mGBA window to the front.
+[2025-02-27 18:24:08] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:24:08] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:24:08] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:24:08] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:24:08] Frame unchanged, reusing last description
+[2025-02-27 18:24:08] Game state from vision: Game screen with no changes
+[2025-02-27 18:24:08] State transition: UNKNOWN -> OVERWORLD
+[2025-02-27 18:24:08] Generating instruction for state: OVERWORLD
+[2025-02-27 18:24:09] Llama instruction: 
+[2025-02-27 18:24:09] Llama instruction: Move RIGHT to explore.
+[2025-02-27 18:24:09] Brought mGBA window to the front.
+[2025-02-27 18:24:09] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:24:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:24:09] Pressing gamepad button: RIGHT (vJoy Button 6)
+[2025-02-27 18:24:09] Pressed gamepad button: RIGHT
+[2025-02-27 18:24:10] Brought mGBA window to the front.
+[2025-02-27 18:24:10] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:24:10] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:24:10] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:24:10] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:24:10] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:25:05] vJoy gamepad reset to default state.
+[2025-02-27 18:25:06] Launching mGBA emulator...
+[2025-02-27 18:25:09] Brought mGBA window to the front.
+[2025-02-27 18:25:09] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:25:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:25:09] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:25:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:25:14] Moondream model initialized on: cuda with 8-bit quantization
+[2025-02-27 18:25:20] Llama model initialized on: cuda with 8-bit quantization
+[2025-02-27 18:25:20] Starting Pokémon Blue AI training with optimized models...
+[2025-02-27 18:25:20] Pressing START button to begin game...
+[2025-02-27 18:25:20] Brought mGBA window to the front.
+[2025-02-27 18:25:20] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:25:20] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:25:20] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 18:25:21] Pressed gamepad button: START
+[2025-02-27 18:25:26] Brought mGBA window to the front.
+[2025-02-27 18:25:26] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:25:26] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:25:26] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:25:26] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:25:26] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:25:27] Brought mGBA window to the front.
+[2025-02-27 18:25:27] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:25:27] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:25:27] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:25:28] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:25:28] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:25:29] Brought mGBA window to the front.
+[2025-02-27 18:25:29] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:25:29] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:25:29] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:25:29] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:25:29] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:25:31] Brought mGBA window to the front.
+[2025-02-27 18:25:31] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:25:31] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:25:31] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:25:31] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:25:31] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:25:33] Brought mGBA window to the front.
+[2025-02-27 18:25:33] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:25:33] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:25:33] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:25:33] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:25:33] Frame unchanged, reusing last description
+[2025-02-27 18:25:33] Brought mGBA window to the front.
+[2025-02-27 18:25:33] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:27:22] vJoy gamepad reset to default state.
+[2025-02-27 18:27:23] Launching mGBA emulator...
+[2025-02-27 18:27:26] Brought mGBA window to the front.
+[2025-02-27 18:27:26] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:27:26] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:27:26] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:27:26] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:27:31] Moondream model initialized on: cuda with 8-bit quantization
+[2025-02-27 18:27:37] Llama model initialized on: cuda with 8-bit quantization
+[2025-02-27 18:27:37] Starting Pokémon Blue AI training with optimized models...
+[2025-02-27 18:27:37] Pressing START button to begin game...
+[2025-02-27 18:27:37] Brought mGBA window to the front.
+[2025-02-27 18:27:37] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:27:37] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:27:37] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 18:27:37] Pressed gamepad button: START
+[2025-02-27 18:27:42] Brought mGBA window to the front.
+[2025-02-27 18:27:42] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:27:42] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:27:42] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:27:42] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:27:42] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:27:44] Brought mGBA window to the front.
+[2025-02-27 18:27:44] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:27:44] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:27:44] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:27:44] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:27:44] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:27:46] Brought mGBA window to the front.
+[2025-02-27 18:27:46] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:27:46] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:27:46] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:27:46] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:27:46] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:28:24] vJoy gamepad reset to default state.
+[2025-02-27 18:28:25] Launching mGBA emulator...
+[2025-02-27 18:28:28] Brought mGBA window to the front.
+[2025-02-27 18:28:28] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:28:28] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:28:28] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:28:28] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:28:33] Moondream model initialized on: cuda with 8-bit quantization
+[2025-02-27 18:28:39] Llama model initialized on: cuda with 8-bit quantization
+[2025-02-27 18:28:39] Starting Pokémon Blue AI training with optimized models...
+[2025-02-27 18:28:39] Pressing START button to begin game...
+[2025-02-27 18:28:39] Brought mGBA window to the front.
+[2025-02-27 18:28:39] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:28:39] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:28:39] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 18:28:39] Pressed gamepad button: START
+[2025-02-27 18:28:44] Brought mGBA window to the front.
+[2025-02-27 18:28:44] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:28:44] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:28:44] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:28:44] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:28:44] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:28:46] Brought mGBA window to the front.
+[2025-02-27 18:28:46] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:28:46] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:28:46] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:28:46] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:28:46] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:28:48] Brought mGBA window to the front.
+[2025-02-27 18:28:48] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:28:48] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:28:48] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:28:48] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:28:48] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:28:50] Brought mGBA window to the front.
+[2025-02-27 18:28:50] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:28:50] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:28:50] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:28:50] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:28:50] Frame unchanged, reusing last description
+[2025-02-27 18:28:50] Brought mGBA window to the front.
+[2025-02-27 18:28:50] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:28:50] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:28:50] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:28:50] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:28:50] Frame unchanged, reusing last description
+[2025-02-27 18:28:50] Game state from vision: Game screen with no changes
+[2025-02-27 18:28:50] State transition: UNKNOWN -> OVERWORLD
+[2025-02-27 18:28:50] Generating instruction for state: OVERWORLD
+[2025-02-27 18:28:51] Llama instruction: 
+[2025-02-27 18:28:51] Llama instruction: Move RIGHT to explore.
+[2025-02-27 18:28:51] Brought mGBA window to the front.
+[2025-02-27 18:28:51] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:28:51] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:28:51] Pressing gamepad button: RIGHT (vJoy Button 6)
+[2025-02-27 18:28:51] Pressed gamepad button: RIGHT
+[2025-02-27 18:28:52] Brought mGBA window to the front.
+[2025-02-27 18:28:52] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:28:52] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:28:52] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:28:52] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:28:52] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:33:53] vJoy gamepad reset to default state.
+[2025-02-27 18:33:54] Launching mGBA emulator...
+[2025-02-27 18:33:57] Brought mGBA window to the front.
+[2025-02-27 18:33:57] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:33:57] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:33:57] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:33:57] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:02] Moondream model initialized on: cuda with 8-bit quantization
+[2025-02-27 18:34:08] Llama model initialized on: cuda with 8-bit quantization
+[2025-02-27 18:34:08] Starting Pokémon Blue AI training with optimized models...
+[2025-02-27 18:34:08] Pressing START button to begin game...
+[2025-02-27 18:34:08] Brought mGBA window to the front.
+[2025-02-27 18:34:08] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:08] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:08] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 18:34:08] Pressed gamepad button: START
+[2025-02-27 18:34:13] Brought mGBA window to the front.
+[2025-02-27 18:34:13] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:13] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:13] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:13] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:13] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:34:15] Brought mGBA window to the front.
+[2025-02-27 18:34:15] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:15] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:15] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:15] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:15] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:34:17] Brought mGBA window to the front.
+[2025-02-27 18:34:17] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:17] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:17] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:17] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:17] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:34:19] Brought mGBA window to the front.
+[2025-02-27 18:34:19] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:19] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:19] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:19] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:19] Frame unchanged, reusing last description
+[2025-02-27 18:34:19] Brought mGBA window to the front.
+[2025-02-27 18:34:19] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:19] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:19] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:19] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:19] Frame unchanged, reusing last description
+[2025-02-27 18:34:19] Game state from vision: Game screen with no changes
+[2025-02-27 18:34:19] State transition: UNKNOWN -> OVERWORLD
+[2025-02-27 18:34:19] Generating instruction for state: OVERWORLD
+[2025-02-27 18:34:20] Llama instruction: 
+[2025-02-27 18:34:20] Llama instruction: Move RIGHT to explore.
+[2025-02-27 18:34:20] Brought mGBA window to the front.
+[2025-02-27 18:34:20] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:20] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:20] Pressing gamepad button: RIGHT (vJoy Button 6)
+[2025-02-27 18:34:20] Pressed gamepad button: RIGHT
+[2025-02-27 18:34:21] Brought mGBA window to the front.
+[2025-02-27 18:34:21] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:21] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:21] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:21] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:21] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:34:22] Brought mGBA window to the front.
+[2025-02-27 18:34:22] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:22] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:22] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:23] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:23] Frame unchanged, reusing last description
+[2025-02-27 18:34:23] Brought mGBA window to the front.
+[2025-02-27 18:34:23] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:23] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:23] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:23] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:23] Frame unchanged, reusing last description
+[2025-02-27 18:34:23] Game state from vision: Game screen with no changes
+[2025-02-27 18:34:23] Generating instruction for state: OVERWORLD
+[2025-02-27 18:34:24] Llama instruction: 
+[2025-02-27 18:34:24] Llama instruction: Move RIGHT to explore.
+[2025-02-27 18:34:24] Brought mGBA window to the front.
+[2025-02-27 18:34:24] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:24] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:24] Pressing gamepad button: RIGHT (vJoy Button 6)
+[2025-02-27 18:34:24] Pressed gamepad button: RIGHT
+[2025-02-27 18:34:25] Brought mGBA window to the front.
+[2025-02-27 18:34:25] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:25] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:25] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:25] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:25] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:34:27] Brought mGBA window to the front.
+[2025-02-27 18:34:27] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:27] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:27] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:27] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:27] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:34:27] Too many consecutive failures. Restarting emulator...
+[2025-02-27 18:34:28] Brought mGBA window to the front.
+[2025-02-27 18:34:28] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:28] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:28] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:28] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:29] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:34:30] Brought mGBA window to the front.
+[2025-02-27 18:34:30] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:30] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:30] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:30] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:30] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:34:32] Brought mGBA window to the front.
+[2025-02-27 18:34:32] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:32] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:32] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:32] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:32] Frame unchanged, reusing last description
+[2025-02-27 18:34:32] Brought mGBA window to the front.
+[2025-02-27 18:34:32] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:32] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:32] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:32] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:32] Frame unchanged, reusing last description
+[2025-02-27 18:34:32] Game state from vision: Game screen with no changes
+[2025-02-27 18:34:32] Generating instruction for state: OVERWORLD
+[2025-02-27 18:34:33] Llama instruction: 
+[2025-02-27 18:34:33] Llama instruction: Move RIGHT to explore.
+[2025-02-27 18:34:33] Brought mGBA window to the front.
+[2025-02-27 18:34:33] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:33] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:33] Pressing gamepad button: RIGHT (vJoy Button 6)
+[2025-02-27 18:34:33] Pressed gamepad button: RIGHT
+[2025-02-27 18:34:34] Brought mGBA window to the front.
+[2025-02-27 18:34:34] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:34] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:34] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:34] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:34] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:34:35] Brought mGBA window to the front.
+[2025-02-27 18:34:35] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:35] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:35] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:34:36] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:34:36] Error during gameplay loop: You need to specify either `text` or `text_target`.
+[2025-02-27 18:36:58] vJoy gamepad reset to default state.
+[2025-02-27 18:36:59] Launching mGBA emulator...
+[2025-02-27 18:37:02] Brought mGBA window to the front.
+[2025-02-27 18:37:02] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:37:02] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:37:02] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:37:02] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:37:06] Moondream model initialized on: cuda with 8-bit quantization
+[2025-02-27 18:37:12] Llama model initialized on: cuda with 8-bit quantization
+[2025-02-27 18:37:12] Starting Pokémon Blue AI training with optimized models...
+[2025-02-27 18:37:12] Pressing START button to begin game...
+[2025-02-27 18:37:12] Brought mGBA window to the front.
+[2025-02-27 18:37:12] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:37:12] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:37:12] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 18:37:12] Pressed gamepad button: START
+[2025-02-27 18:37:17] Brought mGBA window to the front.
+[2025-02-27 18:37:17] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:37:17] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:37:17] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:37:17] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:37:17] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 18:37:19] Brought mGBA window to the front.
+[2025-02-27 18:37:19] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:37:19] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:37:19] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:37:19] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:37:19] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 18:37:21] Brought mGBA window to the front.
+[2025-02-27 18:37:21] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:37:21] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:37:21] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:37:21] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:37:21] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 18:37:50] vJoy gamepad reset to default state.
+[2025-02-27 18:37:51] Launching mGBA emulator...
+[2025-02-27 18:37:54] Brought mGBA window to the front.
+[2025-02-27 18:37:54] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:37:54] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:37:54] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:37:54] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:37:58] Moondream model initialized on: cuda with 8-bit quantization
+[2025-02-27 18:38:04] Llama model initialized on: cuda with 8-bit quantization
+[2025-02-27 18:38:04] Starting Pokémon Blue AI training with optimized models...
+[2025-02-27 18:38:04] Pressing START button to begin game...
+[2025-02-27 18:38:04] Brought mGBA window to the front.
+[2025-02-27 18:38:04] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:38:04] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:38:04] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 18:38:04] Pressed gamepad button: START
+[2025-02-27 18:38:09] Failed to bring mGBA to front: (0, 'SetForegroundWindow', 'No error message is available')
+[2025-02-27 18:38:09] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:38:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:38:10] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 18:38:11] Failed to bring mGBA to front: (0, 'SetForegroundWindow', 'No error message is available')
+[2025-02-27 18:38:11] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:38:11] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:38:11] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 18:38:13] Failed to bring mGBA to front: (0, 'SetForegroundWindow', 'No error message is available')
+[2025-02-27 18:38:13] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:38:13] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:38:13] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 18:38:15] Failed to bring mGBA to front: (0, 'SetForegroundWindow', 'No error message is available')
+[2025-02-27 18:38:15] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:38:15] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:38:15] Frame unchanged, reusing last description
+[2025-02-27 18:38:15] Failed to bring mGBA to front: (0, 'SetForegroundWindow', 'No error message is available')
+[2025-02-27 18:38:15] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:38:15] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:38:15] Frame unchanged, reusing last description
+[2025-02-27 18:38:15] Game state from vision: Game screen with no changes
+[2025-02-27 18:38:15] State transition: UNKNOWN -> OVERWORLD
+[2025-02-27 18:38:15] Generating instruction for state: OVERWORLD
+[2025-02-27 18:38:16] Llama instruction: 
+[2025-02-27 18:38:16] Llama instruction: Move RIGHT to explore.
+[2025-02-27 18:38:16] Failed to bring mGBA to front: (0, 'SetForegroundWindow', 'No error message is available')
+[2025-02-27 18:38:16] Pressing gamepad button: RIGHT (vJoy Button 6)
+[2025-02-27 18:38:16] Pressed gamepad button: RIGHT
+[2025-02-27 18:38:17] Failed to bring mGBA to front: (0, 'SetForegroundWindow', 'No error message is available')
+[2025-02-27 18:38:17] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:38:17] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:38:17] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 18:38:18] Brought mGBA window to the front.
+[2025-02-27 18:38:18] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:38:18] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:38:18] Updated mGBA window region to: (2001, 614, 326, 249)
+[2025-02-27 18:38:18] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:38:19] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 18:45:02] vJoy gamepad reset to default state.
+[2025-02-27 18:45:02] Launching mGBA emulator...
+[2025-02-27 18:45:05] Brought mGBA window to the front.
+[2025-02-27 18:45:05] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 18:45:06] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:45:06] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 18:45:06] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 18:45:10] Moondream model initialized on: cuda with 8-bit quantization
+[2025-02-27 19:09:31] vJoy gamepad reset to default state.
+[2025-02-27 19:09:32] Launching mGBA emulator...
+[2025-02-27 19:09:35] Brought mGBA window to the front.
+[2025-02-27 19:09:35] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:09:35] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:09:35] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:09:35] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:09:39] Moondream model initialized on: cuda with 8-bit quantization
+[2025-02-27 19:09:45] Llama model initialized on: cuda with 8-bit quantization
+[2025-02-27 19:09:45] Starting Pokémon Blue AI training with optimized models...
+[2025-02-27 19:09:45] Pressing START button to begin game...
+[2025-02-27 19:09:45] Brought mGBA window to the front.
+[2025-02-27 19:09:45] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:09:45] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:09:45] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 19:09:45] Pressed gamepad button: START
+[2025-02-27 19:09:50] Brought mGBA window to the front.
+[2025-02-27 19:09:50] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:09:50] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:09:50] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:09:50] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:09:50] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 19:09:52] Brought mGBA window to the front.
+[2025-02-27 19:09:52] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:09:52] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:09:52] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:09:52] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:09:52] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 19:09:54] Brought mGBA window to the front.
+[2025-02-27 19:09:54] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:09:54] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:09:54] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:09:54] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:09:54] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 19:10:55] vJoy gamepad reset to default state.
+[2025-02-27 19:10:56] Launching mGBA emulator...
+[2025-02-27 19:10:59] Brought mGBA window to the front.
+[2025-02-27 19:10:59] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:10:59] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:10:59] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:10:59] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:11:03] Moondream model initialized on: cuda with 8-bit quantization
+[2025-02-27 19:11:09] Llama model initialized on: cuda with 8-bit quantization
+[2025-02-27 19:11:09] Starting Pokémon Blue AI training with optimized models...
+[2025-02-27 19:11:09] Pressing START button to begin game...
+[2025-02-27 19:11:09] Brought mGBA window to the front.
+[2025-02-27 19:11:09] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:11:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:11:09] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 19:11:09] Pressed gamepad button: START
+[2025-02-27 19:11:14] Brought mGBA window to the front.
+[2025-02-27 19:11:14] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:11:14] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:11:14] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:11:14] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:11:14] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 19:11:16] Brought mGBA window to the front.
+[2025-02-27 19:11:16] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:11:16] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:11:16] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:11:16] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:11:16] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 19:12:43] vJoy gamepad reset to default state.
+[2025-02-27 19:12:44] Launching mGBA emulator...
+[2025-02-27 19:12:47] Brought mGBA window to the front.
+[2025-02-27 19:12:47] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:12:47] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:12:47] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:12:48] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:12:52] Moondream model initialized on: cuda with 8-bit quantization
+[2025-02-27 19:12:57] Llama model initialized on: cuda with full float16 precision
+[2025-02-27 19:12:57] Starting Pokémon Blue AI training with optimized models...
+[2025-02-27 19:12:57] Pressing START button to begin game...
+[2025-02-27 19:12:57] Brought mGBA window to the front.
+[2025-02-27 19:12:57] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:12:57] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:12:57] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 19:12:57] Pressed gamepad button: START
+[2025-02-27 19:13:02] Brought mGBA window to the front.
+[2025-02-27 19:13:02] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:13:03] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:13:03] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:13:03] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:13:03] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 19:13:04] Brought mGBA window to the front.
+[2025-02-27 19:13:04] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:13:05] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:13:05] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:13:05] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:13:05] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 19:13:06] Brought mGBA window to the front.
+[2025-02-27 19:13:06] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:13:06] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:13:06] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:13:07] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:13:07] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 19:13:08] Brought mGBA window to the front.
+[2025-02-27 19:13:08] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:13:08] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:13:08] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:13:08] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:13:08] Frame unchanged, reusing last description
+[2025-02-27 19:13:08] Brought mGBA window to the front.
+[2025-02-27 19:13:08] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:13:08] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:13:08] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:13:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:13:09] Frame unchanged, reusing last description
+[2025-02-27 19:13:09] Game state from vision: Game screen with no changes
+[2025-02-27 19:13:09] State transition: UNKNOWN -> OVERWORLD
+[2025-02-27 19:13:09] Generating instruction for state: OVERWORLD
+[2025-02-27 19:13:09] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:13:10] Brought mGBA window to the front.
+[2025-02-27 19:13:10] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:13:10] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:13:10] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:13:10] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:13:10] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 19:13:12] Brought mGBA window to the front.
+[2025-02-27 19:13:12] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:13:12] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:13:12] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:13:12] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:13:12] Frame unchanged, reusing last description
+[2025-02-27 19:13:12] Brought mGBA window to the front.
+[2025-02-27 19:13:12] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:13:12] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:13:12] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:13:12] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:13:12] Frame unchanged, reusing last description
+[2025-02-27 19:13:12] Game state from vision: Game screen with no changes
+[2025-02-27 19:13:12] Generating instruction for state: OVERWORLD
+[2025-02-27 19:13:13] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:13:13] Too many consecutive failures. Restarting emulator...
+[2025-02-27 19:13:14] Brought mGBA window to the front.
+[2025-02-27 19:13:14] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:13:14] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:13:14] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:13:14] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:13:14] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 19:13:16] Brought mGBA window to the front.
+[2025-02-27 19:13:16] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:13:16] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:13:16] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:13:16] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:13:16] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 19:14:51] vJoy gamepad reset to default state.
+[2025-02-27 19:14:52] Launching mGBA emulator...
+[2025-02-27 19:14:55] Brought mGBA window to the front.
+[2025-02-27 19:14:55] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:14:55] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:14:55] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:14:55] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:14:59] Moondream model initialized on: cuda with full float16 precision
+[2025-02-27 19:15:04] Llama model initialized on: cuda with full float16 precision
+[2025-02-27 19:15:04] Starting Pokémon Blue AI training with optimized models...
+[2025-02-27 19:15:04] Pressing START button to begin game...
+[2025-02-27 19:15:04] Brought mGBA window to the front.
+[2025-02-27 19:15:04] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:15:04] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:15:04] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 19:15:04] Pressed gamepad button: START
+[2025-02-27 19:15:09] Brought mGBA window to the front.
+[2025-02-27 19:15:09] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:15:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:15:09] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:15:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:15:34] Moondream Screen Description:  The game screen shows a blue background with a white border. A purple Pokémon is shown in a fighting stance, with a white Pokémon partially visible behind it. The top and bottom sections of the screen are black.
+[2025-02-27 19:15:34] Brought mGBA window to the front.
+[2025-02-27 19:15:34] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:15:34] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:15:34] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:15:35] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:16:42] Moondream Screen Description:  The image shows the title screen of the Pokémon Blue game. It displays the game's title, "Pokémon Blue", in a stylized font. Below the title, the text "Blue Version" indicates the game's color scheme. Two characters are visible: a female Pokémon with a long white tail and a male Pokémon with a white cap. The male Pokémon is standing and appears to be holding a small, dark object.
+[2025-02-27 19:16:42] Title screen detection count: 1
+[2025-02-27 19:16:42] Game state from vision:  The image shows the title screen of the Pokémon Blue game. It displays the game's title, "Pokémon Blue", in a stylized font. Below the title, the text "Blue Version" indicates the game's color scheme. Two characters are visible: a female Pokémon with a long white tail and a male Pokémon with a white cap. The male Pokémon is standing and appears to be holding a small, dark object.
+[2025-02-27 19:16:42] Brought mGBA window to the front.
+[2025-02-27 19:16:42] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:16:42] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:16:42] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 19:16:42] Pressed gamepad button: START
+[2025-02-27 19:16:43] Brought mGBA window to the front.
+[2025-02-27 19:16:43] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:16:43] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:16:43] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:16:43] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:22] Moondream Screen Description:  The game screen is entirely black, with no visible text, character positions, or battle information.
+[2025-02-27 19:18:22] Brought mGBA window to the front.
+[2025-02-27 19:18:22] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:22] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:22] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:22] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:22] Using cached frame description
+[2025-02-27 19:18:22] Game state from vision:  The game screen is entirely black, with no visible text, character positions, or battle information.
+[2025-02-27 19:18:22] State transition: UNKNOWN -> BATTLE
+[2025-02-27 19:18:22] Generating instruction for state: BATTLE
+[2025-02-27 19:18:22] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:18:24] Brought mGBA window to the front.
+[2025-02-27 19:18:24] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:24] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:24] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:24] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:24] Using cached frame description
+[2025-02-27 19:18:24] Brought mGBA window to the front.
+[2025-02-27 19:18:24] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:24] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:24] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:24] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:24] Using cached frame description
+[2025-02-27 19:18:24] Game state from vision:  The game screen is entirely black, with no visible text, character positions, or battle information.
+[2025-02-27 19:18:24] Generating instruction for state: BATTLE
+[2025-02-27 19:18:24] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:18:26] Brought mGBA window to the front.
+[2025-02-27 19:18:26] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:26] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:26] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:26] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:26] Using cached frame description
+[2025-02-27 19:18:26] Brought mGBA window to the front.
+[2025-02-27 19:18:26] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:26] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:26] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:26] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:26] Using cached frame description
+[2025-02-27 19:18:26] Game state from vision:  The game screen is entirely black, with no visible text, character positions, or battle information.
+[2025-02-27 19:18:26] Generating instruction for state: BATTLE
+[2025-02-27 19:18:26] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:18:28] Brought mGBA window to the front.
+[2025-02-27 19:18:28] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:28] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:28] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:28] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:28] Using cached frame description
+[2025-02-27 19:18:28] Brought mGBA window to the front.
+[2025-02-27 19:18:28] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:28] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:28] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:28] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:28] Using cached frame description
+[2025-02-27 19:18:28] Game state from vision:  The game screen is entirely black, with no visible text, character positions, or battle information.
+[2025-02-27 19:18:28] Generating instruction for state: BATTLE
+[2025-02-27 19:18:28] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:18:30] Brought mGBA window to the front.
+[2025-02-27 19:18:30] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:30] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:30] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:30] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:30] Using cached frame description
+[2025-02-27 19:18:30] Brought mGBA window to the front.
+[2025-02-27 19:18:30] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:30] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:30] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:30] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:30] Using cached frame description
+[2025-02-27 19:18:30] Game state from vision:  The game screen is entirely black, with no visible text, character positions, or battle information.
+[2025-02-27 19:18:30] Generating instruction for state: BATTLE
+[2025-02-27 19:18:30] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:18:32] Brought mGBA window to the front.
+[2025-02-27 19:18:32] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:32] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:32] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:32] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:32] Using cached frame description
+[2025-02-27 19:18:32] Brought mGBA window to the front.
+[2025-02-27 19:18:32] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:32] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:32] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:32] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:32] Using cached frame description
+[2025-02-27 19:18:32] Game state from vision:  The game screen is entirely black, with no visible text, character positions, or battle information.
+[2025-02-27 19:18:32] Generating instruction for state: BATTLE
+[2025-02-27 19:18:32] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:18:32] Too many consecutive failures. Restarting emulator...
+[2025-02-27 19:18:34] Brought mGBA window to the front.
+[2025-02-27 19:18:34] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:34] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:34] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:34] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:34] Using cached frame description
+[2025-02-27 19:18:34] Brought mGBA window to the front.
+[2025-02-27 19:18:34] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:34] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:34] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:34] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:34] Using cached frame description
+[2025-02-27 19:18:34] Game state from vision:  The game screen is entirely black, with no visible text, character positions, or battle information.
+[2025-02-27 19:18:34] Generating instruction for state: BATTLE
+[2025-02-27 19:18:34] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:18:36] Brought mGBA window to the front.
+[2025-02-27 19:18:36] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:36] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:36] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:36] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:36] Using cached frame description
+[2025-02-27 19:18:36] Brought mGBA window to the front.
+[2025-02-27 19:18:36] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:36] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:36] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:36] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:36] Using cached frame description
+[2025-02-27 19:18:36] Game state from vision:  The game screen is entirely black, with no visible text, character positions, or battle information.
+[2025-02-27 19:18:36] Generating instruction for state: BATTLE
+[2025-02-27 19:18:36] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:18:38] Brought mGBA window to the front.
+[2025-02-27 19:18:38] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:38] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:38] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:38] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:38] Using cached frame description
+[2025-02-27 19:18:38] Brought mGBA window to the front.
+[2025-02-27 19:18:38] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:38] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:38] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:38] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:38] Saved frame: C:\projects\OmniPoke\logs\frames\frame_20.png
+[2025-02-27 19:18:38] Using cached frame description
+[2025-02-27 19:18:38] Game state from vision:  The game screen is entirely black, with no visible text, character positions, or battle information.
+[2025-02-27 19:18:38] Generating instruction for state: BATTLE
+[2025-02-27 19:18:38] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:18:40] Brought mGBA window to the front.
+[2025-02-27 19:18:40] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:40] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:40] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:40] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:40] Using cached frame description
+[2025-02-27 19:18:40] Brought mGBA window to the front.
+[2025-02-27 19:18:40] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:40] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:40] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:40] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:40] Using cached frame description
+[2025-02-27 19:18:40] Game state from vision:  The game screen is entirely black, with no visible text, character positions, or battle information.
+[2025-02-27 19:18:40] Generating instruction for state: BATTLE
+[2025-02-27 19:18:40] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:18:42] Brought mGBA window to the front.
+[2025-02-27 19:18:42] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:42] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:42] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:42] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:42] Using cached frame description
+[2025-02-27 19:18:42] Brought mGBA window to the front.
+[2025-02-27 19:18:42] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:42] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:42] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:42] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:42] Using cached frame description
+[2025-02-27 19:18:42] Game state from vision:  The game screen is entirely black, with no visible text, character positions, or battle information.
+[2025-02-27 19:18:42] Generating instruction for state: BATTLE
+[2025-02-27 19:18:42] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:18:44] Brought mGBA window to the front.
+[2025-02-27 19:18:44] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:44] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:44] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:44] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:44] Using cached frame description
+[2025-02-27 19:18:44] Brought mGBA window to the front.
+[2025-02-27 19:18:44] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:44] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:44] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:44] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:44] Using cached frame description
+[2025-02-27 19:18:44] Game state from vision:  The game screen is entirely black, with no visible text, character positions, or battle information.
+[2025-02-27 19:18:44] Generating instruction for state: BATTLE
+[2025-02-27 19:18:44] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:18:44] Too many consecutive failures. Restarting emulator...
+[2025-02-27 19:18:46] Brought mGBA window to the front.
+[2025-02-27 19:18:46] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:46] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:46] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:46] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:46] Using cached frame description
+[2025-02-27 19:18:46] Brought mGBA window to the front.
+[2025-02-27 19:18:46] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:46] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:46] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:46] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:46] Using cached frame description
+[2025-02-27 19:18:46] Game state from vision:  The game screen is entirely black, with no visible text, character positions, or battle information.
+[2025-02-27 19:18:46] Generating instruction for state: BATTLE
+[2025-02-27 19:18:46] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:18:48] Brought mGBA window to the front.
+[2025-02-27 19:18:48] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:48] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:48] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:48] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:48] Using cached frame description
+[2025-02-27 19:18:48] Brought mGBA window to the front.
+[2025-02-27 19:18:48] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:48] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:48] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:48] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:48] Using cached frame description
+[2025-02-27 19:18:48] Game state from vision:  The game screen is entirely black, with no visible text, character positions, or battle information.
+[2025-02-27 19:18:48] Generating instruction for state: BATTLE
+[2025-02-27 19:18:48] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:18:50] Brought mGBA window to the front.
+[2025-02-27 19:18:50] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:50] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:50] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:50] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:50] Using cached frame description
+[2025-02-27 19:18:50] Brought mGBA window to the front.
+[2025-02-27 19:18:50] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:50] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:50] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:50] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:50] Using cached frame description
+[2025-02-27 19:18:50] Game state from vision:  The game screen is entirely black, with no visible text, character positions, or battle information.
+[2025-02-27 19:18:50] Generating instruction for state: BATTLE
+[2025-02-27 19:18:50] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:18:52] Brought mGBA window to the front.
+[2025-02-27 19:18:52] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:52] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:52] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:52] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:52] Using cached frame description
+[2025-02-27 19:18:52] Brought mGBA window to the front.
+[2025-02-27 19:18:52] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:52] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:52] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:52] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:52] Using cached frame description
+[2025-02-27 19:18:52] Game state from vision:  The game screen is entirely black, with no visible text, character positions, or battle information.
+[2025-02-27 19:18:52] Generating instruction for state: BATTLE
+[2025-02-27 19:18:52] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:18:54] Brought mGBA window to the front.
+[2025-02-27 19:18:54] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:54] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:54] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:54] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:54] Using cached frame description
+[2025-02-27 19:18:54] Brought mGBA window to the front.
+[2025-02-27 19:18:54] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:54] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:54] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:54] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:54] Using cached frame description
+[2025-02-27 19:18:54] Game state from vision:  The game screen is entirely black, with no visible text, character positions, or battle information.
+[2025-02-27 19:18:54] Generating instruction for state: BATTLE
+[2025-02-27 19:18:54] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:18:56] Brought mGBA window to the front.
+[2025-02-27 19:18:56] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:56] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:56] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:56] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:56] Using cached frame description
+[2025-02-27 19:18:56] Brought mGBA window to the front.
+[2025-02-27 19:18:56] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:56] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:56] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:56] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:56] Using cached frame description
+[2025-02-27 19:18:56] Game state from vision:  The game screen is entirely black, with no visible text, character positions, or battle information.
+[2025-02-27 19:18:56] Generating instruction for state: BATTLE
+[2025-02-27 19:18:56] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:18:56] Too many consecutive failures. Restarting emulator...
+[2025-02-27 19:18:58] Brought mGBA window to the front.
+[2025-02-27 19:18:58] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:58] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:58] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:58] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:58] Using cached frame description
+[2025-02-27 19:18:58] Brought mGBA window to the front.
+[2025-02-27 19:18:58] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:58] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:58] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:18:58] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:18:58] Saved frame: C:\projects\OmniPoke\logs\frames\frame_40.png
+[2025-02-27 19:18:58] Using cached frame description
+[2025-02-27 19:18:58] Game state from vision:  The game screen is entirely black, with no visible text, character positions, or battle information.
+[2025-02-27 19:18:58] Generating instruction for state: BATTLE
+[2025-02-27 19:18:58] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:19:00] Brought mGBA window to the front.
+[2025-02-27 19:19:00] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:19:00] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:19:00] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:19:00] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:19:00] Using cached frame description
+[2025-02-27 19:19:00] Brought mGBA window to the front.
+[2025-02-27 19:19:00] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:19:00] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:19:00] Updated mGBA window region to: (4254, 748, 346, 249)
+[2025-02-27 19:19:00] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:19:00] Using cached frame description
+[2025-02-27 19:19:00] Game state from vision:  The game screen is entirely black, with no visible text, character positions, or battle information.
+[2025-02-27 19:19:00] Generating instruction for state: BATTLE
+[2025-02-27 19:19:00] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-27 19:19:33] vJoy gamepad reset to default state.
+[2025-02-27 19:19:34] Launching mGBA emulator...
+[2025-02-27 19:19:37] Brought mGBA window to the front.
+[2025-02-27 19:19:37] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:19:37] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:19:37] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:19:37] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:19:41] Moondream model initialized on: cuda with 8-bit quantization.
+[2025-02-27 19:19:47] Llama model initialized on: cuda with 8-bit quantization.
+[2025-02-27 19:19:47] Starting Pokémon Blue AI training with optimized models...
+[2025-02-27 19:19:47] Pressing START button to begin game...
+[2025-02-27 19:19:47] Brought mGBA window to the front.
+[2025-02-27 19:19:47] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:19:47] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:19:47] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-27 19:19:47] Pressed gamepad button: START
+[2025-02-27 19:19:52] Brought mGBA window to the front.
+[2025-02-27 19:19:52] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:19:52] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:19:52] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:19:53] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:19:53] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 19:19:54] Brought mGBA window to the front.
+[2025-02-27 19:19:54] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:19:54] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:19:54] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:19:54] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:19:54] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 19:19:56] Brought mGBA window to the front.
+[2025-02-27 19:19:56] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:19:56] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:19:56] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:19:56] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:19:56] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 19:19:58] Brought mGBA window to the front.
+[2025-02-27 19:19:58] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:19:58] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:19:58] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:19:58] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:19:58] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 19:20:00] Brought mGBA window to the front.
+[2025-02-27 19:20:00] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:20:00] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:20:00] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:20:00] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:20:00] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 19:20:01] Brought mGBA window to the front.
+[2025-02-27 19:20:01] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:20:02] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:20:02] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:20:02] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:20:02] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-27 19:20:02] Too many consecutive failures. Restarting emulator...
+[2025-02-27 19:20:03] Brought mGBA window to the front.
+[2025-02-27 19:20:03] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:20:03] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:20:03] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-27 19:20:03] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-27 19:20:04] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char

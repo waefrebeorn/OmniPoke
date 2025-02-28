@@ -55,7 +55,7 @@ class Emulator:
                 # Approx offsets
                 top_menu_height = 120
                 bottom_border = 110
-                side_border = 95
+                side_border = 75
 
                 content_x = x + side_border
                 content_y = y + top_menu_height

@@ -1,14 +1,21 @@
 import time
 import utils
 import config
+import torch
 from emulator import Emulator
 from vision import Vision
 from decision import Decision
 
 class PokemonTrainerAI:
     def __init__(self):
-        self.emulator = Emulator()         # For capturing screen & gamepad button presses
-        self.vision = Vision(self.emulator)  # Moondream-based vision+decision
+        # Set PyTorch to use deterministic algorithms for better performance
+        if hasattr(torch, 'backends') and hasattr(torch.backends, 'cudnn'):
+            torch.backends.cudnn.benchmark = True
+            torch.backends.cudnn.deterministic = False
+        
+        # Initialize components
+        self.emulator = Emulator()
+        self.vision = Vision(self.emulator)
         self.decision = Decision(self.vision)
 
         self.action_count = 0
@@ -16,6 +23,14 @@ class PokemonTrainerAI:
         self.failure_count = 0
         self.stuck_count = 0
         self.last_actions = []  # Track recent actions to detect stuck states
+        self.last_action_time = time.time()
+        
+        # Track timing statistics for performance monitoring
+        self.timing_stats = {
+            "vision": [],
+            "decision": [],
+            "action": []
+        }
 
     def is_stuck(self):
         """Check if we're stuck in the same game state repeating the same actions"""
@@ -37,39 +52,90 @@ class PokemonTrainerAI:
         for action in recovery_sequence:
             utils.log(f"Recovery action: {action}")
             self.emulator.press_button(action)
-            time.sleep(1)
+            time.sleep(0.5)  # Reduced wait time for faster recovery
             
         self.stuck_count = 0
         self.last_actions = []
 
+    def log_performance_stats(self):
+        """Log performance statistics periodically"""
+        if self.action_count % 50 == 0:
+            stats = {}
+            for key, values in self.timing_stats.items():
+                if values:
+                    stats[key] = {
+                        "avg": sum(values) / len(values),
+                        "min": min(values),
+                        "max": max(values),
+                        "total": len(values)
+                    }
+            
+            utils.log(f"Performance stats after {self.action_count} actions:")
+            for key, metrics in stats.items():
+                utils.log(f"  {key}: avg={metrics['avg']:.3f}s, min={metrics['min']:.3f}s, max={metrics['max']:.3f}s")
+            
+            # Reset stats after logging
+            self.timing_stats = {k: [] for k in self.timing_stats.keys()}
+
     def run(self):
-        utils.log("Starting Pokémon Blue AI training (All Moondream + Llama)...")
+        utils.log("Starting Pokémon Blue AI training with optimized models...")
         
         utils.log("Pressing START button to begin game...")
         self.emulator.press_button("START")
-        time.sleep(25)  # Increased wait time to 15 seconds
+        time.sleep(5)  # Reduced wait time
         
         while not self.game_completed:
             try:
+                start_time = time.time()
+                
+                # Get game state text
+                vision_start = time.time()
+                game_state_text = self.vision.get_game_state_text()
+                vision_time = time.time() - vision_start
+                self.timing_stats["vision"].append(vision_time)
+                
+                # Get next action
+                decision_start = time.time()
                 action = self.decision.get_next_action()
+                decision_time = time.time() - decision_start
+                self.timing_stats["decision"].append(decision_time)
+                
+                # Add action to history
                 self.last_actions.append(action)
                 if len(self.last_actions) > 20:
                     self.last_actions.pop(0)
                 
+                # Execute action
+                action_start = time.time()
                 self.emulator.press_button(action)
+                action_time = time.time() - action_start
+                self.timing_stats["action"].append(action_time)
+                
                 self.action_count += 1
                 
+                # Log action time and potential performance issues
+                elapsed = time.time() - self.last_action_time
+                self.last_action_time = time.time()
+                
+                if self.action_count % 10 == 0:
+                    utils.log(f"Action {self.action_count}: {action} - Vision: {vision_time:.3f}s, Decision: {decision_time:.3f}s, Total: {elapsed:.3f}s")
+                    self.log_performance_stats()
+                
+                # Check for stuck state and recovery
                 if self.is_stuck() and self.stuck_count >= 3:
                     utils.log(f"Detected stuck state {self.stuck_count} times - attempting recovery")
                     self.perform_recovery_action()
                 
-                game_state_text = self.vision.get_game_state_text()
+                # Check for game completion
                 if "Hall of Fame" in game_state_text:
                     utils.log(f"Game completed in {self.action_count} actions!")
                     self.game_completed = True
                 
+                # Dynamic polling interval based on game state
                 if self.decision.current_state == "UNKNOWN":
-                    time.sleep(config.POLLING_INTERVAL * 2)
+                    time.sleep(config.POLLING_INTERVAL * 1.5)
+                elif self.decision.current_state in ["TITLE_SCREEN", "DIALOGUE", "INTRO_SEQUENCE"]:
+                    time.sleep(config.POLLING_INTERVAL * 0.7)  # Faster for simple states
                 else:
                     time.sleep(config.POLLING_INTERVAL)
                     
@@ -83,4 +149,8 @@ class PokemonTrainerAI:
                 time.sleep(config.POLLING_INTERVAL * 2)
 
 if __name__ == "__main__":
+    # Try to free up memory before starting
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+    
     PokemonTrainerAI().run()
