@@ -1,12 +1,24 @@
+# Virtual environment
 venv/
+
+# Python cache
 __pycache__/
-*.log
+*.pyc
+
+# Logs
+logs/
+logs/*.log
+logs/*.txt
+logs/frames/*.png
+
+# Hugging Face & Caches
 .huggingface/
 .cache/
+
+# OS-specific
 .DS_Store
-*.pyc
-stored_tokens
+
+# Game-related files
+stored_tokens/
 *.gb
-logs/frames/window_debug.png
-logs/log.txt
-roms/pokemon_blue.sav
+roms/*.sav
