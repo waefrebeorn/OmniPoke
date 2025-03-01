@@ -7,3 +7,6 @@ __pycache__/
 *.pyc
 stored_tokens
 *.gb
+logs/frames/window_debug.png
+logs/log.txt
+roms/pokemon_blue.sav
