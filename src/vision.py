@@ -11,8 +11,7 @@ from PIL import Image
 class Vision:
     """
     Optimized Moondream-based vision class with enhanced game state detection capabilities.
-    Uses brightness checks to distinguish between deep dark caves and walking areas,
-    and leverages walkthrough-based context for improved environment consistency.
+    Uses the Moondream model's description to detect environment cues without relying on brightness.
     """
     def __init__(self, emulator=None):
         self.emulator = emulator
@@ -49,14 +48,13 @@ Be comprehensive but concise. Include environmental cues that indicate location 
             "CAVE_DETECTION": """
 Is the player in a cave environment? Look for:
 - Dark/rocky surroundings
-- Limited visibility (but not pitch black)
-- Cave entrance/exit and open areas
-- Rock formations and tunnels
+- Limited visibility or descriptions indicating low light (e.g., "limited visibility", "flash needed")
+- Cave entrance/exit, tunnels, or rock formations
 Describe the cave features and any visible paths or items.
 """,
             "DARK_CAVE_DETECTION": """
 Is this a dark cave where Flash is needed? Look for:
-- Very limited visibility (small area around the player)
+- Very limited visibility or descriptions explicitly stating low light conditions
 - Mostly black or near-black surroundings
 - Difficulty distinguishing paths or walls
 Describe the limited visibility and any cues.
@@ -99,23 +97,23 @@ Describe the limited visibility and any cues.
         img_array = np.array(img_small)
         return hash(img_array.tobytes())
     
-    def get_average_brightness(self, image):
-        grayscale = image.convert("L")
-        np_image = np.array(grayscale)
-        return np.mean(np_image)
-    
     def detect_environment(self, description):
         description_upper = description.upper()
-        if any(term in description_upper for term in ["DARK CAVE", "CAN'T SEE", "LIMITED VISIBILITY", "FLASH NEEDED"]):
-            return "DARK_CAVE"
-        if any(term in description_upper for term in ["MT MOON", "MT. MOON"]):
-            return "MT_MOON"
-        if "ROCK TUNNEL" in description_upper:
-            return "ROCK_TUNNEL"
-        if "VICTORY ROAD" in description_upper:
-            return "VICTORY_ROAD"
-        if any(term in description_upper for term in ["CAVE", "TUNNEL", "UNDERGROUND", "ROCKY"]):
+        
+        # Exclude Professor Oak's intro by forcing the INTRO_SEQUENCE state
+        if "PROFESSOR" in description_upper or "OAK" in description_upper:
+            return "INTRO_SEQUENCE"
+        
+        # Look for explicit cave keywords
+        if any(term in description_upper for term in ["CAVE", "MT MOON", "ROCK TUNNEL", "VICTORY ROAD"]):
             return "CAVE"
+
+        # Only allow dark cave classification if the description explicitly mentions low visibility,
+        # and only if already in a cave context.
+        if any(term in description_upper for term in ["DARK CAVE", "LIMITED VISIBILITY", "FLASH NEEDED", "VERY LOW LIGHT"]):
+            if self.current_environment in ["CAVE", "DARK_CAVE"]:
+                return "DARK_CAVE"
+        
         if any(term in description_upper for term in ["POKEMON CENTER", "POKÉMON CENTER", "NURSE JOY", "HEALING"]):
             return "POKEMON_CENTER"
         if any(term in description_upper for term in ["MART", "SHOP", "STORE", "CLERK", "BUY"]):
@@ -161,26 +159,9 @@ Describe the limited visibility and any cues.
     
     def get_game_state_text(self):
         image = self.capture_screen()
-        # Always load the current screenshot—do not use cached data.
-        brightness = self.get_average_brightness(image)
-        DARK_THRESHOLD = 40    # Below this value, consider the screen dark.
-        BRIGHT_THRESHOLD = 60  # Above this, the screen is clearly bright.
-        
-        if brightness < DARK_THRESHOLD:
-            utils.log(f"Dark screen detected (brightness: {brightness:.1f}). Forcing DARK_CAVE state.")
-            caption = "Dark cave environment with very limited visibility. Flash needed."
-            detected_env = "DARK_CAVE"
-            self.update_environment_tracking(detected_env)
-            self.last_cave_state = detected_env
-            return caption
-        
-        if brightness > BRIGHT_THRESHOLD and self.last_cave_state in ["DARK_CAVE", "CAVE"]:
-            utils.log(f"Bright screen detected (brightness: {brightness:.1f}). Interpreting as walking through a cave.")
-            self.last_cave_state = "CAVE"
-        
         # Always generate a fresh description from the current image.
         prompt_to_use = self.base_prompt
-        if any(env in ["CAVE", "MT_MOON", "ROCK_TUNNEL", "VICTORY ROAD"] for env in self.environment_history[-2:]):
+        if any(env in ["CAVE", "MT_MOON", "ROCK TUNNEL", "VICTORY ROAD"] for env in self.environment_history[-2:]):
             prompt_to_use = self.specialized_prompts["CAVE_DETECTION"]
             utils.log("Using specialized cave detection prompt")
         elif "DARK_CAVE" in self.environment_history[-2:]:
