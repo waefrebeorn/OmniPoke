@@ -88,28 +88,30 @@ class PokemonTrainerAI:
             try:
                 start_time = time.time()
                 
-                # Get game state text
-                vision_start = time.time()
-                game_state_text = self.vision.get_game_state_text()
-                vision_time = time.time() - vision_start
-                self.timing_stats["vision"].append(vision_time)
-                
-                # Get next action
+                # Execute next action
                 decision_start = time.time()
                 action = self.decision.get_next_action()
                 decision_time = time.time() - decision_start
                 self.timing_stats["decision"].append(decision_time)
                 
+                # Press the button and wait 1 second for the game to update
+                self.emulator.press_button(action)
+                time.sleep(1)  # Wait for the game to reflect the action
+                
+                # Capture updated screenshot after waiting
+                frame = self.emulator.capture_screen()
+                utils.save_frame(frame, "post_action.png")  # Overwrite the same file
+                
+                # Get game state text from the updated frame
+                vision_start = time.time()
+                game_state_text = self.vision.get_game_state_text()
+                vision_time = time.time() - vision_start
+                self.timing_stats["vision"].append(vision_time)
+                
                 # Add action to history
                 self.last_actions.append(action)
                 if len(self.last_actions) > 20:
                     self.last_actions.pop(0)
-                
-                # Execute action
-                action_start = time.time()
-                self.emulator.press_button(action)
-                action_time = time.time() - action_start
-                self.timing_stats["action"].append(action_time)
                 
                 self.action_count += 1
                 

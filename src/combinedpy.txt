@@ -58,18 +58,16 @@ LOW_CPU_USAGE = True      # Enable low CPU memory usage
 decision.py 
 ======================== 
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, StoppingCriteria, StoppingCriteriaList
+from transformers import AutoModelForCausalLM, AutoTokenizer, StoppingCriteria, StoppingCriteriaList, BitsAndBytesConfig
 import utils
+import config
 
 class StopOnTokens(StoppingCriteria):
     def __init__(self, stop_token_ids):
         self.stop_token_ids = stop_token_ids
     
     def __call__(self, input_ids, scores, **kwargs):
-        for stop_id in self.stop_token_ids:
-            if input_ids[0][-1] == stop_id:
-                return True
-        return False
+        return any(input_ids[0][-1] == stop_id for stop_id in self.stop_token_ids)
 
 class Decision:
     """
@@ -79,28 +77,37 @@ class Decision:
     """
     def __init__(self, vision, device=None):
         self.vision = vision
-        # Use CUDA if available, otherwise CPU
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
         self.llama_model_name = "meta-llama/Llama-3.2-3B"
         
-        # Initialize Llama tokenizer 
+        # Initialize Llama tokenizer
         self.tokenizer = AutoTokenizer.from_pretrained(self.llama_model_name)
         
-        # Load model with 8-bit quantization to reduce VRAM usage
+        # Use BitsAndBytesConfig for proper 8-bit quantization settings
+        quantization_config = BitsAndBytesConfig(
+            load_in_8bit=True,
+            llm_int8_enable_fp32_cpu_offload=False  # Ensure entire model stays in VRAM
+        )
+        
+        # Load Llama model with 8-bit quantization and float16 precision
         self.llama_model = AutoModelForCausalLM.from_pretrained(
             self.llama_model_name,
-            device_map={"": self.device},
-            torch_dtype=torch.float16,  # Use half precision
-            load_in_8bit=True,  # Use 8-bit quantization
+            device_map="cuda",  # Force all modules on GPU
+            quantization_config=quantization_config,
+            torch_dtype=torch.float16,
             low_cpu_mem_usage=True
         )
         
-        # Prepare stopping criteria for generation
+        # Optional: Compile the model for faster inference (if using CUDA)
+        if torch.cuda.is_available() and config.TORCH_COMPILE:
+            self.llama_model = torch.compile(self.llama_model)
+        
+        # Stop tokens for controlled generation
         stop_words = [".", "\n"]
-        stop_token_ids = [self.tokenizer.encode(word)[-1] for word in stop_words]
+        stop_token_ids = [self.tokenizer.encode(word, add_special_tokens=False)[-1] for word in stop_words]
         self.stopping_criteria = StoppingCriteriaList([StopOnTokens(stop_token_ids)])
         
-        utils.log(f"Llama model initialized on: {self.device} with 8-bit quantization")
+        utils.log(f"Llama model initialized on: {self.device} with 8-bit quantization (no CPU offload) and float16 precision")
         
         # Precompile prompts for faster generation
         self.prompt_templates = self._create_prompt_templates()
@@ -112,267 +119,296 @@ class Decision:
         
         # Improved cache for recently seen game states
         self.instruction_cache = {}
-        self.cache_size = 20  # Increased cache size for better hit rates
-        
-        # State-based action lookup for common states - bypass LLM completely
+        self.cache_size = 20  
+
+        # Direct action mapping for common states
         self.common_state_actions = {
             "TITLE_SCREEN": "START",
             "DIALOGUE": "A",
-            "INTRO_SEQUENCE": "A"
+            "INTRO_SEQUENCE": "A",
+            "ITEM_FOUND": "A",
+            "HEALING": "A",
+            "EVOLUTION": "A"
         }
 
     def _create_prompt_templates(self):
-        """Create and return a dictionary of pre-formatted prompt templates for each state."""
-        templates = {}
-        
-        # Simplified prompts with fewer tokens to process
-        templates["TITLE_SCREEN"] = """
-You're at the Pokémon Blue title screen.
-Your response must be EXACTLY "Press START button to begin the game."
-"""
-        
-        templates["INTRO_SEQUENCE"] = """
-You're in the Pokémon Blue introduction with Professor Oak.
-Game state: \"\"\"{}\"\"\"
-Your response must be EXACTLY "Press A button to continue dialogue."
-"""
-        
-        templates["DIALOGUE"] = """
-You're in dialogue or reading text in Pokémon Blue.
-Game state: \"\"\"{}\"\"\"
-Your response must be EXACTLY "Press A button to continue dialogue."
-"""
-        
-        templates["BATTLE"] = """
-You're in a Pokémon battle.
-Game state: \"\"\"{}\"\"\"
-Respond with EXACTLY one of:
-"Move UP to navigate battle menu."
-"Move DOWN to navigate battle menu."
-"Press A to select the current option."
-"""
-        
-        templates["MENU"] = """
-You're navigating a menu in Pokémon Blue.
-Game state: \"\"\"{}\"\"\"
-Respond with EXACTLY one of:
-"Move UP to navigate menu."
-"Move DOWN to navigate menu."
-"Press A to select the current option."
-"Press B to exit the menu."
-"""
-        
-        templates["OVERWORLD"] = """
-You're exploring the Pokémon Blue overworld.
-Game state: \"\"\"{}\"\"\"
-Respond with EXACTLY one of:
-"Move UP to explore."
-"Move DOWN to explore."
-"Move LEFT to explore."
-"Move RIGHT to explore."
-"Press A to interact."
-"Press START to open menu."
-"""
-        
-        return templates
+        """Create optimized prompt templates for Llama"""
+        return {
+            # General game states
+            "TITLE_SCREEN": "You're at the Pokémon Blue title screen. Respond with: 'Press START button to begin the game.'",
+            "INTRO_SEQUENCE": "You're in Professor Oak's introduction. Respond with: 'Press A button to continue dialogue.'",
+            "DIALOGUE": "You're in a dialogue screen. Respond with: 'Press A button to continue dialogue.'",
+            "MENU": "You're navigating a menu. Respond with exactly one of: 'Move UP', 'Move DOWN', 'Press A', 'Press B'.",
+            "OVERWORLD": "You're exploring the overworld. Respond with exactly one of: 'Move UP', 'Move DOWN', 'Move LEFT', 'Move RIGHT', 'Press A'.",
+            
+            # Battle states with specificity
+            "BATTLE": "You're in a Pokémon battle. Respond with exactly one of: 'Move UP', 'Move DOWN', 'Move LEFT', 'Move RIGHT', 'Press A', 'Press B'.",
+            "WILD_BATTLE": "You're in a wild Pokémon battle. Choose 'FIGHT' for moves, or other options. Respond with exactly one of: 'Move UP', 'Move DOWN', 'Move LEFT', 'Move RIGHT', 'Press A', 'Press B'.",
+            "TRAINER_BATTLE": "You're in a trainer battle. Choose your moves wisely. Respond with exactly one of: 'Move UP', 'Move DOWN', 'Move LEFT', 'Move RIGHT', 'Press A', 'Press B'.",
+            "GYM_LEADER_BATTLE": "You're battling a Gym Leader. This is an important battle for a badge. Respond with exactly one of: 'Move UP', 'Move DOWN', 'Move LEFT', 'Move RIGHT', 'Press A', 'Press B'.",
+            
+            # Cave-specific templates
+            "CAVE": "You're exploring a cave in Pokémon Blue. Watch for wild Pokémon encounters and look for items. Respond with exactly one of: 'Move UP', 'Move DOWN', 'Move LEFT', 'Move RIGHT', 'Press A', 'Press START' (to access menu).",
+            "DARK_CAVE": "You're in a dark cave without Flash. You can only see a small area around your character. Navigate carefully or use Flash. Respond with exactly one of: 'Move UP', 'Move DOWN', 'Move LEFT', 'Move RIGHT', 'Press START' (to use Flash if available).",
+            "MT_MOON": "You're in Mt. Moon. Watch for Zubat encounters and look for items and fossil researchers. Respond with exactly one of: 'Move UP', 'Move DOWN', 'Move LEFT', 'Move RIGHT', 'Press A', 'Press START'.",
+            "ROCK_TUNNEL": "You're in Rock Tunnel. This area is complex with many trainers. Respond with exactly one of: 'Move UP', 'Move DOWN', 'Move LEFT', 'Move RIGHT', 'Press A', 'Press START'.",
+            "VICTORY_ROAD": "You're in Victory Road. This is a challenging cave with strength puzzles and strong trainers. Respond with exactly one of: 'Move UP', 'Move DOWN', 'Move LEFT', 'Move RIGHT', 'Press A', 'Press START'.",
+            
+            # Location-specific templates
+            "BUILDING": "You're inside a building. Look for NPCs to talk to or items. Respond with exactly one of: 'Move UP', 'Move DOWN', 'Move LEFT', 'Move RIGHT', 'Press A'.",
+            "POKEMON_CENTER": "You're in a Pokémon Center. Talk to Nurse Joy to heal or use the PC. Respond with exactly one of: 'Move UP', 'Move DOWN', 'Move LEFT', 'Move RIGHT', 'Press A'.",
+            "POKEMON_MART": "You're in a Pokémon Mart. Talk to the clerk to buy items. Respond with exactly one of: 'Move UP', 'Move DOWN', 'Move LEFT', 'Move RIGHT', 'Press A'.",
+            "GYM": "You're in a Pokémon Gym. Navigate to the Gym Leader while defeating trainers. Respond with exactly one of: 'Move UP', 'Move DOWN', 'Move LEFT', 'Move RIGHT', 'Press A'.",
+            
+            # Special interaction templates
+            "ITEM_FOUND": "You've found an item. Respond with: 'Press A to pick up the item.'",
+            "HEALING": "Your Pokémon are being healed. Respond with: 'Press A to continue.'",
+            "EVOLUTION": "Your Pokémon is evolving! Respond with: 'Press A to continue evolution' or 'Press B to cancel evolution'.",
+            "FISHING": "You're using a fishing rod. Wait for a bite. Respond with: 'Press A when there's a bite.'",
+            
+            # Menu-specific templates
+            "POKEMON_MENU": "You're in the Pokémon menu. Respond with exactly one of: 'Move UP', 'Move DOWN', 'Press A to select', 'Press B to exit'.",
+            "ITEM_MENU": "You're in the Item menu. Respond with exactly one of: 'Move UP', 'Move DOWN', 'Press A to use item', 'Press B to exit'.",
+            "SAVE_MENU": "You're at the save prompt. Respond with: 'Press A to save' or 'Press B to cancel'.",
+            
+            # Puzzle-specific templates
+            "STRENGTH_PUZZLE": "You're at a strength puzzle. You need to push boulders. Respond with: 'Press A to use Strength' or 'Move in the direction to push boulder'.",
+            "CUT_OBSTACLE": "There's a small tree blocking your path. Respond with: 'Press A to use Cut' if facing the tree.",
+            "SURF_WATER": "You're at a body of water. Respond with: 'Press A to use Surf' if facing the water."
+        }
 
     def detect_game_state(self, game_state_text):
         """
-        Analyzes the game state description to determine what stage of the game we're in.
-        Returns a string representing the current game state.
+        Analyzes the game state description to determine the player's situation.
         """
-        if self.current_state != "UNKNOWN":
-            self.previous_states.append(self.current_state)
-            if len(self.previous_states) > 5:
-                self.previous_states.pop(0)
-        
-        # Optimized text matching with early returns for common states
         game_state_upper = game_state_text.upper()
-        
-        # Check for title screen first (most important for cold starts)
-        if "BLUE VERSION" in game_state_upper or "POKÉMON LOGO" in game_state_upper or "TITLE SCREEN" in game_state_upper:
+
+        # More precise detection logic with priority order
+        if ("PROFESSOR" in game_state_upper or "OAK" in game_state_upper) and "INTRO" in game_state_upper:
+            return "INTRO_SEQUENCE"
+        if "BLUE VERSION" in game_state_upper or "TITLE SCREEN" in game_state_upper:
             return "TITLE_SCREEN"
             
-        # Check for battle (common state that needs specific handling)
-        if "BATTLE" in game_state_upper or "FIGHT" in game_state_upper or "ATTACK" in game_state_upper:
+        # Battle detection with specificity
+        if "GYM LEADER" in game_state_upper and "BATTLE" in game_state_upper:
+            return "GYM_LEADER_BATTLE"
+        if "TRAINER" in game_state_upper and "BATTLE" in game_state_upper:
+            return "TRAINER_BATTLE"
+        if "WILD" in game_state_upper and "BATTLE" in game_state_upper:
+            return "WILD_BATTLE"
+        if "BATTLE" in game_state_upper or "FIGHT" in game_state_upper:
             return "BATTLE"
             
-        # Check dialogue and intro (common and simple states)
-        if "TEXT" in game_state_upper or "DIALOGUE" in game_state_upper:
-            return "DIALOGUE"
-        if "OAK" in game_state_upper or "PROFESSOR" in game_state_upper:
-            return "INTRO_SEQUENCE"
+        # Cave detection with specificity
+        if ("DARK" in game_state_upper or "CAN'T SEE" in game_state_upper) and ("CAVE" in game_state_upper or "TUNNEL" in game_state_upper):
+            return "DARK_CAVE"
+        if "MT MOON" in game_state_upper or "MT. MOON" in game_state_upper:
+            return "MT_MOON"
+        if "ROCK TUNNEL" in game_state_upper:
+            return "ROCK_TUNNEL"
+        if "VICTORY ROAD" in game_state_upper:
+            return "VICTORY_ROAD"
+        if "CAVE" in game_state_upper:
+            return "CAVE"
             
-        # Check for menu state
-        if "MENU" in game_state_upper or "OPTION" in game_state_upper or "ITEMS" in game_state_upper:
+        # Building detection
+        if "POKEMON CENTER" in game_state_upper or "POKÉMON CENTER" in game_state_upper:
+            return "POKEMON_CENTER"
+        if "MART" in game_state_upper or "SHOP" in game_state_upper or "STORE" in game_state_upper:
+            return "POKEMON_MART"
+        if "GYM" in game_state_upper:
+            return "GYM"
+        if "BUILDING" in game_state_upper or "HOUSE" in game_state_upper or "INDOOR" in game_state_upper:
+            return "BUILDING"
+            
+        # Special interactions
+        if "FOUND" in game_state_upper and "ITEM" in game_state_upper:
+            return "ITEM_FOUND"
+        if "HEALING" in game_state_upper or "NURSE JOY" in game_state_upper:
+            return "HEALING"
+        if "EVOLVING" in game_state_upper or "EVOLUTION" in game_state_upper:
+            return "EVOLUTION"
+        if "FISHING" in game_state_upper or "FISHING ROD" in game_state_upper:
+            return "FISHING"
+            
+        # Menu detection
+        if "POKEMON" in game_state_upper and "MENU" in game_state_upper:
+            return "POKEMON_MENU"
+        if "ITEM" in game_state_upper and "MENU" in game_state_upper:
+            return "ITEM_MENU"
+        if "SAVE" in game_state_upper:
+            return "SAVE_MENU"
+        if "MENU" in game_state_upper or "OPTION" in game_state_upper:
             return "MENU"
             
-        # Default to overworld
+        # Puzzle detection
+        if "BOULDER" in game_state_upper and "STRENGTH" in game_state_upper:
+            return "STRENGTH_PUZZLE"
+        if "TREE" in game_state_upper and "CUT" in game_state_upper:
+            return "CUT_OBSTACLE"
+        if ("WATER" in game_state_upper or "LAKE" in game_state_upper or "OCEAN" in game_state_upper) and "SURF" in game_state_upper:
+            return "SURF_WATER"
+            
+        # Text/dialogue detection
+        if "TEXT" in game_state_upper or "DIALOGUE" in game_state_upper:
+            return "DIALOGUE"
+        
+        # Default to overworld if no specific state is detected
         return "OVERWORLD"
-
-    def get_cached_instruction(self, game_state_text, state):
-        """Try to retrieve a cached instruction for similar game states."""
-        # First check for exact match
-        if game_state_text in self.instruction_cache:
-            utils.log("Using exact cached instruction")
-            return self.instruction_cache[game_state_text]
-            
-        # If no exact match, look for similarities in key phrases
-        # This improves cache hit rate for similar descriptions
-        for cached_text, instruction in self.instruction_cache.items():
-            if state == self.detect_game_state(cached_text):  # Only compare within same state
-                # Check for significant phrase overlap
-                if self._text_similarity(game_state_text, cached_text) > 0.6:
-                    utils.log("Using similar cached instruction")
-                    return instruction
-                    
-        return None
-        
-    def _text_similarity(self, text1, text2):
-        """Simple text similarity measure based on word overlap"""
-        words1 = set(text1.lower().split())
-        words2 = set(text2.lower().split())
-        
-        if not words1 or not words2:
-            return 0
-            
-        overlap = len(words1.intersection(words2))
-        union = len(words1.union(words2))
-        
-        return overlap / union
-
-    def update_cache(self, game_state_text, instruction):
-        """Add or update the instruction cache."""
-        # Simple FIFO cache
-        if len(self.instruction_cache) >= self.cache_size:
-            # Remove oldest entry (first key)
-            oldest_key = next(iter(self.instruction_cache))
-            del self.instruction_cache[oldest_key]
-        
-        self.instruction_cache[game_state_text] = instruction
 
     def get_llama_instruction(self, game_state):
         """
-        Uses Llama to convert a game state description into a concise instruction task.
-        Optimized with improved caching and fast paths for common states.
+        Uses Llama-3.2-3B to generate a concise instruction based on the current game state.
         """
-        new_state = self.detect_game_state(game_state)
+        # First check if we can use the vision's environment detection
+        if hasattr(self.vision, 'current_environment') and self.vision.current_environment != "UNKNOWN":
+            # Use the environment detection from Vision if available and confident
+            if self.vision.environment_confidence > 0.7:  # Only use if confidence is high
+                new_state = self.vision.current_environment
+                utils.log(f"Using Vision's environment detection: {new_state} (confidence: {self.vision.environment_confidence:.2f})")
+            else:
+                # Fall back to text-based detection if confidence is low
+                new_state = self.detect_game_state(game_state)
+        else:
+            # Fall back to traditional detection if Vision doesn't provide environment info
+            new_state = self.detect_game_state(game_state)
+        
+        # Track state transitions
         if new_state != self.current_state:
+            self.previous_states.append(self.current_state)
+            if len(self.previous_states) > 5:  # Keep only the last 5 states
+                self.previous_states.pop(0)
+                
             self.state_transitions += 1
             utils.log(f"State transition: {self.current_state} -> {new_state}")
             self.current_state = new_state
-        
-        # Fast path shortcuts for common states - completely bypass LLM
+
+        # Direct action mapping for common states
         if new_state in self.common_state_actions:
-            action = self.common_state_actions[new_state]
-            if new_state == "TITLE_SCREEN":
-                return "Press START button to begin the game."
-            elif new_state == "DIALOGUE" or new_state == "INTRO_SEQUENCE":
-                return "Press A button to continue dialogue."
-        
-        # Check cache for similar game states
-        cached_instruction = self.get_cached_instruction(game_state, self.current_state)
-        if cached_instruction:
+            return f"Press {self.common_state_actions[new_state]} button."
+
+        # Intelligent caching: Check if we've seen this state recently
+        cache_key = f"{new_state}:{hash(game_state[:100])}"  # Use first 100 chars for hashing
+        if cache_key in self.instruction_cache:
+            cached_instruction = self.instruction_cache[cache_key]
+            utils.log(f"Using cached instruction for {new_state}: {cached_instruction}")
             return cached_instruction
 
-        # Select the appropriate prompt template
-        template = self.prompt_templates.get(self.current_state, self.prompt_templates["OVERWORLD"])
-        prompt = template.format(game_state)
+        # Use state-based prompt template
+        prompt = self.prompt_templates.get(new_state, self.prompt_templates["OVERWORLD"])
+        utils.log(f"Generating instruction for state: {new_state}")
 
-        utils.log(f"Generating instruction for state: {self.current_state}")
-        
-        # Generation with optimized parameters for speed
-        base_temperature = 0.5  # Lower temperature for more deterministic outputs
-        max_tokens = 25  # Reduced token count for faster generation
-        valid_indicators = ["PRESS A", "PRESS B", "PRESS START", "MOVE UP", "MOVE DOWN", "MOVE LEFT", "MOVE RIGHT"]
-        
-        # Use dynamic batch size based on input length to optimize throughput
-        input_ids = self.tokenizer(prompt, return_tensors="pt").input_ids.to(self.device)
-        
-        with torch.inference_mode():  # Use inference_mode instead of no_grad for slightly better performance
-            output_ids = self.llama_model.generate(
+        # Tokenize and ensure input is float16
+        input_ids = self.tokenizer(prompt, return_tensors="pt").input_ids.to(self.device).to(torch.long)
+
+        # Generate response with optimized parameters for each state type
+        with torch.inference_mode():
+            # Adjust generation parameters based on state type
+            temperature = 0.5  # Default temperature
+            if new_state in ["DARK_CAVE", "MT_MOON", "ROCK_TUNNEL", "VICTORY_ROAD"]:
+                temperature = 0.3  # More deterministic for caves
+            elif new_state in ["BATTLE", "WILD_BATTLE", "TRAINER_BATTLE", "GYM_LEADER_BATTLE"]:
+                temperature = 0.4  # Slightly more deterministic for battles
+                
+            output = self.llama_model.generate(
                 input_ids, 
-                max_new_tokens=max_tokens,
-                temperature=base_temperature,
-                num_return_sequences=1,
-                do_sample=True,
-                top_p=0.85,  # Reduced from 0.9
-                repetition_penalty=1.1,  # Reduced from 1.2
-                pad_token_id=self.tokenizer.eos_token_id  # Explicitly set pad token
+                max_new_tokens=25,
+                temperature=temperature,
+                top_p=0.85,
+                repetition_penalty=1.1,
+                stopping_criteria=self.stopping_criteria,
+                pad_token_id=self.tokenizer.eos_token_id
             )
-        
-        instruction = self.tokenizer.decode(output_ids[0][input_ids.shape[1]:], skip_special_tokens=True).strip()
+
+        # Decode output
+        instruction = self.tokenizer.decode(output[0][input_ids.shape[1]:], skip_special_tokens=True).strip()
         utils.log(f"Llama instruction: {instruction}")
+
+        # Cache the instruction
+        if len(self.instruction_cache) >= self.cache_size:
+            # Remove oldest entry
+            oldest_key = next(iter(self.instruction_cache))
+            del self.instruction_cache[oldest_key]
+        self.instruction_cache[cache_key] = instruction
+
+        return instruction if instruction else "Press A button to continue."
+    
+    def handle_dark_cave(self):
+        """Special handling for dark caves without Flash"""
+        # Check if we've been in dark cave for multiple consecutive states
+        if len(self.previous_states) >= 3 and all(state == "DARK_CAVE" for state in self.previous_states[-3:]):
+            utils.log("Stuck in dark cave, attempting to access Flash through menu")
+            return "START"  # Access menu to potentially use Flash
         
-        # Check if we got a valid instruction
-        if any(ind in instruction.upper() for ind in valid_indicators):
-            # Cache this successful instruction
-            self.update_cache(game_state, instruction)
-            return instruction
-        
-        # If instruction isn't valid, use state-based fallbacks for reliability
-        if self.current_state == "TITLE_SCREEN":
-            return "Press START button to begin the game."
-        if self.current_state == "DIALOGUE" or self.current_state == "INTRO_SEQUENCE":
-            return "Press A button to continue dialogue."
-        if self.current_state == "OVERWORLD":
-            return "Move RIGHT to explore."
-        if self.current_state == "BATTLE":
-            return "Press A to select the current option."
-        if self.current_state == "MENU":
-            return "Press A to select the current option."
+        # Implement a simple wall-following algorithm for dark caves
+        last_actions = getattr(self, '_last_dark_cave_actions', [])
+        if not last_actions:
+            utils.log("Starting dark cave navigation with RIGHT direction")
+            self._last_dark_cave_actions = ["RIGHT"]
+            return "RIGHT"
             
-        # Generic fallback if all else fails
-        return "Press A button to continue."
+        # Simple navigation pattern: try to follow the right wall
+        last_action = last_actions[-1]
+        if len(last_actions) >= 2 and last_actions[-1] == last_actions[-2]:
+            # If we've tried the same direction twice, try a different direction
+            directions = ["UP", "RIGHT", "DOWN", "LEFT"]
+            current_idx = directions.index(last_action)
+            next_idx = (current_idx + 1) % 4
+            next_action = directions[next_idx]
+            utils.log(f"Changing direction in dark cave from {last_action} to {next_action}")
+            last_actions.append(next_action)
+            self._last_dark_cave_actions = last_actions[-5:] if len(last_actions) > 5 else last_actions
+            return next_action
+        else:
+            # Continue in the same direction
+            last_actions.append(last_action)
+            self._last_dark_cave_actions = last_actions[-5:] if len(last_actions) > 5 else last_actions
+            return last_action
 
     def get_next_action(self):
         """
-        Uses Vision to obtain the game state text, then returns a button press decision.
-        Optimized to reduce unnecessary processing.
+        Uses Vision to obtain the game state and determine the next button press.
         """
         game_state = self.vision.get_game_state_text()
         utils.log(f"Game state from vision: {game_state}")
-        
-        # Ultra-fast path: title screen detection
-        if "BLUE VERSION" in game_state.upper() or "POKÉMON LOGO" in game_state.upper() or "TITLE SCREEN" in game_state.upper():
-            utils.log("Title screen detected from game state. Forcing START button.")
-            self.current_state = "TITLE_SCREEN"
-            return "START"
 
-        # Get instruction
+        # Special handling for common states
+        if "TITLE SCREEN" in game_state.upper() or self.current_state == "TITLE_SCREEN":
+            return "START"
+            
+        # Special handling for dark caves
+        if self.current_state == "DARK_CAVE":
+            return self.handle_dark_cave()
+
+        # Generate task instruction
         instruction = self.get_llama_instruction(game_state)
         utils.log(f"Llama instruction: {instruction}")
-        
-        # Ensure title screen gets START button
-        if self.current_state == "TITLE_SCREEN":
-            utils.log("Title screen state detected. Forcing START button.")
-            return "START"
 
-        # Extract action from instruction using direct pattern matching
-        instruction_upper = instruction.upper()
-        if "PRESS A" in instruction_upper:
+        # Pass instruction to Vision for context-aware decision
+        if hasattr(self.vision, 'get_next_action') and callable(getattr(self.vision, 'get_next_action')):
+            action = self.vision.get_next_action(instruction)
+            utils.log(f"Vision-based action with instruction: {action}")
+            return action
+
+        # Fallback extraction from instruction string if Vision doesn't provide action
+        action = instruction.upper()
+        if "PRESS A" in action:
             return "A"
-        elif "PRESS B" in instruction_upper:
+        if "PRESS B" in action:
             return "B"
-        elif "PRESS START" in instruction_upper:
+        if "PRESS START" in action:
             return "START"
-        elif "MOVE UP" in instruction_upper:
+        if "MOVE UP" in action:
             return "UP"
-        elif "MOVE DOWN" in instruction_upper:
+        if "MOVE DOWN" in action:
             return "DOWN"
-        elif "MOVE LEFT" in instruction_upper:
+        if "MOVE LEFT" in action:
             return "LEFT"
-        elif "MOVE RIGHT" in instruction_upper:
+        if "MOVE RIGHT" in action:
             return "RIGHT"
-        else:
-            # If we're here, use state-based defaults
-            if self.current_state == "DIALOGUE" or self.current_state == "INTRO_SEQUENCE":
-                return "A"
-            elif self.current_state == "TITLE_SCREEN":
-                return "START"
-            else:
-                # Default to a safe action when uncertain
-                return self.get_next_action()  # Recursive call to try again for AI PLAYTHROUGH 
+        
+        # Recursive call to try again for AI PLAYTHROUGH
+        return self.get_next_action()  # Recursive call NEEDED AND NOT TO BE REMOVED for AI PLAYTHROUGH 
  
 ======================== 
 emulator.py 
@@ -433,8 +469,8 @@ class Emulator:
 
                 # Approx offsets
                 top_menu_height = 120
-                bottom_border = 110
-                side_border = 85
+                bottom_border = 88
+                side_border = 80
 
                 content_x = x + side_border
                 content_y = y + top_menu_height
@@ -706,28 +742,30 @@ class PokemonTrainerAI:
             try:
                 start_time = time.time()
                 
-                # Get game state text
-                vision_start = time.time()
-                game_state_text = self.vision.get_game_state_text()
-                vision_time = time.time() - vision_start
-                self.timing_stats["vision"].append(vision_time)
-                
-                # Get next action
+                # Execute next action
                 decision_start = time.time()
                 action = self.decision.get_next_action()
                 decision_time = time.time() - decision_start
                 self.timing_stats["decision"].append(decision_time)
                 
+                # Press the button and wait 1 second for the game to update
+                self.emulator.press_button(action)
+                time.sleep(1)  # Wait for the game to reflect the action
+                
+                # Capture updated screenshot after waiting
+                frame = self.emulator.capture_screen()
+                utils.save_frame(frame, "post_action.png")  # Overwrite the same file
+                
+                # Get game state text from the updated frame
+                vision_start = time.time()
+                game_state_text = self.vision.get_game_state_text()
+                vision_time = time.time() - vision_start
+                self.timing_stats["vision"].append(vision_time)
+                
                 # Add action to history
                 self.last_actions.append(action)
                 if len(self.last_actions) > 20:
                     self.last_actions.pop(0)
-                
-                # Execute action
-                action_start = time.time()
-                self.emulator.press_button(action)
-                action_time = time.time() - action_start
-                self.timing_stats["action"].append(action_time)
                 
                 self.action_count += 1
                 
@@ -864,7 +902,7 @@ import time
 import utils
 import config
 import torch
-from transformers import AutoProcessor, AutoModelForCausalLM
+from transformers import AutoModelForCausalLM
 import cv2
 import numpy as np
 import os
@@ -872,54 +910,78 @@ from PIL import Image
 
 class Vision:
     """
-    Optimized Moondream-based vision class.
+    Optimized Moondream-based vision class with enhanced game state detection capabilities.
     This class captures the screen from the emulator and uses the Moondream model
-    to analyze the game state.
+    to analyze the game state with improved prompts for specialized areas like caves.
     """
     def __init__(self, emulator=None):
         self.emulator = emulator
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
 
-        # Load Moondream processor and model with optimizations
-        self.processor = AutoProcessor.from_pretrained(
-            config.VISION_MODEL_PATH,
-            trust_remote_code=True
-        )
-        
+        # Load Moondream model with full float16 precision for compatibility
         self.model = AutoModelForCausalLM.from_pretrained(
             config.VISION_MODEL_PATH,
             revision="2025-01-09",
             trust_remote_code=True,
             device_map={"": self.device},
-            torch_dtype=torch.float16,  # Use half precision
-            load_in_8bit=True,          # Use 8-bit quantization to reduce memory
+            torch_dtype=torch.float16  # Use full FP16 precision
         )
         
-        utils.log(f"Moondream model initialized on: {self.device} with 8-bit quantization")
+        # Optionally compile the model for faster inference if enabled in config
+        if torch.cuda.is_available() and config.TORCH_COMPILE:
+            self.model = torch.compile(self.model)
+        
+        utils.log(f"Moondream model initialized on: {self.device} with full float16 precision")
 
         # Valid button actions
         self.valid_buttons = ["UP", "DOWN", "LEFT", "RIGHT", "A", "B", "START", "SELECT"]
 
-        # Optimized Moondream prompt - shorter but still effective
+        # Enhanced base prompt for better game state detection
         self.base_prompt = """
-Describe this Pokémon Blue game screen. Focus on:
-1. Game state (title screen, dialogue, battle, menu, or overworld)
-2. Visible text or menu options
-3. Character positions
-4. Battle information if present
-Be concise and specific.
+Describe this Pokémon Blue game screen in detail. Focus on:
+1. Game state (be specific: title screen, dialogue, battle type, menu, overworld, cave, dark cave, gym)
+2. All visible text or menu options
+3. Character and NPC positions
+4. Environment details (indoors, outdoors, cave, water)
+5. Battle information if present (Pokémon names, HP, moves)
+6. Any obstacles or interactive elements (doors, signs, trees, boulders)
+
+Be comprehensive but concise. Include environmental cues that indicate location type.
 """
+
+        # Environment-specific prompts for better detection
+        self.specialized_prompts = {
+            "CAVE_DETECTION": """
+Is the player in a cave environment? Look for:
+- Dark/rocky surroundings
+- Limited visibility
+- Cave entrance/exit
+- Rock formations
+- Multiple tunnel paths
+Describe the cave features and any visible paths or items.
+""",
+            "DARK_CAVE_DETECTION": """
+Is this a dark cave where Flash is needed? Look for:
+- Very limited visibility (small visible area around player)
+- Black surroundings
+- Difficulty seeing paths or walls
+Describe the visibility level and any visible elements.
+"""
+        }
 
         # Image caching to avoid reprocessing identical frames
         self.image_cache = {}
-        self.cache_limit = 5
+        self.cache_limit = 10  # Increased cache size
         
         self.consecutive_title_screens = 0
         self.frames_captured = 0
-        
-        # Cache for encoded images to prevent redundant encoding
-        self.encoded_cache = {}
         self.last_frame_hash = None
+        
+        # Track environmental context across frames
+        self.current_environment = "UNKNOWN"
+        self.environment_confidence = 0
+        self.environment_history = []  # Track last 5 environment detections
+        self.max_history = 5
 
     def capture_screen(self):
         """
@@ -946,52 +1008,136 @@ Be concise and specific.
         img_array = np.array(img_small)
         return hash(img_array.tobytes())
     
+    def detect_environment(self, description):
+        """
+        Analyze the screen description to detect specific environments.
+        Returns the detected environment type.
+        """
+        description_upper = description.upper()
+        
+        # Cave detection with priority on dark caves
+        if any(term in description_upper for term in ["DARK CAVE", "CAN'T SEE", "LIMITED VISIBILITY", "FLASH NEEDED"]):
+            return "DARK_CAVE"
+        if any(term in description_upper for term in ["MT MOON", "MT. MOON"]):
+            return "MT_MOON"
+        if "ROCK TUNNEL" in description_upper:
+            return "ROCK_TUNNEL"
+        if "VICTORY ROAD" in description_upper:
+            return "VICTORY_ROAD"
+        if any(term in description_upper for term in ["CAVE", "TUNNEL", "UNDERGROUND", "ROCKY"]):
+            return "CAVE"
+            
+        # Building interiors
+        if any(term in description_upper for term in ["POKEMON CENTER", "POKÉMON CENTER", "NURSE JOY", "HEALING"]):
+            return "POKEMON_CENTER"
+        if any(term in description_upper for term in ["MART", "SHOP", "STORE", "CLERK", "BUY"]):
+            return "POKEMON_MART"
+        if "GYM" in description_upper:
+            return "GYM"
+        if any(term in description_upper for term in ["HOUSE", "BUILDING", "INSIDE", "INTERIOR", "INDOOR"]):
+            return "BUILDING"
+            
+        # Battle types
+        if "GYM LEADER" in description_upper and "BATTLE" in description_upper:
+            return "GYM_LEADER_BATTLE"
+        if "TRAINER" in description_upper and "BATTLE" in description_upper:
+            return "TRAINER_BATTLE"
+        if "WILD" in description_upper and "BATTLE" in description_upper:
+            return "WILD_BATTLE"
+        if any(term in description_upper for term in ["BATTLE", "FIGHT", "POKEMON VS", "POKÉMON VS"]):
+            return "BATTLE"
+            
+        # Other specific states
+        if any(term in description_upper for term in ["TITLE SCREEN", "BLUE VERSION", "PRESS START"]):
+            return "TITLE_SCREEN"
+        if any(term in description_upper for term in ["TEXT BOX", "DIALOGUE", "TALKING", "MESSAGE"]):
+            return "DIALOGUE"
+        if any(term in description_upper for term in ["MENU", "OPTIONS", "ITEMS", "POKEMON LIST", "POKÉMON LIST"]):
+            return "MENU"
+            
+        # Default to overworld
+        return "OVERWORLD"
+    
+    def update_environment_tracking(self, detected_env):
+        """
+        Update environment tracking based on new detection,
+        using a history-based approach for stability.
+        """
+        # Add to history and maintain max size
+        self.environment_history.append(detected_env)
+        if len(self.environment_history) > self.max_history:
+            self.environment_history.pop(0)
+            
+        # Count occurrences of each environment in history
+        env_counts = {}
+        for env in self.environment_history:
+            env_counts[env] = env_counts.get(env, 0) + 1
+            
+        # Find most common environment in history
+        most_common_env = max(env_counts.items(), key=lambda x: x[1])
+        most_common_count = most_common_env[1]
+        confidence = most_common_count / len(self.environment_history)
+        
+        # Update current environment if confidence is high enough
+        if confidence >= 0.6:  # 60% threshold for changing environment
+            prev_env = self.current_environment
+            self.current_environment = most_common_env[0]
+            self.environment_confidence = confidence
+            
+            if prev_env != self.current_environment:
+                utils.log(f"Environment change: {prev_env} -> {self.current_environment} (confidence: {confidence:.2f})")
+        
+        return self.current_environment
+    
     def get_game_state_text(self):
         """
-        Return a descriptive text about the current screen with caching optimization.
+        Return a descriptive text about the current screen with enhanced environment detection.
         """
         image = self.capture_screen()
         image_hash = self._hash_image(image)
         
         # Check if this frame is in cache
         if image_hash in self.image_cache:
-            utils.log("Using cached frame description")
-            return self.image_cache[image_hash]
+            cached_description = self.image_cache[image_hash]
+            # Still update environment tracking with cached description
+            detected_env = self.detect_environment(cached_description)
+            self.update_environment_tracking(detected_env)
+            utils.log(f"Using cached frame description (environment: {self.current_environment})")
+            return cached_description
             
         # Check if this is the same as last frame
         if image_hash == self.last_frame_hash:
+            cached_description = self.image_cache.get(image_hash, "Game screen with no changes")
             utils.log("Frame unchanged, reusing last description")
-            return self.image_cache.get(image_hash, "Game screen with no changes")
+            return cached_description
         
         self.last_frame_hash = image_hash
         
-        # Fast path for encoded image cache
-        if image_hash in self.encoded_cache:
-            encoded = self.encoded_cache[image_hash]
-            utils.log("Using cached encoded image")
-        else:
-            # Process image with the processor to get proper tensor input
-            inputs = self.processor(images=image, return_tensors="pt").to(self.device)
-            with torch.inference_mode():
-                with torch.amp.autocast('cuda', enabled=True):
-                    encoded = self.model.encode_image(**inputs)
-            # Cache the encoded image
-            if len(self.encoded_cache) >= self.cache_limit:
-                oldest = next(iter(self.encoded_cache))
-                del self.encoded_cache[oldest]
-            self.encoded_cache[image_hash] = encoded
+        # Choose prompt based on recent environment history for better specificity
+        prompt_to_use = self.base_prompt
         
-        # Generate caption with optimized settings.
-        # Note: We now pass the prompt using the `text` parameter.
+        # If we've consistently detected a cave, use specialized cave prompt
+        if any(env in ["CAVE", "MT_MOON", "ROCK_TUNNEL", "VICTORY_ROAD"] for env in self.environment_history[-2:]):
+            prompt_to_use = self.specialized_prompts["CAVE_DETECTION"]
+            utils.log("Using specialized cave detection prompt")
+        
+        # If we've detected a dark cave, use specialized dark cave prompt
+        elif "DARK_CAVE" in self.environment_history[-2:]:
+            prompt_to_use = self.specialized_prompts["DARK_CAVE_DETECTION"]
+            utils.log("Using specialized dark cave detection prompt")
+        
+        # Generate caption using Moondream
         with torch.inference_mode():
             caption = self.model.query(
-                encoded,
-                text=self.base_prompt,
-                max_new_tokens=150,  # Limit token generation
-                temperature=0.5,     # Lower temperature for more deterministic outputs
+                image,
+                prompt_to_use,
             )["answer"]
             
         utils.log(f"Moondream Screen Description: {caption}")
+        
+        # Update environment tracking
+        detected_env = self.detect_environment(caption)
+        self.update_environment_tracking(detected_env)
         
         # Update cache
         if len(self.image_cache) >= self.cache_limit:
@@ -999,8 +1145,9 @@ Be concise and specific.
             del self.image_cache[oldest]
         self.image_cache[image_hash] = caption
         
-        # Track title screen occurrences
-        if "title" in caption.lower() or "blue version" in caption.lower():
+        # More precise title screen tracking
+        if ("title screen" in caption.lower() or "blue version" in caption.lower()) and \
+           ("professor" not in caption.lower() and "oak" not in caption.lower()):
             self.consecutive_title_screens += 1
             utils.log(f"Title screen detection count: {self.consecutive_title_screens}")
         else:
@@ -1008,10 +1155,47 @@ Be concise and specific.
             
         return caption
 
+    def get_context_aware_prompt(self, task_instruction=None):
+        """
+        Generate a context-aware prompt based on the current environment.
+        """
+        # Base prompt parts
+        base_prefix = "You are playing Pokémon Blue. "
+        base_suffix = "\nReply with ONLY one button: UP, DOWN, LEFT, RIGHT, A, B, START, SELECT"
+        
+        # Environment-specific instructions
+        env_instructions = {
+            "DARK_CAVE": "You're in a dark cave with limited visibility. Navigate carefully and consider using Flash. ",
+            "CAVE": "You're exploring a cave. Watch for wild Pokémon and look for items. ",
+            "MT_MOON": "You're in Mt. Moon. Watch for Zubat encounters and fossil researchers. ",
+            "ROCK_TUNNEL": "You're in Rock Tunnel. This cave is complex with many trainers. ",
+            "VICTORY_ROAD": "You're in Victory Road. This is a challenging cave with strength puzzles. ",
+            "POKEMON_CENTER": "You're in a Pokémon Center. Consider talking to Nurse Joy to heal your Pokémon. ",
+            "POKEMON_MART": "You're in a Pokémon Mart. You can buy items from the clerk. ",
+            "GYM": "You're in a Pokémon Gym. Navigate to the Gym Leader while defeating trainers. ",
+            "WILD_BATTLE": "You're in a wild Pokémon battle. Choose fight for moves, or other options like Run. ",
+            "TRAINER_BATTLE": "You're in a trainer battle. You must win to proceed. Choose your moves wisely. ",
+            "GYM_LEADER_BATTLE": "You're battling a Gym Leader! This is an important battle for a badge. ",
+            "TITLE_SCREEN": "You're at the title screen. ",
+            "DIALOGUE": "You're in a dialogue or text screen. ",
+            "MENU": "You're navigating a menu. Use directional buttons to navigate and A to select. ",
+            "OVERWORLD": "You're exploring the overworld. "
+        }
+        
+        # Get environment-specific instruction or use general default
+        env_instruction = env_instructions.get(self.current_environment, "Choose a button based on what you see. ")
+        
+        # Include task instruction if provided, otherwise use environment-based guidance
+        if task_instruction:
+            prompt = f"{base_prefix}Choose a button based on this instruction:\n{task_instruction}{base_suffix}"
+        else:
+            prompt = f"{base_prefix}{env_instruction}{base_suffix}"
+            
+        return prompt
+
     def get_next_action(self, task_instruction=None):
         """
-        Use the Moondream model to choose the next button press.
-        Optimized with fast paths and more efficient generation settings.
+        Use the Moondream model to choose the next button press with environment awareness.
         """
         # Title screen fast path
         if self.consecutive_title_screens >= 2:
@@ -1019,52 +1203,26 @@ Be concise and specific.
             return "START"
         
         image = self.capture_screen()
-        image_hash = self._hash_image(image)
         
-        # Get or create encoded image
-        if image_hash in self.encoded_cache:
-            encoded = self.encoded_cache[image_hash]
-            utils.log("Using cached encoded image for action generation")
-        else:
-            inputs = self.processor(images=image, return_tensors="pt").to(self.device)
-            with torch.inference_mode():
-                with torch.amp.autocast('cuda', enabled=True):
-                    encoded = self.model.encode_image(**inputs)
-            if len(self.encoded_cache) >= self.cache_limit:
-                oldest = next(iter(self.encoded_cache))
-                del self.encoded_cache[oldest]
-            self.encoded_cache[image_hash] = encoded
-            
-        # Use task instruction if provided, otherwise use default prompt
-        if task_instruction:
-            prompt = f"""
-You are playing Pokémon Blue. Choose a button based on this instruction:
-{task_instruction}
-Reply with ONLY one button: UP, DOWN, LEFT, RIGHT, A, B, START, SELECT
-"""
-        else:
-            prompt = """
-You are playing Pokémon Blue. Choose ONE button to press:
-If you see title screen: START
-If you see text/dialogue: A
-If in menu: UP/DOWN to navigate, A to select
-If in overworld: UP/DOWN/LEFT/RIGHT to move
-
-Reply with ONLY one button: UP, DOWN, LEFT, RIGHT, A, B, START, SELECT
-"""
-        # Generate with optimized settings.
-        # Pass the prompt using the `text` parameter.
+        # Generate context-aware prompt
+        prompt = self.get_context_aware_prompt(task_instruction)
+        utils.log(f"Using prompt: {prompt}")
+        
+        # Generate with optimized settings
         with torch.inference_mode():
             response = self.model.query(
-                encoded,
-                text=prompt,
-                temperature=0.5,
-                max_new_tokens=15,
-                top_p=0.85
+                image,
+                prompt,
             )["answer"]
             
         utils.log(f"Moondream raw decision: {response}")
         action = response.strip().upper()
+        
+        # More specific title screen check to avoid false triggers
+        if ("TITLE SCREEN" in action or "BLUE VERSION" in action) and \
+           ("PROFESSOR" not in action and "OAK" not in action):
+            utils.log("Title screen text detected in response, overriding to START")
+            return "START"
         
         # Extract button by direct pattern matching
         for button in self.valid_buttons:
@@ -1072,13 +1230,16 @@ Reply with ONLY one button: UP, DOWN, LEFT, RIGHT, A, B, START, SELECT
                 utils.log(f"Extracted button '{button}' from '{action}'")
                 return button
                 
-        # Title screen override
-        if "TITLE" in action or "BLUE VERSION" in action:
-            utils.log("Title screen text detected in response, overriding to START")
+        # Environment-specific fallbacks
+        if self.current_environment == "DARK_CAVE":
+            utils.log("In dark cave with no clear action. Defaulting to START to access Flash.")
             return "START"
+        
+        if self.current_environment == "DIALOGUE":
+            utils.log("In dialogue with no clear action. Defaulting to A.")
+            return "A"
         
         # Default to "redo" if no valid button found - NEEDED FOR AI PLAYTHROUGH
         utils.log(f"No valid button in '{action}'. Defaulting to RETRYING.")
-        return self.get_next_action()  # Recursive call to try again
- 
+        return self.get_next_action()  # Recursive call to try again 
  

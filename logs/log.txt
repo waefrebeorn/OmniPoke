@@ -8736,3 +8736,1199 @@ There are no additional challenges.
 [2025-02-27 19:20:03] Updated mGBA window region to: (1991, 614, 346, 249)
 [2025-02-27 19:20:03] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
 [2025-02-27 19:20:04] Error during gameplay loop: self and mat2 must have the same dtype, but got Half and Char
+[2025-02-28 22:06:55] vJoy gamepad reset to default state.
+[2025-02-28 22:06:56] Launching mGBA emulator...
+[2025-02-28 22:06:59] Brought mGBA window to the front.
+[2025-02-28 22:06:59] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:06:59] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:06:59] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:06:59] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:07:10] Moondream model initialized on: cuda with full float16 precision
+[2025-02-28 22:09:14] vJoy gamepad reset to default state.
+[2025-02-28 22:09:14] Launching mGBA emulator...
+[2025-02-28 22:09:17] Brought mGBA window to the front.
+[2025-02-28 22:09:17] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:09:17] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:09:17] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:09:18] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:09:22] Moondream model initialized on: cuda with full float16 precision
+[2025-02-28 22:09:32] Llama model initialized on: cuda with 8-bit quantization (no CPU offload) and float16 precision
+[2025-02-28 22:09:32] Starting Pokémon Blue AI training with optimized models...
+[2025-02-28 22:09:32] Pressing START button to begin game...
+[2025-02-28 22:09:32] Brought mGBA window to the front.
+[2025-02-28 22:09:32] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:09:32] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:09:32] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 22:09:32] Pressed gamepad button: START
+[2025-02-28 22:09:37] Brought mGBA window to the front.
+[2025-02-28 22:09:37] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:09:37] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:09:37] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:09:37] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:10:07] Moondream Screen Description:  The game screen is blank, showing no game state or visible text.
+[2025-02-28 22:10:07] Brought mGBA window to the front.
+[2025-02-28 22:10:07] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:10:07] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:10:07] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:10:07] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:10:54] Moondream Screen Description:  The image shows the title screen of Pokémon Blue. It displays the game's title, "Pokémon Blue", in a stylized font. Below the title, the text "Blue Version" indicates the game's color scheme. Two characters are visible, one in the foreground and one in the background, both seemingly in a fighting stance.
+[2025-02-28 22:10:54] Title screen detection count: 1
+[2025-02-28 22:10:54] Game state from vision:  The image shows the title screen of Pokémon Blue. It displays the game's title, "Pokémon Blue", in a stylized font. Below the title, the text "Blue Version" indicates the game's color scheme. Two characters are visible, one in the foreground and one in the background, both seemingly in a fighting stance.
+[2025-02-28 22:10:54] Brought mGBA window to the front.
+[2025-02-28 22:10:54] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:10:54] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:10:54] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 22:10:55] Pressed gamepad button: START
+[2025-02-28 22:10:56] Brought mGBA window to the front.
+[2025-02-28 22:10:56] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:10:56] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:10:56] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:10:56] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:10:56] Using cached frame description
+[2025-02-28 22:10:56] Brought mGBA window to the front.
+[2025-02-28 22:10:56] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:10:56] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:10:56] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:10:56] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:10:56] Using cached frame description
+[2025-02-28 22:10:56] Game state from vision:  The game screen is blank, showing no game state or visible text.
+[2025-02-28 22:10:56] State transition: UNKNOWN -> DIALOGUE
+[2025-02-28 22:10:56] Llama instruction: Press A button.
+[2025-02-28 22:10:56] Brought mGBA window to the front.
+[2025-02-28 22:10:56] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:10:56] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:10:56] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-28 22:10:56] Pressed gamepad button: A
+[2025-02-28 22:10:57] Brought mGBA window to the front.
+[2025-02-28 22:10:57] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:10:57] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:10:57] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:10:57] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:10:57] Using cached frame description
+[2025-02-28 22:10:57] Brought mGBA window to the front.
+[2025-02-28 22:10:57] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:10:57] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:10:57] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:10:57] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:10:57] Using cached frame description
+[2025-02-28 22:10:57] Game state from vision:  The game screen is blank, showing no game state or visible text.
+[2025-02-28 22:10:57] Llama instruction: Press A button.
+[2025-02-28 22:10:57] Brought mGBA window to the front.
+[2025-02-28 22:10:57] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:10:57] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:10:57] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-28 22:10:58] Pressed gamepad button: A
+[2025-02-28 22:10:58] Brought mGBA window to the front.
+[2025-02-28 22:10:58] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:10:58] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:10:58] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:10:58] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:11:30] Moondream Screen Description:  The game screen shows a blue background with a white border. A pixelated character, possibly a Pokémon, is standing in the center.  There is no visible text or menu options.
+[2025-02-28 22:11:30] Brought mGBA window to the front.
+[2025-02-28 22:11:30] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:11:30] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:11:30] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:11:30] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:12:12] Moondream Screen Description:  The game screen shows a blue background with a white border.  A small, pixelated character is centered, holding a small object.  The text "Hello there!" is displayed at the bottom, followed by a dialogue box with the text "What's up?" and a question mark.
+[2025-02-28 22:12:12] Game state from vision:  The game screen shows a blue background with a white border.  A small, pixelated character is centered, holding a small object.  The text "Hello there!" is displayed at the bottom, followed by a dialogue box with the text "What's up?" and a question mark.
+[2025-02-28 22:12:12] Llama instruction: Press A button.
+[2025-02-28 22:12:12] Brought mGBA window to the front.
+[2025-02-28 22:12:12] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:12:12] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:12:12] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-28 22:12:13] Pressed gamepad button: A
+[2025-02-28 22:12:13] Brought mGBA window to the front.
+[2025-02-28 22:12:13] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:12:13] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:12:13] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:12:13] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:12:39] Moondream Screen Description:  The game screen shows a welcome message to the player, followed by the game's title, a dialogue prompt, and a battle information.
+[2025-02-28 22:12:39] Title screen detection count: 1
+[2025-02-28 22:12:39] Brought mGBA window to the front.
+[2025-02-28 22:12:39] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:12:39] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:12:39] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:12:39] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:13:10] Moondream Screen Description:  The game screen shows a welcome message to the player, followed by the game's title, a dialogue prompt, and a brief description of the game's setting.
+[2025-02-28 22:13:10] Title screen detection count: 2
+[2025-02-28 22:13:10] Game state from vision:  The game screen shows a welcome message to the player, followed by the game's title, a dialogue prompt, and a brief description of the game's setting.
+[2025-02-28 22:13:10] Llama instruction: Press A button.
+[2025-02-28 22:13:10] Brought mGBA window to the front.
+[2025-02-28 22:13:10] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:13:10] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:13:10] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-28 22:13:11] Pressed gamepad button: A
+[2025-02-28 22:13:11] Brought mGBA window to the front.
+[2025-02-28 22:13:11] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:13:11] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:13:11] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:13:11] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:13:51] Moondream Screen Description:  The game screen shows a blue background with a white border.  A character with blonde hair and a white lab coat is standing.  Below the character, the text "My name is" is displayed.
+[2025-02-28 22:13:51] Brought mGBA window to the front.
+[2025-02-28 22:13:51] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:13:51] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:13:51] Updated mGBA window region to: (1991, 614, 346, 249)
+[2025-02-28 22:13:51] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:14:05] vJoy gamepad reset to default state.
+[2025-02-28 22:14:06] Launching mGBA emulator...
+[2025-02-28 22:14:09] Brought mGBA window to the front.
+[2025-02-28 22:14:09] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 22:14:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:14:09] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 22:14:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:14:13] Moondream model initialized on: cuda with full float16 precision
+[2025-02-28 22:14:20] Llama model initialized on: cuda with 8-bit quantization (no CPU offload) and float16 precision
+[2025-02-28 22:14:20] Starting Pokémon Blue AI training with optimized models...
+[2025-02-28 22:14:20] Pressing START button to begin game...
+[2025-02-28 22:14:20] Brought mGBA window to the front.
+[2025-02-28 22:14:20] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 22:14:20] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:14:20] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 22:14:20] Pressed gamepad button: START
+[2025-02-28 22:14:26] Brought mGBA window to the front.
+[2025-02-28 22:14:26] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 22:14:26] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:14:26] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 22:14:26] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:15:32] Moondream Screen Description:  The image shows a Pokémon Blue game screen. The title screen displays the game's title, "Pokémon," in large, stylized yellow letters against a light purple background. Below the title, the text "Blue Version" indicates the color scheme. Two cartoon characters, a larger one and a smaller one, are positioned below the title. The smaller character appears to be a Pokéball, while the larger one resembles a Pokédex. The bottom of the screen includes copyright information for Game Freak Inc.
+[2025-02-28 22:15:32] Title screen detection count: 1
+[2025-02-28 22:15:32] Brought mGBA window to the front.
+[2025-02-28 22:15:32] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 22:15:32] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:15:32] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 22:15:32] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:16:29] Moondream Screen Description:  The image shows the title screen of Pokémon Blue. It displays the game's title, "Pokémon," in large, stylized yellow letters against a light purple background. Below the title, the text "Blue Version" is displayed in a smaller, sans-serif font. A pixelated character, possibly a Pokémon, is shown in the bottom right corner. The bottom of the screen contains copyright information for Game Break Inc.
+[2025-02-28 22:16:29] Title screen detection count: 2
+[2025-02-28 22:16:29] Game state from vision:  The image shows the title screen of Pokémon Blue. It displays the game's title, "Pokémon," in large, stylized yellow letters against a light purple background. Below the title, the text "Blue Version" is displayed in a smaller, sans-serif font. A pixelated character, possibly a Pokémon, is shown in the bottom right corner. The bottom of the screen contains copyright information for Game Break Inc.
+[2025-02-28 22:16:29] Brought mGBA window to the front.
+[2025-02-28 22:16:29] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 22:16:29] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:16:29] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 22:16:29] Pressed gamepad button: START
+[2025-02-28 22:16:30] Brought mGBA window to the front.
+[2025-02-28 22:16:30] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 22:16:30] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:16:30] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 22:16:30] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:50:58] vJoy gamepad reset to default state.
+[2025-02-28 22:50:59] Launching mGBA emulator...
+[2025-02-28 22:51:02] Brought mGBA window to the front.
+[2025-02-28 22:51:02] Updated mGBA window region to: (4552, 798, 336, 269)
+[2025-02-28 22:51:02] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:51:02] Updated mGBA window region to: (4552, 798, 336, 269)
+[2025-02-28 22:51:02] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:51:08] Moondream model initialized on: cuda with full float16 precision
+[2025-02-28 22:51:15] Llama model initialized on: cuda with 8-bit quantization (no CPU offload) and float16 precision
+[2025-02-28 22:51:15] Starting Pokémon Blue AI training with optimized models...
+[2025-02-28 22:51:15] Pressing START button to begin game...
+[2025-02-28 22:51:15] Brought mGBA window to the front.
+[2025-02-28 22:51:15] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:51:15] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:51:15] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 22:51:15] Pressed gamepad button: START
+[2025-02-28 22:51:20] Brought mGBA window to the front.
+[2025-02-28 22:51:20] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:51:20] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:51:20] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:51:20] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:52:00] Moondream Screen Description:  The game screen shows a light pink background with a darker pink silhouette of a Pokémon.  There is no visible text or menu options. The character is positioned slightly to the left of the center.
+[2025-02-28 22:52:00] Game state from vision:  The game screen shows a light pink background with a darker pink silhouette of a Pokémon.  There is no visible text or menu options. The character is positioned slightly to the left of the center.
+[2025-02-28 22:52:00] State transition: UNKNOWN -> DIALOGUE
+[2025-02-28 22:52:00] Llama instruction: Press A button.
+[2025-02-28 22:52:00] Brought mGBA window to the front.
+[2025-02-28 22:52:00] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:52:00] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:52:00] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-28 22:52:00] Pressed gamepad button: A
+[2025-02-28 22:52:01] Brought mGBA window to the front.
+[2025-02-28 22:52:01] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:52:01] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:52:01] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:52:01] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:52:01] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_0.png
+[2025-02-28 22:52:01] Brought mGBA window to the front.
+[2025-02-28 22:52:01] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:52:01] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:52:01] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:52:01] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:52:37] Moondream Screen Description:  The image shows a Pokémon Blue game screen. The title screen displays the Pokémon logo and the text "Blue Version". Below the logo, there is a character illustration of a Pokémon and a Pokémon. The bottom of the screen contains copyright information for Game Freak Inc.
+[2025-02-28 22:52:37] Title screen detection count: 1
+[2025-02-28 22:52:37] Brought mGBA window to the front.
+[2025-02-28 22:52:37] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:52:37] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:52:37] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:52:38] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:53:15] Moondream Screen Description:  The image shows the title screen of Pokémon Blue. It displays the game's title, "Pokémon," in a stylized yellow font. Below the title, "Blue Version" is written in a smaller, simpler font.  A pixelated character, possibly a Pokémon, is shown holding a Pokéball. The character is wearing a baseball cap and a short-sleeved shirt. The background is a light purple color.
+[2025-02-28 22:53:15] Title screen detection count: 2
+[2025-02-28 22:53:15] Game state from vision:  The image shows the title screen of Pokémon Blue. It displays the game's title, "Pokémon," in a stylized yellow font. Below the title, "Blue Version" is written in a smaller, simpler font.  A pixelated character, possibly a Pokémon, is shown holding a Pokéball. The character is wearing a baseball cap and a short-sleeved shirt. The background is a light purple color.
+[2025-02-28 22:53:15] Brought mGBA window to the front.
+[2025-02-28 22:53:15] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:53:15] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:53:15] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 22:53:15] Pressed gamepad button: START
+[2025-02-28 22:53:16] Brought mGBA window to the front.
+[2025-02-28 22:53:16] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:53:16] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:53:16] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:53:16] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:53:16] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_1.png
+[2025-02-28 22:53:16] Brought mGBA window to the front.
+[2025-02-28 22:53:16] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:53:16] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:53:16] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:53:16] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:53:29] Moondream Screen Description:  The game screen is blank, showing no game state or visible text.
+[2025-02-28 22:53:30] Brought mGBA window to the front.
+[2025-02-28 22:53:30] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:53:30] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:53:30] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:53:30] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:53:54] Moondream Screen Description:  The game screen displays the title "New Game Option" in a black font on a light pink background.  Below the title, there is a blue border with a white frame.  The screen shows a blank space, suggesting a new game is about to be started.
+[2025-02-28 22:53:54] Title screen detection count: 1
+[2025-02-28 22:53:54] Game state from vision:  The game screen displays the title "New Game Option" in a black font on a light pink background.  Below the title, there is a blue border with a white frame.  The screen shows a blank space, suggesting a new game is about to be started.
+[2025-02-28 22:53:54] State transition: DIALOGUE -> MENU
+[2025-02-28 22:53:54] Generating instruction for state: MENU
+[2025-02-28 22:53:54] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-28 22:53:56] Brought mGBA window to the front.
+[2025-02-28 22:53:56] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:53:56] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:53:56] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:53:56] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:53:56] Using cached frame description
+[2025-02-28 22:53:56] Game state from vision:  The game screen displays the title "New Game Option" in a black font on a light pink background.  Below the title, there is a blue border with a white frame.  The screen shows a blank space, suggesting a new game is about to be started.
+[2025-02-28 22:53:56] Generating instruction for state: MENU
+[2025-02-28 22:53:56] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-28 22:53:58] Brought mGBA window to the front.
+[2025-02-28 22:53:58] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:53:58] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:53:58] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:53:58] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:53:58] Using cached frame description
+[2025-02-28 22:53:58] Game state from vision:  The game screen displays the title "New Game Option" in a black font on a light pink background.  Below the title, there is a blue border with a white frame.  The screen shows a blank space, suggesting a new game is about to be started.
+[2025-02-28 22:53:58] Generating instruction for state: MENU
+[2025-02-28 22:53:58] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-28 22:54:00] Brought mGBA window to the front.
+[2025-02-28 22:54:00] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:54:00] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:54:00] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:54:00] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:54:00] Using cached frame description
+[2025-02-28 22:54:00] Game state from vision:  The game screen displays the title "New Game Option" in a black font on a light pink background.  Below the title, there is a blue border with a white frame.  The screen shows a blank space, suggesting a new game is about to be started.
+[2025-02-28 22:54:00] Generating instruction for state: MENU
+[2025-02-28 22:54:00] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-28 22:54:01] Brought mGBA window to the front.
+[2025-02-28 22:54:01] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:54:01] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:54:01] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:54:01] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:54:02] Using cached frame description
+[2025-02-28 22:54:02] Game state from vision:  The game screen displays the title "New Game Option" in a black font on a light pink background.  Below the title, there is a blue border with a white frame.  The screen shows a blank space, suggesting a new game is about to be started.
+[2025-02-28 22:54:02] Generating instruction for state: MENU
+[2025-02-28 22:54:02] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-28 22:54:03] Brought mGBA window to the front.
+[2025-02-28 22:54:03] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:54:03] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:54:03] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:54:03] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:54:03] Using cached frame description
+[2025-02-28 22:54:03] Game state from vision:  The game screen displays the title "New Game Option" in a black font on a light pink background.  Below the title, there is a blue border with a white frame.  The screen shows a blank space, suggesting a new game is about to be started.
+[2025-02-28 22:54:03] Generating instruction for state: MENU
+[2025-02-28 22:54:03] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-28 22:54:03] Too many consecutive failures. Restarting emulator...
+[2025-02-28 22:54:05] Brought mGBA window to the front.
+[2025-02-28 22:54:05] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:54:05] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:54:05] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:54:05] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:54:05] Using cached frame description
+[2025-02-28 22:54:05] Game state from vision:  The game screen displays the title "New Game Option" in a black font on a light pink background.  Below the title, there is a blue border with a white frame.  The screen shows a blank space, suggesting a new game is about to be started.
+[2025-02-28 22:54:05] Generating instruction for state: MENU
+[2025-02-28 22:54:05] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-28 22:54:07] Brought mGBA window to the front.
+[2025-02-28 22:54:07] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:54:07] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:54:07] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:54:07] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:54:07] Using cached frame description
+[2025-02-28 22:54:07] Game state from vision:  The game screen displays the title "New Game Option" in a black font on a light pink background.  Below the title, there is a blue border with a white frame.  The screen shows a blank space, suggesting a new game is about to be started.
+[2025-02-28 22:54:07] Generating instruction for state: MENU
+[2025-02-28 22:54:07] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-28 22:54:09] Brought mGBA window to the front.
+[2025-02-28 22:54:09] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:54:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:54:09] Updated mGBA window region to: (1649, 596, 336, 269)
+[2025-02-28 22:54:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:54:09] Using cached frame description
+[2025-02-28 22:54:09] Game state from vision:  The game screen displays the title "New Game Option" in a black font on a light pink background.  Below the title, there is a blue border with a white frame.  The screen shows a blank space, suggesting a new game is about to be started.
+[2025-02-28 22:54:09] Generating instruction for state: MENU
+[2025-02-28 22:54:09] Error during gameplay loop: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.HalfTensor instead (while checking arguments for embedding)
+[2025-02-28 22:55:05] vJoy gamepad reset to default state.
+[2025-02-28 22:55:06] Launching mGBA emulator...
+[2025-02-28 22:55:09] Brought mGBA window to the front.
+[2025-02-28 22:55:09] Updated mGBA window region to: (-887, 550, 336, 269)
+[2025-02-28 22:55:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:55:09] Updated mGBA window region to: (-887, 550, 336, 269)
+[2025-02-28 22:55:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:55:13] Moondream model initialized on: cuda with full float16 precision
+[2025-02-28 22:55:20] Llama model initialized on: cuda with 8-bit quantization (no CPU offload) and float16 precision
+[2025-02-28 22:55:20] Starting Pokémon Blue AI training with optimized models...
+[2025-02-28 22:55:20] Pressing START button to begin game...
+[2025-02-28 22:55:20] Brought mGBA window to the front.
+[2025-02-28 22:55:20] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:55:20] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:55:20] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 22:55:20] Pressed gamepad button: START
+[2025-02-28 22:55:25] Brought mGBA window to the front.
+[2025-02-28 22:55:25] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:55:25] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:55:25] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:55:25] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:56:12] Moondream Screen Description:  The image shows a Pokémon Blue game screen. The title screen displays the game's title, "Pokémon," in large, stylized yellow letters against a light purple background. Below the title, the text "Blue Version" indicates the color scheme. Two cartoon characters, a larger one and a smaller one, are positioned below the title. The smaller character appears to be a Pokéball, while the larger one resembles a Pokédex. The bottom of the screen includes copyright information for Game Freak Inc.
+[2025-02-28 22:56:12] Title screen detection count: 1
+[2025-02-28 22:56:12] Game state from vision:  The image shows a Pokémon Blue game screen. The title screen displays the game's title, "Pokémon," in large, stylized yellow letters against a light purple background. Below the title, the text "Blue Version" indicates the color scheme. Two cartoon characters, a larger one and a smaller one, are positioned below the title. The smaller character appears to be a Pokéball, while the larger one resembles a Pokédex. The bottom of the screen includes copyright information for Game Freak Inc.
+[2025-02-28 22:56:12] Brought mGBA window to the front.
+[2025-02-28 22:56:12] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:56:12] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:56:12] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 22:56:13] Pressed gamepad button: START
+[2025-02-28 22:56:14] Brought mGBA window to the front.
+[2025-02-28 22:56:14] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:56:14] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:56:14] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:56:14] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:56:14] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_0.png
+[2025-02-28 22:56:14] Brought mGBA window to the front.
+[2025-02-28 22:56:14] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:56:14] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:56:14] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:56:14] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:56:30] Moondream Screen Description:  The game screen is blank, showing no game state or visible text.
+[2025-02-28 22:56:32] Brought mGBA window to the front.
+[2025-02-28 22:56:32] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:56:32] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:56:32] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:56:32] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:57:05] Moondream Screen Description:  The game screen displays the title "New Game Option" in a black font on a light pink background.  Below the title, there is a blue border with a white frame.  The screen shows a blank space, suggesting a new game is about to be started.
+[2025-02-28 22:57:05] Title screen detection count: 1
+[2025-02-28 22:57:05] Game state from vision:  The game screen displays the title "New Game Option" in a black font on a light pink background.  Below the title, there is a blue border with a white frame.  The screen shows a blank space, suggesting a new game is about to be started.
+[2025-02-28 22:57:05] State transition: UNKNOWN -> MENU
+[2025-02-28 22:57:05] Generating instruction for state: MENU
+[2025-02-28 22:57:06] Llama instruction: 
+[2025-02-28 22:57:06] Llama instruction: Press A button to continue.
+[2025-02-28 22:57:06] Brought mGBA window to the front.
+[2025-02-28 22:57:06] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:57:06] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:57:06] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-28 22:57:06] Pressed gamepad button: A
+[2025-02-28 22:57:07] Brought mGBA window to the front.
+[2025-02-28 22:57:07] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:57:07] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:57:07] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:57:07] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:57:08] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_1.png
+[2025-02-28 22:57:08] Brought mGBA window to the front.
+[2025-02-28 22:57:08] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:57:08] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:57:08] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:57:08] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:57:38] Moondream Screen Description:  The game screen shows a blue border with a light purple background.  A pixelated character, possibly a scientist or doctor, is centrally positioned.  There are no visible text or menu options, battle information, or other game elements.
+[2025-02-28 22:57:38] Brought mGBA window to the front.
+[2025-02-28 22:57:38] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:57:38] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:57:38] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:57:39] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:58:10] Moondream Screen Description:  The game screen shows a blue background with a white border.  A small, pixelated character with orange hair and a white lab coat stands in the center.  Below the character, the text "Hello there! Welcome to the" is displayed.
+[2025-02-28 22:58:10] Game state from vision:  The game screen shows a blue background with a white border.  A small, pixelated character with orange hair and a white lab coat stands in the center.  Below the character, the text "Hello there! Welcome to the" is displayed.
+[2025-02-28 22:58:10] State transition: MENU -> DIALOGUE
+[2025-02-28 22:58:10] Llama instruction: Press A button.
+[2025-02-28 22:58:10] Brought mGBA window to the front.
+[2025-02-28 22:58:10] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:58:11] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:58:11] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-28 22:58:11] Pressed gamepad button: A
+[2025-02-28 22:58:12] Brought mGBA window to the front.
+[2025-02-28 22:58:12] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:58:12] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:58:12] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:58:12] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:58:12] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_2.png
+[2025-02-28 22:58:12] Brought mGBA window to the front.
+[2025-02-28 22:58:12] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:58:12] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:58:12] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:58:12] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:58:34] Moondream Screen Description:  The game screen shows a welcome message to the Pokémon world, with a single character standing in the center.  There is no visible battle information or menu options.
+[2025-02-28 22:58:35] Brought mGBA window to the front.
+[2025-02-28 22:58:35] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:58:35] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:58:35] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:58:35] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:58:35] Using cached frame description
+[2025-02-28 22:58:35] Game state from vision:  The game screen shows a welcome message to the Pokémon world, with a single character standing in the center.  There is no visible battle information or menu options.
+[2025-02-28 22:58:35] State transition: DIALOGUE -> BATTLE
+[2025-02-28 22:58:35] Generating instruction for state: BATTLE
+[2025-02-28 22:59:02] Llama instruction: The game will respond with either 'Move OK' or 'Move NG'.
+This is the same as Move Up, but you
+[2025-02-28 22:59:02] Llama instruction: The game will respond with either 'Move OK' or 'Move NG'.
+This is the same as Move Up, but you
+[2025-02-28 22:59:02] Brought mGBA window to the front.
+[2025-02-28 22:59:02] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:59:02] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:59:02] Pressing gamepad button: UP (vJoy Button 3)
+[2025-02-28 22:59:02] Pressed gamepad button: UP
+[2025-02-28 22:59:03] Brought mGBA window to the front.
+[2025-02-28 22:59:03] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:59:03] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:59:03] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:59:03] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:59:03] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_3.png
+[2025-02-28 22:59:03] Brought mGBA window to the front.
+[2025-02-28 22:59:03] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:59:03] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:59:03] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:59:03] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:59:03] Using cached frame description
+[2025-02-28 22:59:04] Brought mGBA window to the front.
+[2025-02-28 22:59:04] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:59:04] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:59:04] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:59:04] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:59:27] Moondream Screen Description:  The game screen shows a welcome message to the Pokémon world, with a single character standing in the center.  There is no visible battle information or menu options.
+[2025-02-28 22:59:27] Game state from vision:  The game screen shows a welcome message to the Pokémon world, with a single character standing in the center.  There is no visible battle information or menu options.
+[2025-02-28 22:59:27] Generating instruction for state: BATTLE
+[2025-02-28 22:59:28] Llama instruction: 
+[2025-02-28 22:59:28] Llama instruction: Press A button to continue.
+[2025-02-28 22:59:28] Brought mGBA window to the front.
+[2025-02-28 22:59:28] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:59:28] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:59:28] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-28 22:59:28] Pressed gamepad button: A
+[2025-02-28 22:59:29] Brought mGBA window to the front.
+[2025-02-28 22:59:29] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:59:29] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:59:29] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:59:29] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:59:29] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_4.png
+[2025-02-28 22:59:29] Brought mGBA window to the front.
+[2025-02-28 22:59:29] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:59:29] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 22:59:29] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 22:59:29] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:00:01] Moondream Screen Description:  The game screen shows a blue background with a white border.  A small, pixelated character is displayed in the center.  Below the character, there is text that reads "My name is OAK! People ca".
+[2025-02-28 23:00:02] Brought mGBA window to the front.
+[2025-02-28 23:00:02] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:00:02] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:00:02] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:00:02] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:00:32] Moondream Screen Description:  The game screen shows a blue background with a white border.  A small, pixelated character is displayed in the center.  Below the character, there is text that reads "My name is OAK! People call me".
+[2025-02-28 23:00:32] Game state from vision:  The game screen shows a blue background with a white border.  A small, pixelated character is displayed in the center.  Below the character, there is text that reads "My name is OAK! People call me".
+[2025-02-28 23:00:32] State transition: BATTLE -> DIALOGUE
+[2025-02-28 23:00:32] Llama instruction: Press A button.
+[2025-02-28 23:00:32] Brought mGBA window to the front.
+[2025-02-28 23:00:32] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:00:32] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:00:32] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-28 23:00:32] Pressed gamepad button: A
+[2025-02-28 23:00:33] Brought mGBA window to the front.
+[2025-02-28 23:00:33] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:00:33] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:00:33] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:00:34] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:00:34] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_5.png
+[2025-02-28 23:00:34] Brought mGBA window to the front.
+[2025-02-28 23:00:34] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:00:34] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:00:34] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:00:34] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:01:09] Moondream Screen Description:  The Pokémon Blue game screen shows a character named Prof. standing against a light purple background. The dialogue box indicates that people call him Prof. The game's title screen displays the game's title, and the menu options are visible at the top.
+[2025-02-28 23:01:09] Title screen detection count: 1
+[2025-02-28 23:01:09] Brought mGBA window to the front.
+[2025-02-28 23:01:09] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:01:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:01:09] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:01:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:01:09] Using cached frame description
+[2025-02-28 23:01:09] Game state from vision:  The Pokémon Blue game screen shows a character named Prof. standing against a light purple background. The dialogue box indicates that people call him Prof. The game's title screen displays the game's title, and the menu options are visible at the top.
+[2025-02-28 23:01:09] Brought mGBA window to the front.
+[2025-02-28 23:01:09] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:01:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:01:09] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 23:01:10] Pressed gamepad button: START
+[2025-02-28 23:01:11] Brought mGBA window to the front.
+[2025-02-28 23:01:11] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:01:11] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:01:11] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:01:11] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:01:11] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_6.png
+[2025-02-28 23:01:11] Brought mGBA window to the front.
+[2025-02-28 23:01:11] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:01:11] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:01:11] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:01:11] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:01:36] Moondream Screen Description:  The Pokémon Blue game screen shows a character in a lab coat standing against a light purple background.  The dialogue box contains the text "people call me the POKAMON PROF!"
+[2025-02-28 23:01:37] Brought mGBA window to the front.
+[2025-02-28 23:01:37] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:01:37] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:01:37] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:01:37] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:01:37] Using cached frame description
+[2025-02-28 23:01:37] Game state from vision:  The Pokémon Blue game screen shows a character named Prof. standing against a light purple background. The dialogue box indicates that people call him Prof. The game's title screen displays the game's title, and the menu options are visible at the top.
+[2025-02-28 23:01:37] Brought mGBA window to the front.
+[2025-02-28 23:01:37] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:01:37] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:01:37] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 23:01:37] Pressed gamepad button: START
+[2025-02-28 23:01:38] Brought mGBA window to the front.
+[2025-02-28 23:01:38] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:01:38] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:01:38] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:01:38] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:01:38] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_7.png
+[2025-02-28 23:01:38] Brought mGBA window to the front.
+[2025-02-28 23:01:38] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:01:39] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:01:39] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:01:39] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:01:39] Using cached frame description
+[2025-02-28 23:01:39] Brought mGBA window to the front.
+[2025-02-28 23:01:39] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:01:39] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:01:39] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:01:39] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:01:39] Using cached frame description
+[2025-02-28 23:01:39] Game state from vision:  The Pokémon Blue game screen shows a character in a lab coat standing against a light purple background.  The dialogue box contains the text "people call me the POKAMON PROF!"
+[2025-02-28 23:01:39] Llama instruction: Press A button.
+[2025-02-28 23:01:39] Brought mGBA window to the front.
+[2025-02-28 23:01:39] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:01:39] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:01:39] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-28 23:01:40] Pressed gamepad button: A
+[2025-02-28 23:01:41] Brought mGBA window to the front.
+[2025-02-28 23:01:41] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:01:41] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:01:41] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:01:41] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:01:41] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_8.png
+[2025-02-28 23:01:41] Brought mGBA window to the front.
+[2025-02-28 23:01:41] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:01:41] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:01:41] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:01:41] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:02:23] Moondream Screen Description:  The game screen shows a blue frame with a light purple background.  A single Pokémon character is displayed in the center, seemingly in a fighting stance.  The character is primarily orange and white with some darker markings.  There is no visible text or menu options, and the character's position suggests it is in a fighting or combat situation.
+[2025-02-28 23:02:24] Brought mGBA window to the front.
+[2025-02-28 23:02:24] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:02:24] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:02:24] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:02:24] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:02:51] Moondream Screen Description:  The game screen shows a blue background with a white border.  A dialogue box is present, displaying the text "This world is inhabited by".
+[2025-02-28 23:02:51] Game state from vision:  The game screen shows a blue background with a white border.  A dialogue box is present, displaying the text "This world is inhabited by".
+[2025-02-28 23:02:51] Llama instruction: Press A button.
+[2025-02-28 23:02:51] Brought mGBA window to the front.
+[2025-02-28 23:02:51] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:02:52] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:02:52] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-28 23:02:52] Pressed gamepad button: A
+[2025-02-28 23:02:53] Brought mGBA window to the front.
+[2025-02-28 23:02:53] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:02:53] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:02:53] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:02:53] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:02:53] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_9.png
+[2025-02-28 23:02:53] Brought mGBA window to the front.
+[2025-02-28 23:02:53] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:02:53] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:02:53] Updated mGBA window region to: (1336, 751, 336, 269)
+[2025-02-28 23:02:53] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:02:53] Saved frame: C:\projects\OmniPoke\logs\frames\frame_20.png
+[2025-02-28 23:03:11] Moondream Screen Description:  Game state (title screen, dialogue, battle, menu, or overworld)
+[2025-02-28 23:03:11] Title screen detection count: 1
+[2025-02-28 23:03:11] Action 10: A - Vision: 17.596s, Decision: 27.800s, Total: 47.422s
+[2025-02-28 23:03:11] Brought mGBA window to the front.
+[2025-02-28 23:03:11] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:03:11] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:03:11] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:03:11] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:03:11] Using cached frame description
+[2025-02-28 23:03:11] Game state from vision:  Game state (title screen, dialogue, battle, menu, or overworld)
+[2025-02-28 23:03:11] Brought mGBA window to the front.
+[2025-02-28 23:03:11] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:03:11] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:03:11] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 23:03:12] Pressed gamepad button: START
+[2025-02-28 23:03:13] Brought mGBA window to the front.
+[2025-02-28 23:03:13] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:03:13] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:03:13] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:03:13] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:03:13] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_10.png
+[2025-02-28 23:03:13] Brought mGBA window to the front.
+[2025-02-28 23:03:13] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:03:13] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:03:13] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:03:13] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:03:44] Moondream Screen Description:  The game screen shows a blue background with a white border.  The top and bottom borders are blue, and the middle is white.  The center contains the text "Inhabited by creatures called".
+[2025-02-28 23:03:45] Brought mGBA window to the front.
+[2025-02-28 23:03:45] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:03:45] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:03:45] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:03:45] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:03:45] Using cached frame description
+[2025-02-28 23:03:45] Game state from vision:  The game screen shows a blue background with a white border.  The top and bottom borders are blue, and the middle is white.  The center contains the text "Inhabited by creatures called".
+[2025-02-28 23:03:45] Llama instruction: Press A button.
+[2025-02-28 23:03:45] Brought mGBA window to the front.
+[2025-02-28 23:03:45] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:03:45] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:03:45] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-28 23:03:45] Pressed gamepad button: A
+[2025-02-28 23:03:47] Brought mGBA window to the front.
+[2025-02-28 23:03:47] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:03:47] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:03:47] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:03:47] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:03:47] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_11.png
+[2025-02-28 23:03:47] Brought mGBA window to the front.
+[2025-02-28 23:03:47] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:03:47] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:03:47] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:03:47] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:05] Moondream Screen Description:  Game state (title screen, dialogue, battle, menu, or overworld)
+[2025-02-28 23:04:05] Title screen detection count: 1
+[2025-02-28 23:04:05] Brought mGBA window to the front.
+[2025-02-28 23:04:05] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:05] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:05] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:06] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:23] Moondream Screen Description:  Game state (title screen, dialogue, battle, menu, or overworld)
+[2025-02-28 23:04:23] Title screen detection count: 2
+[2025-02-28 23:04:23] Game state from vision:  Game state (title screen, dialogue, battle, menu, or overworld)
+[2025-02-28 23:04:23] Brought mGBA window to the front.
+[2025-02-28 23:04:23] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:23] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:23] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 23:04:23] Pressed gamepad button: START
+[2025-02-28 23:04:24] Brought mGBA window to the front.
+[2025-02-28 23:04:24] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:24] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:24] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:24] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:24] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_12.png
+[2025-02-28 23:04:25] Brought mGBA window to the front.
+[2025-02-28 23:04:25] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:25] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:25] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:25] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:25] Using cached frame description
+[2025-02-28 23:04:25] Brought mGBA window to the front.
+[2025-02-28 23:04:25] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:25] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:25] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:25] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:25] Using cached frame description
+[2025-02-28 23:04:25] Game state from vision:  Game state (title screen, dialogue, battle, menu, or overworld)
+[2025-02-28 23:04:25] Brought mGBA window to the front.
+[2025-02-28 23:04:25] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:25] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:25] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 23:04:26] Pressed gamepad button: START
+[2025-02-28 23:04:27] Brought mGBA window to the front.
+[2025-02-28 23:04:27] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:27] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:27] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:27] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:27] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_13.png
+[2025-02-28 23:04:27] Brought mGBA window to the front.
+[2025-02-28 23:04:27] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:27] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:27] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:27] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:27] Using cached frame description
+[2025-02-28 23:04:28] Brought mGBA window to the front.
+[2025-02-28 23:04:28] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:28] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:28] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:28] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:28] Using cached frame description
+[2025-02-28 23:04:28] Game state from vision:  Game state (title screen, dialogue, battle, menu, or overworld)
+[2025-02-28 23:04:28] Brought mGBA window to the front.
+[2025-02-28 23:04:28] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:28] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:28] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 23:04:28] Pressed gamepad button: START
+[2025-02-28 23:04:29] Brought mGBA window to the front.
+[2025-02-28 23:04:29] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:29] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:29] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:29] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:29] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_14.png
+[2025-02-28 23:04:29] Brought mGBA window to the front.
+[2025-02-28 23:04:29] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:29] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:29] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:29] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:30] Using cached frame description
+[2025-02-28 23:04:30] Brought mGBA window to the front.
+[2025-02-28 23:04:30] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:30] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:30] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:30] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:30] Using cached frame description
+[2025-02-28 23:04:30] Game state from vision:  Game state (title screen, dialogue, battle, menu, or overworld)
+[2025-02-28 23:04:30] Brought mGBA window to the front.
+[2025-02-28 23:04:30] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:30] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:30] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 23:04:31] Pressed gamepad button: START
+[2025-02-28 23:04:32] Brought mGBA window to the front.
+[2025-02-28 23:04:32] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:32] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:32] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:32] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:32] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_15.png
+[2025-02-28 23:04:32] Brought mGBA window to the front.
+[2025-02-28 23:04:32] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:32] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:32] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:32] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:32] Using cached frame description
+[2025-02-28 23:04:33] Brought mGBA window to the front.
+[2025-02-28 23:04:33] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:33] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:33] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:33] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:33] Using cached frame description
+[2025-02-28 23:04:33] Game state from vision:  Game state (title screen, dialogue, battle, menu, or overworld)
+[2025-02-28 23:04:33] Brought mGBA window to the front.
+[2025-02-28 23:04:33] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:33] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:33] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 23:04:33] Pressed gamepad button: START
+[2025-02-28 23:04:34] Brought mGBA window to the front.
+[2025-02-28 23:04:34] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:34] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:34] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:34] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:34] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_16.png
+[2025-02-28 23:04:34] Brought mGBA window to the front.
+[2025-02-28 23:04:34] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:34] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:34] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:34] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:34] Using cached frame description
+[2025-02-28 23:04:35] Brought mGBA window to the front.
+[2025-02-28 23:04:35] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:35] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:35] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:35] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:35] Using cached frame description
+[2025-02-28 23:04:35] Game state from vision:  Game state (title screen, dialogue, battle, menu, or overworld)
+[2025-02-28 23:04:35] Brought mGBA window to the front.
+[2025-02-28 23:04:35] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:35] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:35] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 23:04:35] Pressed gamepad button: START
+[2025-02-28 23:04:36] Brought mGBA window to the front.
+[2025-02-28 23:04:36] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:36] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:36] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:36] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:37] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_17.png
+[2025-02-28 23:04:37] Brought mGBA window to the front.
+[2025-02-28 23:04:37] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:37] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:37] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:37] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:37] Using cached frame description
+[2025-02-28 23:04:37] Brought mGBA window to the front.
+[2025-02-28 23:04:37] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:37] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:37] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:37] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:37] Using cached frame description
+[2025-02-28 23:04:37] Game state from vision:  Game state (title screen, dialogue, battle, menu, or overworld)
+[2025-02-28 23:04:37] Brought mGBA window to the front.
+[2025-02-28 23:04:38] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:38] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:38] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 23:04:38] Pressed gamepad button: START
+[2025-02-28 23:04:39] Brought mGBA window to the front.
+[2025-02-28 23:04:39] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:39] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:39] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:39] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:39] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_18.png
+[2025-02-28 23:04:39] Brought mGBA window to the front.
+[2025-02-28 23:04:39] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:39] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:39] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:39] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:39] Using cached frame description
+[2025-02-28 23:04:40] Brought mGBA window to the front.
+[2025-02-28 23:04:40] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:40] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:40] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:40] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:40] Using cached frame description
+[2025-02-28 23:04:40] Game state from vision:  Game state (title screen, dialogue, battle, menu, or overworld)
+[2025-02-28 23:04:40] Brought mGBA window to the front.
+[2025-02-28 23:04:40] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:40] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:40] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 23:04:40] Pressed gamepad button: START
+[2025-02-28 23:04:41] Brought mGBA window to the front.
+[2025-02-28 23:04:41] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:41] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:41] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:41] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:41] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_19.png
+[2025-02-28 23:04:41] Brought mGBA window to the front.
+[2025-02-28 23:04:41] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:41] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:41] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:41] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:42] Saved frame: C:\projects\OmniPoke\logs\frames\frame_40.png
+[2025-02-28 23:04:42] Using cached frame description
+[2025-02-28 23:04:42] Action 20: START - Vision: 0.177s, Decision: 0.193s, Total: 2.400s
+[2025-02-28 23:04:42] Brought mGBA window to the front.
+[2025-02-28 23:04:42] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:42] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:42] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:42] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:42] Using cached frame description
+[2025-02-28 23:04:42] Game state from vision:  Game state (title screen, dialogue, battle, menu, or overworld)
+[2025-02-28 23:04:42] Brought mGBA window to the front.
+[2025-02-28 23:04:42] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:42] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:42] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 23:04:43] Pressed gamepad button: START
+[2025-02-28 23:04:44] Brought mGBA window to the front.
+[2025-02-28 23:04:44] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:44] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:44] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:44] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:44] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_20.png
+[2025-02-28 23:04:44] Brought mGBA window to the front.
+[2025-02-28 23:04:44] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:44] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:44] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:44] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:44] Using cached frame description
+[2025-02-28 23:04:44] Brought mGBA window to the front.
+[2025-02-28 23:04:44] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:45] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:45] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:45] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:45] Using cached frame description
+[2025-02-28 23:04:45] Game state from vision:  Game state (title screen, dialogue, battle, menu, or overworld)
+[2025-02-28 23:04:45] Brought mGBA window to the front.
+[2025-02-28 23:04:45] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:45] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:45] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 23:04:45] Pressed gamepad button: START
+[2025-02-28 23:04:46] Brought mGBA window to the front.
+[2025-02-28 23:04:46] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:46] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:46] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:46] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:46] Saved frame: C:\projects\OmniPoke\logs\frames\post_action_21.png
+[2025-02-28 23:04:46] Brought mGBA window to the front.
+[2025-02-28 23:04:46] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:46] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:46] Updated mGBA window region to: (2225, 636, 336, 269)
+[2025-02-28 23:04:46] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:04:46] Using cached frame description
+[2025-02-28 23:04:46] Detected possible stuck state - same action START repeated 10 times
+[2025-02-28 23:14:20] vJoy gamepad reset to default state.
+[2025-02-28 23:14:20] Launching mGBA emulator...
+[2025-02-28 23:14:23] Brought mGBA window to the front.
+[2025-02-28 23:14:23] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:14:23] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:14:23] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:14:23] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:14:28] Moondream model initialized on: cuda with full float16 precision
+[2025-02-28 23:14:34] Llama model initialized on: cuda with 8-bit quantization (no CPU offload) and float16 precision
+[2025-02-28 23:14:34] Starting Pokémon Blue AI training with optimized models...
+[2025-02-28 23:14:34] Pressing START button to begin game...
+[2025-02-28 23:14:34] Brought mGBA window to the front.
+[2025-02-28 23:14:34] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:14:34] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:14:34] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 23:14:34] Pressed gamepad button: START
+[2025-02-28 23:14:39] Brought mGBA window to the front.
+[2025-02-28 23:14:39] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:14:39] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:14:39] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:14:39] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:15:29] Moondream Screen Description:  The image shows a Pokémon Blue game screen. The title screen displays the game's title, "Pokémon," in large, stylized yellow letters against a light purple background. Below the title, the text "Blue Version" indicates the color scheme. Two cartoon characters, a larger one and a smaller one, are positioned below the title. The smaller character appears to be a Pokéball, while the larger one resembles a Pokédex. The bottom of the screen includes copyright information for Game Freak Inc.
+[2025-02-28 23:15:29] Title screen detection count: 1
+[2025-02-28 23:15:29] Game state from vision:  The image shows a Pokémon Blue game screen. The title screen displays the game's title, "Pokémon," in large, stylized yellow letters against a light purple background. Below the title, the text "Blue Version" indicates the color scheme. Two cartoon characters, a larger one and a smaller one, are positioned below the title. The smaller character appears to be a Pokéball, while the larger one resembles a Pokédex. The bottom of the screen includes copyright information for Game Freak Inc.
+[2025-02-28 23:15:29] Brought mGBA window to the front.
+[2025-02-28 23:15:29] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:15:29] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:15:29] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 23:15:29] Pressed gamepad button: START
+[2025-02-28 23:15:30] Brought mGBA window to the front.
+[2025-02-28 23:15:30] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:15:30] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:15:30] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:15:30] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:15:31] Saved frame: C:\projects\OmniPoke\logs\frames\post_action.png
+[2025-02-28 23:15:31] Brought mGBA window to the front.
+[2025-02-28 23:15:31] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:15:31] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:15:31] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:15:31] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:15:42] Moondream Screen Description:  The game screen is blank, showing no game state or visible text.
+[2025-02-28 23:15:43] Brought mGBA window to the front.
+[2025-02-28 23:15:43] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:15:43] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:15:43] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:15:43] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:16:06] Moondream Screen Description:  The game screen displays the title "New Game Option" in a black font on a light pink background.  Below the title, there is a blue border with a white frame.  The screen shows a blank space, suggesting a new game is about to be started.
+[2025-02-28 23:16:06] Game state from vision:  The game screen displays the title "New Game Option" in a black font on a light pink background.  Below the title, there is a blue border with a white frame.  The screen shows a blank space, suggesting a new game is about to be started.
+[2025-02-28 23:16:06] State transition: UNKNOWN -> MENU
+[2025-02-28 23:16:06] Generating instruction for state: MENU
+[2025-02-28 23:16:07] Llama instruction: 
+[2025-02-28 23:16:07] Llama instruction: Press A button to continue.
+[2025-02-28 23:16:07] Brought mGBA window to the front.
+[2025-02-28 23:16:07] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:16:07] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:16:07] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-28 23:16:07] Pressed gamepad button: A
+[2025-02-28 23:16:08] Brought mGBA window to the front.
+[2025-02-28 23:16:08] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:16:08] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:16:08] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:16:08] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:16:08] Saved frame: C:\projects\OmniPoke\logs\frames\post_action.png
+[2025-02-28 23:16:08] Brought mGBA window to the front.
+[2025-02-28 23:16:08] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:16:08] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:16:08] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:16:09] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:16:30] Moondream Screen Description:  The game screen shows a blue border with a light purple background.  A pixelated character, possibly a scientist or doctor, is centrally positioned.  There are no visible text or menu options, battle information, or other game elements.
+[2025-02-28 23:16:31] Brought mGBA window to the front.
+[2025-02-28 23:16:31] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:16:31] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:16:31] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:16:31] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:16:55] Moondream Screen Description:  The game screen shows a blue background with a white border.  A small, pixelated character with orange hair and a white lab coat stands in the center.  The text "Hello there!" is displayed below the character, and "Welcome to the" is displayed below that.
+[2025-02-28 23:16:55] Game state from vision:  The game screen shows a blue background with a white border.  A small, pixelated character with orange hair and a white lab coat stands in the center.  The text "Hello there!" is displayed below the character, and "Welcome to the" is displayed below that.
+[2025-02-28 23:16:55] State transition: MENU -> DIALOGUE
+[2025-02-28 23:16:55] Llama instruction: Press A button.
+[2025-02-28 23:16:55] Brought mGBA window to the front.
+[2025-02-28 23:16:55] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:16:55] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:16:55] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-28 23:16:55] Pressed gamepad button: A
+[2025-02-28 23:16:56] Brought mGBA window to the front.
+[2025-02-28 23:16:56] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:16:56] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:16:56] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:16:56] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:16:56] Saved frame: C:\projects\OmniPoke\logs\frames\post_action.png
+[2025-02-28 23:16:56] Brought mGBA window to the front.
+[2025-02-28 23:16:56] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:16:56] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:16:56] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:16:56] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:17:13] Moondream Screen Description:  The game screen shows a welcome message to the Pokémon world, with a single character standing in the center.  There is no visible battle information or menu options.
+[2025-02-28 23:17:14] Brought mGBA window to the front.
+[2025-02-28 23:17:14] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:17:14] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:17:14] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:17:14] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:17:30] Moondream Screen Description:  The game screen shows a welcome message to the Pokémon world, with a single character standing in the center.  There is no visible battle information or menu options.
+[2025-02-28 23:17:30] Game state from vision:  The game screen shows a welcome message to the Pokémon world, with a single character standing in the center.  There is no visible battle information or menu options.
+[2025-02-28 23:17:30] State transition: DIALOGUE -> BATTLE
+[2025-02-28 23:17:30] Generating instruction for state: BATTLE
+[2025-02-28 23:17:47] Llama instruction: If you press A, the game will respond with either 'OK' or 'Try Again'.
+I've been playing around with
+[2025-02-28 23:17:47] Llama instruction: If you press A, the game will respond with either 'OK' or 'Try Again'.
+I've been playing around with
+[2025-02-28 23:17:47] Brought mGBA window to the front.
+[2025-02-28 23:17:47] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:17:47] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:17:47] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-28 23:17:47] Pressed gamepad button: A
+[2025-02-28 23:17:48] Brought mGBA window to the front.
+[2025-02-28 23:17:48] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:17:48] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:17:48] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:17:48] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:17:48] Saved frame: C:\projects\OmniPoke\logs\frames\post_action.png
+[2025-02-28 23:17:48] Brought mGBA window to the front.
+[2025-02-28 23:17:48] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:17:48] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:17:48] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:17:48] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:18:09] Moondream Screen Description:  The game screen shows a blue background with a white border.  A small, pixelated character is displayed in the center.  Below the character, there is text that reads "My name is OAK! People c".
+[2025-02-28 23:18:10] Brought mGBA window to the front.
+[2025-02-28 23:18:10] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:18:10] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:18:10] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:18:10] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:18:32] Moondream Screen Description:  The game screen shows a blue background with a white border.  A small, pixelated character is displayed in the center.  Below the character, there is text that reads "My name is OAK! People call me".
+[2025-02-28 23:18:32] Game state from vision:  The game screen shows a blue background with a white border.  A small, pixelated character is displayed in the center.  Below the character, there is text that reads "My name is OAK! People call me".
+[2025-02-28 23:18:32] State transition: BATTLE -> DIALOGUE
+[2025-02-28 23:18:32] Llama instruction: Press A button.
+[2025-02-28 23:18:32] Brought mGBA window to the front.
+[2025-02-28 23:18:32] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:18:32] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:18:32] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-28 23:18:32] Pressed gamepad button: A
+[2025-02-28 23:18:33] Brought mGBA window to the front.
+[2025-02-28 23:18:33] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:18:33] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:18:33] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:18:33] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:18:33] Saved frame: C:\projects\OmniPoke\logs\frames\post_action.png
+[2025-02-28 23:18:33] Brought mGBA window to the front.
+[2025-02-28 23:18:33] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:18:33] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:18:33] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:18:33] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:18:55] Moondream Screen Description:  The Pokémon Blue game screen shows a character named Prof. standing against a light purple background. The dialogue box indicates that people call him Prof. The game's title screen displays the game's title, and the menu options are visible at the top.
+[2025-02-28 23:18:55] Title screen detection count: 1
+[2025-02-28 23:18:56] Brought mGBA window to the front.
+[2025-02-28 23:18:56] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:18:56] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:18:56] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:18:56] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:18:56] Using cached frame description
+[2025-02-28 23:18:56] Game state from vision:  The Pokémon Blue game screen shows a character named Prof. standing against a light purple background. The dialogue box indicates that people call him Prof. The game's title screen displays the game's title, and the menu options are visible at the top.
+[2025-02-28 23:18:56] Brought mGBA window to the front.
+[2025-02-28 23:18:56] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:18:56] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:18:56] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 23:18:56] Pressed gamepad button: START
+[2025-02-28 23:18:57] Brought mGBA window to the front.
+[2025-02-28 23:18:57] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:18:57] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:18:57] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:18:57] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:18:57] Saved frame: C:\projects\OmniPoke\logs\frames\post_action.png
+[2025-02-28 23:18:57] Brought mGBA window to the front.
+[2025-02-28 23:18:57] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:18:57] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:18:57] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:18:57] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:19:16] Moondream Screen Description:  The Pokémon Blue game screen shows a character in a lab coat standing against a light purple background.  The dialogue box contains the text "people call me the POKAMON PROF!"
+[2025-02-28 23:19:17] Brought mGBA window to the front.
+[2025-02-28 23:19:17] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:19:17] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:19:17] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:19:17] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:19:17] Using cached frame description
+[2025-02-28 23:19:17] Game state from vision:  The Pokémon Blue game screen shows a character named Prof. standing against a light purple background. The dialogue box indicates that people call him Prof. The game's title screen displays the game's title, and the menu options are visible at the top.
+[2025-02-28 23:19:17] Brought mGBA window to the front.
+[2025-02-28 23:19:17] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:19:17] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:19:17] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 23:19:17] Pressed gamepad button: START
+[2025-02-28 23:19:18] Brought mGBA window to the front.
+[2025-02-28 23:19:18] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:19:18] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:19:18] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:19:18] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:19:18] Saved frame: C:\projects\OmniPoke\logs\frames\post_action.png
+[2025-02-28 23:19:18] Brought mGBA window to the front.
+[2025-02-28 23:19:18] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:19:18] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:19:18] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:19:18] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:19:18] Using cached frame description
+[2025-02-28 23:19:19] Brought mGBA window to the front.
+[2025-02-28 23:19:19] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:19:19] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:19:19] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:19:19] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:19:19] Using cached frame description
+[2025-02-28 23:19:19] Game state from vision:  The Pokémon Blue game screen shows a character in a lab coat standing against a light purple background.  The dialogue box contains the text "people call me the POKAMON PROF!"
+[2025-02-28 23:19:19] Llama instruction: Press A button.
+[2025-02-28 23:19:19] Brought mGBA window to the front.
+[2025-02-28 23:19:19] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:19:19] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:19:19] Pressing gamepad button: A (vJoy Button 1)
+[2025-02-28 23:19:19] Pressed gamepad button: A
+[2025-02-28 23:19:20] Brought mGBA window to the front.
+[2025-02-28 23:19:20] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:19:20] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:19:20] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:19:21] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:19:21] Saved frame: C:\projects\OmniPoke\logs\frames\post_action.png
+[2025-02-28 23:19:21] Brought mGBA window to the front.
+[2025-02-28 23:19:21] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:19:21] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:19:21] Updated mGBA window region to: (1996, 614, 336, 269)
+[2025-02-28 23:19:21] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:28:58] vJoy gamepad reset to default state.
+[2025-02-28 23:28:58] Launching mGBA emulator...
+[2025-02-28 23:29:01] Brought mGBA window to the front.
+[2025-02-28 23:29:01] Updated mGBA window region to: (1996, 614, 336, 271)
+[2025-02-28 23:29:02] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:29:02] Updated mGBA window region to: (1996, 614, 336, 271)
+[2025-02-28 23:29:02] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:29:06] Moondream model initialized on: cuda with full float16 precision
+[2025-02-28 23:29:14] Llama model initialized on: cuda with 8-bit quantization (no CPU offload) and float16 precision
+[2025-02-28 23:29:14] Starting Pokémon Blue AI training with optimized models...
+[2025-02-28 23:29:14] Pressing START button to begin game...
+[2025-02-28 23:29:14] Brought mGBA window to the front.
+[2025-02-28 23:29:14] Updated mGBA window region to: (1996, 614, 336, 271)
+[2025-02-28 23:29:14] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:29:14] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 23:29:14] Pressed gamepad button: START
+[2025-02-28 23:29:19] Brought mGBA window to the front.
+[2025-02-28 23:29:19] Updated mGBA window region to: (1996, 614, 336, 271)
+[2025-02-28 23:29:20] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:29:20] Updated mGBA window region to: (1996, 614, 336, 271)
+[2025-02-28 23:29:20] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:58:44] vJoy gamepad reset to default state.
+[2025-02-28 23:58:45] Launching mGBA emulator...
+[2025-02-28 23:58:48] Brought mGBA window to the front.
+[2025-02-28 23:58:48] Updated mGBA window region to: (-887, 550, 336, 271)
+[2025-02-28 23:58:48] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:58:48] Updated mGBA window region to: (-887, 550, 336, 271)
+[2025-02-28 23:58:48] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:58:54] Moondream model initialized on: cuda with full float16 precision
+[2025-02-28 23:59:20] vJoy gamepad reset to default state.
+[2025-02-28 23:59:21] Launching mGBA emulator...
+[2025-02-28 23:59:24] Brought mGBA window to the front.
+[2025-02-28 23:59:24] Updated mGBA window region to: (1996, 614, 336, 271)
+[2025-02-28 23:59:24] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:59:24] Updated mGBA window region to: (1996, 614, 336, 271)
+[2025-02-28 23:59:24] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:59:30] Moondream model initialized on: cuda with full float16 precision
+[2025-02-28 23:59:41] Llama model initialized on: cuda with 8-bit quantization (no CPU offload) and float16 precision
+[2025-02-28 23:59:41] Starting Pokémon Blue AI training with optimized models...
+[2025-02-28 23:59:41] Pressing START button to begin game...
+[2025-02-28 23:59:41] Brought mGBA window to the front.
+[2025-02-28 23:59:41] Updated mGBA window region to: (1996, 614, 336, 271)
+[2025-02-28 23:59:42] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:59:42] Pressing gamepad button: START (vJoy Button 8)
+[2025-02-28 23:59:42] Pressed gamepad button: START
+[2025-02-28 23:59:47] Brought mGBA window to the front.
+[2025-02-28 23:59:47] Updated mGBA window region to: (1996, 614, 336, 271)
+[2025-02-28 23:59:47] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-02-28 23:59:47] Updated mGBA window region to: (1996, 614, 336, 271)
+[2025-02-28 23:59:47] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:05:32] vJoy gamepad reset to default state.
+[2025-03-01 00:05:32] Launching mGBA emulator...
+[2025-03-01 00:05:35] Brought mGBA window to the front.
+[2025-03-01 00:05:35] Updated mGBA window region to: (1996, 614, 336, 271)
+[2025-03-01 00:05:36] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:05:36] Updated mGBA window region to: (1996, 614, 336, 271)
+[2025-03-01 00:05:36] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:05:42] Moondream model initialized on: cuda with full float16 precision
+[2025-03-01 00:05:58] Llama model initialized on: cuda with 8-bit quantization (no CPU offload) and float16 precision
+[2025-03-01 00:05:58] Starting Pokémon Blue AI training with optimized models...
+[2025-03-01 00:05:58] Pressing START button to begin game...
+[2025-03-01 00:05:58] Brought mGBA window to the front.
+[2025-03-01 00:05:58] Updated mGBA window region to: (1996, 614, 336, 271)
+[2025-03-01 00:05:58] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:05:58] Pressing gamepad button: START (vJoy Button 8)
+[2025-03-01 00:05:59] Pressed gamepad button: START
+[2025-03-01 00:06:04] Brought mGBA window to the front.
+[2025-03-01 00:06:04] Updated mGBA window region to: (1996, 614, 336, 271)
+[2025-03-01 00:06:04] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:06:04] Updated mGBA window region to: (1996, 614, 336, 271)
+[2025-03-01 00:06:04] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
