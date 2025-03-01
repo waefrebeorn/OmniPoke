@@ -10678,3 +10678,24 @@ Reply with ONLY one button: UP, DOWN, LEFT, RIGHT, A, B, START, SELECT
 [2025-03-01 00:56:22] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
 [2025-03-01 00:56:22] Pressing gamepad button: RIGHT (vJoy Button 6)
 [2025-03-01 00:56:22] Pressed gamepad button: RIGHT
+[2025-03-01 01:03:10] vJoy gamepad reset to default state.
+[2025-03-01 01:03:11] Launching mGBA emulator...
+[2025-03-01 01:03:14] Brought mGBA window to the front.
+[2025-03-01 01:03:14] Updated mGBA window region to: (4552, 798, 336, 271)
+[2025-03-01 01:03:14] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 01:03:14] Updated mGBA window region to: (4552, 798, 336, 271)
+[2025-03-01 01:03:14] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 01:03:20] Moondream model initialized on: cuda with full float16 precision
+[2025-03-01 01:03:28] Llama model initialized on: cuda with 8-bit quantization (no CPU offload) and float16 precision
+[2025-03-01 01:03:28] Starting Pokémon Blue AI training with optimized models...
+[2025-03-01 01:03:28] Pressing START button to begin game...
+[2025-03-01 01:03:28] Brought mGBA window to the front.
+[2025-03-01 01:03:28] Updated mGBA window region to: (1810, 874, 336, 271)
+[2025-03-01 01:03:28] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 01:03:28] Pressing gamepad button: START (vJoy Button 8)
+[2025-03-01 01:03:28] Pressed gamepad button: START
+[2025-03-01 01:03:33] Brought mGBA window to the front.
+[2025-03-01 01:03:33] Updated mGBA window region to: (1810, 874, 336, 271)
+[2025-03-01 01:03:33] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 01:03:33] Updated mGBA window region to: (1810, 874, 336, 271)
+[2025-03-01 01:03:33] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
