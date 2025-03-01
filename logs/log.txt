@@ -9932,3 +9932,9 @@ I've been playing around with
 [2025-03-01 00:06:04] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
 [2025-03-01 00:06:04] Updated mGBA window region to: (1996, 614, 336, 271)
 [2025-03-01 00:06:04] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:52:10] vJoy gamepad reset to default state.
+[2025-03-01 00:52:11] Launching mGBA emulator...
+[2025-03-01 00:52:14] Failed to bring mGBA to front: (0, 'SetForegroundWindow', 'No error message is available')
+[2025-03-01 00:52:14] Updated mGBA window region to: (1996, 614, 336, 271)
+[2025-03-01 00:52:14] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:52:19] Moondream model initialized on: cuda with full float16 precision
