@@ -9938,3 +9938,743 @@ I've been playing around with
 [2025-03-01 00:52:14] Updated mGBA window region to: (1996, 614, 336, 271)
 [2025-03-01 00:52:14] Saved debug capture: C:\projects\OmniPoke\logs\frames\window_debug.png
 [2025-03-01 00:52:19] Moondream model initialized on: cuda with full float16 precision
+[2025-03-01 00:54:42] vJoy gamepad reset to default state.
+[2025-03-01 00:54:42] Launching mGBA emulator...
+[2025-03-01 00:54:45] Brought mGBA window to the front.
+[2025-03-01 00:54:45] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:54:45] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:54:45] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:54:45] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:54:59] Moondream model initialized on: cuda with full float16 precision
+[2025-03-01 00:55:03] Llama model initialized on: cuda with 8-bit quantization (no CPU offload) and float16 precision
+[2025-03-01 00:55:03] Starting Pokémon Blue AI training with optimized models...
+[2025-03-01 00:55:03] Pressing START button to begin game...
+[2025-03-01 00:55:03] Brought mGBA window to the front.
+[2025-03-01 00:55:03] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:03] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:03] Pressing gamepad button: START (vJoy Button 8)
+[2025-03-01 00:55:04] Pressed gamepad button: START
+[2025-03-01 00:55:09] Brought mGBA window to the front.
+[2025-03-01 00:55:09] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:09] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:09] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:09] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:16] Moondream Screen Description:  The image shows a Pokémon Blue game screen. The top section displays the game's title, "NEW GAME", and the option "OPTION". Below this, a blue border frames the screen. The background is a light pink color. The bottom section shows a simple, pixelated environment with a cave and dark cave. The screen also displays the game's title, "Pok\u00e9mon Blue", and the option "Character and NPC positions".
+[2025-03-01 00:55:16] Environment change: UNKNOWN -> DARK_CAVE (confidence: 1.00)
+[2025-03-01 00:55:16] Game state from vision:  The image shows a Pokémon Blue game screen. The top section displays the game's title, "NEW GAME", and the option "OPTION". Below this, a blue border frames the screen. The background is a light pink color. The bottom section shows a simple, pixelated environment with a cave and dark cave. The screen also displays the game's title, "Pok\u00e9mon Blue", and the option "Character and NPC positions".
+[2025-03-01 00:55:16] Using Vision's environment detection: DARK_CAVE (confidence: 1.00)
+[2025-03-01 00:55:16] State transition: UNKNOWN -> DARK_CAVE
+[2025-03-01 00:55:16] Generating instruction for state: DARK_CAVE
+[2025-03-01 00:55:17] Llama instruction: 
+[2025-03-01 00:55:17] Llama instruction: Press A button to continue.
+[2025-03-01 00:55:17] Brought mGBA window to the front.
+[2025-03-01 00:55:17] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:17] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:17] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:17] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:17] Using prompt: You are playing Pokémon Blue. Remember your planned path from the walkthrough.
+Choose a button based on this instruction:
+Press A button to continue.
+Reply with ONLY one button: UP, DOWN, LEFT, RIGHT, A, B, START, SELECT
+[2025-03-01 00:55:18] Moondream raw decision:  A
+[2025-03-01 00:55:18] Extracted button 'A' from 'A'
+[2025-03-01 00:55:18] Vision-based action with instruction: A
+[2025-03-01 00:55:18] Brought mGBA window to the front.
+[2025-03-01 00:55:18] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:18] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:18] Pressing gamepad button: A (vJoy Button 1)
+[2025-03-01 00:55:18] Pressed gamepad button: A
+[2025-03-01 00:55:19] Brought mGBA window to the front.
+[2025-03-01 00:55:19] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:19] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:19] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:19] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:19] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:55:19] Brought mGBA window to the front.
+[2025-03-01 00:55:19] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:19] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:19] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:19] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:19] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:19] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:20] Brought mGBA window to the front.
+[2025-03-01 00:55:20] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:20] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:20] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:20] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:20] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:20] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:20] Game state from vision:  The image shows a Pokémon Blue game screen. The top section displays the game's title, "NEW GAME", and the option "OPTION". Below this, a blue border frames the screen. The background is a light pink color. The bottom section shows a simple, pixelated environment with a cave and dark cave. The screen also displays the game's title, "Pok\u00e9mon Blue", and the option "Character and NPC positions".
+[2025-03-01 00:55:20] Starting dark cave navigation with RIGHT direction
+[2025-03-01 00:55:20] Brought mGBA window to the front.
+[2025-03-01 00:55:20] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:20] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:20] Pressing gamepad button: RIGHT (vJoy Button 6)
+[2025-03-01 00:55:20] Pressed gamepad button: RIGHT
+[2025-03-01 00:55:21] Brought mGBA window to the front.
+[2025-03-01 00:55:21] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:21] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:21] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:21] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:21] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:55:21] Brought mGBA window to the front.
+[2025-03-01 00:55:21] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:21] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:21] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:22] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:22] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:22] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:22] Brought mGBA window to the front.
+[2025-03-01 00:55:22] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:22] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:22] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:22] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:22] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:22] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:22] Game state from vision:  The image shows a Pokémon Blue game screen. The top section displays the game's title, "NEW GAME", and the option "OPTION". Below this, a blue border frames the screen. The background is a light pink color. The bottom section shows a simple, pixelated environment with a cave and dark cave. The screen also displays the game's title, "Pok\u00e9mon Blue", and the option "Character and NPC positions".
+[2025-03-01 00:55:22] Brought mGBA window to the front.
+[2025-03-01 00:55:22] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:22] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:22] Pressing gamepad button: RIGHT (vJoy Button 6)
+[2025-03-01 00:55:23] Pressed gamepad button: RIGHT
+[2025-03-01 00:55:24] Brought mGBA window to the front.
+[2025-03-01 00:55:24] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:24] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:24] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:24] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:24] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:55:24] Brought mGBA window to the front.
+[2025-03-01 00:55:24] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:24] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:24] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:24] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:24] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:24] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:25] Brought mGBA window to the front.
+[2025-03-01 00:55:25] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:25] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:25] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:25] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:25] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:25] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:25] Game state from vision:  The image shows a Pokémon Blue game screen. The top section displays the game's title, "NEW GAME", and the option "OPTION". Below this, a blue border frames the screen. The background is a light pink color. The bottom section shows a simple, pixelated environment with a cave and dark cave. The screen also displays the game's title, "Pok\u00e9mon Blue", and the option "Character and NPC positions".
+[2025-03-01 00:55:25] Changing direction in dark cave from RIGHT to DOWN
+[2025-03-01 00:55:25] Brought mGBA window to the front.
+[2025-03-01 00:55:25] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:25] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:25] Pressing gamepad button: DOWN (vJoy Button 4)
+[2025-03-01 00:55:25] Pressed gamepad button: DOWN
+[2025-03-01 00:55:26] Brought mGBA window to the front.
+[2025-03-01 00:55:26] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:26] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:26] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:26] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:26] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:55:26] Brought mGBA window to the front.
+[2025-03-01 00:55:26] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:26] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:26] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:26] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:26] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:26] Using specialized dark cave detection prompt
+[2025-03-01 00:55:28] Moondream Screen Description:  Very limited visibility (small area around the player)
+[2025-03-01 00:55:29] Brought mGBA window to the front.
+[2025-03-01 00:55:29] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:29] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:29] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:29] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:29] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:29] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:29] Game state from vision:  Very limited visibility (small area around the player)
+[2025-03-01 00:55:29] Brought mGBA window to the front.
+[2025-03-01 00:55:29] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:29] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:29] Pressing gamepad button: DOWN (vJoy Button 4)
+[2025-03-01 00:55:29] Pressed gamepad button: DOWN
+[2025-03-01 00:55:30] Brought mGBA window to the front.
+[2025-03-01 00:55:30] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:30] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:30] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:30] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:30] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:55:30] Brought mGBA window to the front.
+[2025-03-01 00:55:30] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:30] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:30] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:31] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:31] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:31] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:31] Brought mGBA window to the front.
+[2025-03-01 00:55:31] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:31] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:31] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:31] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:31] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:31] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:31] Game state from vision:  Very limited visibility (small area around the player)
+[2025-03-01 00:55:31] Changing direction in dark cave from DOWN to LEFT
+[2025-03-01 00:55:31] Brought mGBA window to the front.
+[2025-03-01 00:55:31] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:31] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:31] Pressing gamepad button: LEFT (vJoy Button 5)
+[2025-03-01 00:55:32] Pressed gamepad button: LEFT
+[2025-03-01 00:55:33] Brought mGBA window to the front.
+[2025-03-01 00:55:33] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:33] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:33] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:33] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:33] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:55:33] Brought mGBA window to the front.
+[2025-03-01 00:55:33] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:33] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:33] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:33] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:33] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:33] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:34] Brought mGBA window to the front.
+[2025-03-01 00:55:34] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:34] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:34] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:34] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:34] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:34] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:34] Game state from vision:  Very limited visibility (small area around the player)
+[2025-03-01 00:55:34] Brought mGBA window to the front.
+[2025-03-01 00:55:34] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:34] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:34] Pressing gamepad button: LEFT (vJoy Button 5)
+[2025-03-01 00:55:34] Pressed gamepad button: LEFT
+[2025-03-01 00:55:35] Brought mGBA window to the front.
+[2025-03-01 00:55:35] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:35] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:35] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:35] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:35] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:55:35] Brought mGBA window to the front.
+[2025-03-01 00:55:35] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:35] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:35] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:35] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:35] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:35] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:36] Brought mGBA window to the front.
+[2025-03-01 00:55:36] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:36] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:36] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:36] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:36] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:36] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:36] Game state from vision:  Very limited visibility (small area around the player)
+[2025-03-01 00:55:36] Changing direction in dark cave from LEFT to UP
+[2025-03-01 00:55:36] Brought mGBA window to the front.
+[2025-03-01 00:55:36] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:36] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:36] Pressing gamepad button: UP (vJoy Button 3)
+[2025-03-01 00:55:36] Pressed gamepad button: UP
+[2025-03-01 00:55:37] Brought mGBA window to the front.
+[2025-03-01 00:55:37] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:38] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:38] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:38] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:38] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:55:38] Brought mGBA window to the front.
+[2025-03-01 00:55:38] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:38] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:38] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:38] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:38] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:38] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:39] Brought mGBA window to the front.
+[2025-03-01 00:55:39] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:39] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:39] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:39] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:39] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:39] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:39] Game state from vision:  The image shows a Pokémon Blue game screen. The top section displays the game's title, "NEW GAME", and the option "OPTION". Below this, a blue border frames the screen. The background is a light pink color. The bottom section shows a simple, pixelated environment with a cave and dark cave. The screen also displays the game's title, "Pok\u00e9mon Blue", and the option "Character and NPC positions".
+[2025-03-01 00:55:39] Brought mGBA window to the front.
+[2025-03-01 00:55:39] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:39] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:39] Pressing gamepad button: UP (vJoy Button 3)
+[2025-03-01 00:55:39] Pressed gamepad button: UP
+[2025-03-01 00:55:40] Brought mGBA window to the front.
+[2025-03-01 00:55:40] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:40] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:40] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:40] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:40] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:55:40] Brought mGBA window to the front.
+[2025-03-01 00:55:40] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:40] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:40] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:40] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:40] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:40] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:41] Brought mGBA window to the front.
+[2025-03-01 00:55:41] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:41] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:41] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:41] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:41] Saved frame: C:\Projects\OmniPoke\logs\frames\frame_20.png
+[2025-03-01 00:55:41] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:41] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:41] Game state from vision:  The image shows a Pokémon Blue game screen. The top section displays the game's title, "NEW GAME", and the option "OPTION". Below this, a blue border frames the screen. The background is a light pink color. The bottom section shows a simple, pixelated environment with a cave and dark cave. The screen also displays the game's title, "Pok\u00e9mon Blue", and the option "Character and NPC positions".
+[2025-03-01 00:55:41] Changing direction in dark cave from UP to RIGHT
+[2025-03-01 00:55:41] Brought mGBA window to the front.
+[2025-03-01 00:55:41] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:41] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:41] Pressing gamepad button: RIGHT (vJoy Button 6)
+[2025-03-01 00:55:41] Pressed gamepad button: RIGHT
+[2025-03-01 00:55:42] Brought mGBA window to the front.
+[2025-03-01 00:55:42] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:42] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:42] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:42] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:42] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:55:42] Brought mGBA window to the front.
+[2025-03-01 00:55:42] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:42] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:42] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:43] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:43] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:43] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:43] Action 10: RIGHT - Vision: 0.106s, Decision: 0.125s, Total: 2.415s
+[2025-03-01 00:55:43] Brought mGBA window to the front.
+[2025-03-01 00:55:43] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:43] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:43] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:43] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:43] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:43] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:43] Game state from vision:  The image shows a Pokémon Blue game screen. The top section displays the game's title, "NEW GAME", and the option "OPTION". Below this, a blue border frames the screen. The background is a light pink color. The bottom section shows a simple, pixelated environment with a cave and dark cave. The screen also displays the game's title, "Pok\u00e9mon Blue", and the option "Character and NPC positions".
+[2025-03-01 00:55:43] Brought mGBA window to the front.
+[2025-03-01 00:55:43] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:44] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:44] Pressing gamepad button: RIGHT (vJoy Button 6)
+[2025-03-01 00:55:44] Pressed gamepad button: RIGHT
+[2025-03-01 00:55:45] Brought mGBA window to the front.
+[2025-03-01 00:55:45] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:45] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:45] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:45] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:45] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:55:45] Brought mGBA window to the front.
+[2025-03-01 00:55:45] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:45] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:45] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:45] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:45] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:45] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:46] Brought mGBA window to the front.
+[2025-03-01 00:55:46] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:46] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:46] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:46] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:46] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:46] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:46] Game state from vision:  The image shows a Pokémon Blue game screen. The top section displays the game's title, "NEW GAME", and the option "OPTION". Below this, a blue border frames the screen. The background is a light pink color. The bottom section shows a simple, pixelated environment with a cave and dark cave. The screen also displays the game's title, "Pok\u00e9mon Blue", and the option "Character and NPC positions".
+[2025-03-01 00:55:46] Changing direction in dark cave from RIGHT to DOWN
+[2025-03-01 00:55:46] Brought mGBA window to the front.
+[2025-03-01 00:55:46] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:46] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:46] Pressing gamepad button: DOWN (vJoy Button 4)
+[2025-03-01 00:55:46] Pressed gamepad button: DOWN
+[2025-03-01 00:55:47] Brought mGBA window to the front.
+[2025-03-01 00:55:47] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:47] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:47] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:47] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:47] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:55:47] Brought mGBA window to the front.
+[2025-03-01 00:55:47] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:47] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:47] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:47] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:47] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:47] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:48] Brought mGBA window to the front.
+[2025-03-01 00:55:48] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:48] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:48] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:48] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:48] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:48] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:48] Game state from vision:  Very limited visibility (small area around the player)
+[2025-03-01 00:55:48] Brought mGBA window to the front.
+[2025-03-01 00:55:48] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:48] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:48] Pressing gamepad button: DOWN (vJoy Button 4)
+[2025-03-01 00:55:49] Pressed gamepad button: DOWN
+[2025-03-01 00:55:50] Brought mGBA window to the front.
+[2025-03-01 00:55:50] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:50] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:50] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:50] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:50] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:55:50] Brought mGBA window to the front.
+[2025-03-01 00:55:50] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:50] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:50] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:50] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:50] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:50] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:51] Brought mGBA window to the front.
+[2025-03-01 00:55:51] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:51] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:51] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:51] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:51] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:51] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:51] Game state from vision:  Very limited visibility (small area around the player)
+[2025-03-01 00:55:51] Changing direction in dark cave from DOWN to LEFT
+[2025-03-01 00:55:51] Brought mGBA window to the front.
+[2025-03-01 00:55:51] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:51] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:51] Pressing gamepad button: LEFT (vJoy Button 5)
+[2025-03-01 00:55:51] Pressed gamepad button: LEFT
+[2025-03-01 00:55:52] Brought mGBA window to the front.
+[2025-03-01 00:55:52] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:52] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:52] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:52] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:52] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:55:52] Brought mGBA window to the front.
+[2025-03-01 00:55:52] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:52] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:52] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:52] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:52] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:52] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:53] Brought mGBA window to the front.
+[2025-03-01 00:55:53] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:53] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:53] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:53] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:53] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:53] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:53] Game state from vision:  Very limited visibility (small area around the player)
+[2025-03-01 00:55:53] Brought mGBA window to the front.
+[2025-03-01 00:55:53] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:53] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:53] Pressing gamepad button: LEFT (vJoy Button 5)
+[2025-03-01 00:55:53] Pressed gamepad button: LEFT
+[2025-03-01 00:55:54] Brought mGBA window to the front.
+[2025-03-01 00:55:54] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:54] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:54] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:55] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:55] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:55:55] Brought mGBA window to the front.
+[2025-03-01 00:55:55] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:55] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:55] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:55] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:55] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:55] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:55] Brought mGBA window to the front.
+[2025-03-01 00:55:55] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:56] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:56] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:56] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:56] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:56] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:56] Game state from vision:  Very limited visibility (small area around the player)
+[2025-03-01 00:55:56] Changing direction in dark cave from LEFT to UP
+[2025-03-01 00:55:56] Brought mGBA window to the front.
+[2025-03-01 00:55:56] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:56] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:56] Pressing gamepad button: UP (vJoy Button 3)
+[2025-03-01 00:55:56] Pressed gamepad button: UP
+[2025-03-01 00:55:57] Brought mGBA window to the front.
+[2025-03-01 00:55:57] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:57] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:57] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:57] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:57] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:55:57] Brought mGBA window to the front.
+[2025-03-01 00:55:57] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:57] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:57] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:57] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:57] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:57] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:58] Brought mGBA window to the front.
+[2025-03-01 00:55:58] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:58] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:58] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:58] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:58] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:55:58] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:55:58] Game state from vision:  The image shows a Pokémon Blue game screen. The top section displays the game's title, "NEW GAME", and the option "OPTION". Below this, a blue border frames the screen. The background is a light pink color. The bottom section shows a simple, pixelated environment with a cave and dark cave. The screen also displays the game's title, "Pok\u00e9mon Blue", and the option "Character and NPC positions".
+[2025-03-01 00:55:58] Brought mGBA window to the front.
+[2025-03-01 00:55:58] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:58] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:58] Pressing gamepad button: UP (vJoy Button 3)
+[2025-03-01 00:55:58] Pressed gamepad button: UP
+[2025-03-01 00:55:59] Brought mGBA window to the front.
+[2025-03-01 00:55:59] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:59] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:59] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:59] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:59] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:55:59] Brought mGBA window to the front.
+[2025-03-01 00:55:59] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:59] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:55:59] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:55:59] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:00] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:56:00] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:56:00] Brought mGBA window to the front.
+[2025-03-01 00:56:00] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:00] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:00] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:00] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:00] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:56:00] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:56:00] Game state from vision:  The image shows a Pokémon Blue game screen. The top section displays the game's title, "NEW GAME", and the option "OPTION". Below this, a blue border frames the screen. The background is a light pink color. The bottom section shows a simple, pixelated environment with a cave and dark cave. The screen also displays the game's title, "Pok\u00e9mon Blue", and the option "Character and NPC positions".
+[2025-03-01 00:56:00] Changing direction in dark cave from UP to RIGHT
+[2025-03-01 00:56:00] Brought mGBA window to the front.
+[2025-03-01 00:56:00] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:00] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:00] Pressing gamepad button: RIGHT (vJoy Button 6)
+[2025-03-01 00:56:01] Pressed gamepad button: RIGHT
+[2025-03-01 00:56:02] Brought mGBA window to the front.
+[2025-03-01 00:56:02] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:02] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:02] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:02] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:02] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:56:02] Brought mGBA window to the front.
+[2025-03-01 00:56:02] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:02] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:02] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:02] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:02] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:56:02] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:56:03] Brought mGBA window to the front.
+[2025-03-01 00:56:03] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:03] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:03] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:03] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:03] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:56:03] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:56:03] Game state from vision:  The image shows a Pokémon Blue game screen. The top section displays the game's title, "NEW GAME", and the option "OPTION". Below this, a blue border frames the screen. The background is a light pink color. The bottom section shows a simple, pixelated environment with a cave and dark cave. The screen also displays the game's title, "Pok\u00e9mon Blue", and the option "Character and NPC positions".
+[2025-03-01 00:56:03] Brought mGBA window to the front.
+[2025-03-01 00:56:03] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:03] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:03] Pressing gamepad button: RIGHT (vJoy Button 6)
+[2025-03-01 00:56:03] Pressed gamepad button: RIGHT
+[2025-03-01 00:56:04] Brought mGBA window to the front.
+[2025-03-01 00:56:04] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:04] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:04] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:04] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:04] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:56:04] Brought mGBA window to the front.
+[2025-03-01 00:56:04] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:04] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:04] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:04] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:04] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:56:04] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:56:05] Brought mGBA window to the front.
+[2025-03-01 00:56:05] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:05] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:05] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:05] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:05] Saved frame: C:\Projects\OmniPoke\logs\frames\frame_40.png
+[2025-03-01 00:56:05] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:56:05] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:56:05] Game state from vision:  The image shows a Pokémon Blue game screen. The top section displays the game's title, "NEW GAME", and the option "OPTION". Below this, a blue border frames the screen. The background is a light pink color. The bottom section shows a simple, pixelated environment with a cave and dark cave. The screen also displays the game's title, "Pok\u00e9mon Blue", and the option "Character and NPC positions".
+[2025-03-01 00:56:05] Changing direction in dark cave from RIGHT to DOWN
+[2025-03-01 00:56:05] Brought mGBA window to the front.
+[2025-03-01 00:56:05] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:05] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:05] Pressing gamepad button: DOWN (vJoy Button 4)
+[2025-03-01 00:56:06] Pressed gamepad button: DOWN
+[2025-03-01 00:56:07] Brought mGBA window to the front.
+[2025-03-01 00:56:07] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:07] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:07] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:07] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:07] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:56:07] Brought mGBA window to the front.
+[2025-03-01 00:56:07] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:07] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:07] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:07] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:07] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:56:07] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:56:07] Action 20: DOWN - Vision: 0.105s, Decision: 0.118s, Total: 2.430s
+[2025-03-01 00:56:08] Brought mGBA window to the front.
+[2025-03-01 00:56:08] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:08] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:08] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:08] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:08] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:56:08] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:56:08] Game state from vision:  Very limited visibility (small area around the player)
+[2025-03-01 00:56:08] Brought mGBA window to the front.
+[2025-03-01 00:56:08] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:08] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:08] Pressing gamepad button: DOWN (vJoy Button 4)
+[2025-03-01 00:56:08] Pressed gamepad button: DOWN
+[2025-03-01 00:56:09] Brought mGBA window to the front.
+[2025-03-01 00:56:09] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:09] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:09] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:09] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:09] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:56:09] Brought mGBA window to the front.
+[2025-03-01 00:56:09] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:09] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:09] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:09] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:09] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:56:09] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:56:10] Brought mGBA window to the front.
+[2025-03-01 00:56:10] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:10] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:10] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:10] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:10] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:56:10] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:56:10] Game state from vision:  Very limited visibility (small area around the player)
+[2025-03-01 00:56:10] Changing direction in dark cave from DOWN to LEFT
+[2025-03-01 00:56:10] Brought mGBA window to the front.
+[2025-03-01 00:56:10] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:10] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:10] Pressing gamepad button: LEFT (vJoy Button 5)
+[2025-03-01 00:56:10] Pressed gamepad button: LEFT
+[2025-03-01 00:56:11] Brought mGBA window to the front.
+[2025-03-01 00:56:11] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:11] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:11] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:11] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:11] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:56:11] Brought mGBA window to the front.
+[2025-03-01 00:56:11] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:12] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:12] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:12] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:12] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:56:12] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:56:12] Brought mGBA window to the front.
+[2025-03-01 00:56:12] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:12] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:12] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:12] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:13] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:56:13] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:56:13] Game state from vision:  Very limited visibility (small area around the player)
+[2025-03-01 00:56:13] Brought mGBA window to the front.
+[2025-03-01 00:56:13] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:13] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:13] Pressing gamepad button: LEFT (vJoy Button 5)
+[2025-03-01 00:56:13] Pressed gamepad button: LEFT
+[2025-03-01 00:56:14] Brought mGBA window to the front.
+[2025-03-01 00:56:14] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:14] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:14] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:14] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:14] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:56:14] Brought mGBA window to the front.
+[2025-03-01 00:56:14] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:14] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:14] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:14] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:14] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:56:14] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:56:15] Brought mGBA window to the front.
+[2025-03-01 00:56:15] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:15] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:15] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:15] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:15] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:56:15] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:56:15] Game state from vision:  Very limited visibility (small area around the player)
+[2025-03-01 00:56:15] Changing direction in dark cave from LEFT to UP
+[2025-03-01 00:56:15] Brought mGBA window to the front.
+[2025-03-01 00:56:15] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:15] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:15] Pressing gamepad button: UP (vJoy Button 3)
+[2025-03-01 00:56:15] Pressed gamepad button: UP
+[2025-03-01 00:56:16] Brought mGBA window to the front.
+[2025-03-01 00:56:16] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:16] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:16] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:16] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:16] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:56:16] Brought mGBA window to the front.
+[2025-03-01 00:56:16] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:16] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:16] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:16] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:16] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:56:16] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:56:17] Brought mGBA window to the front.
+[2025-03-01 00:56:17] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:17] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:17] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:17] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:17] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:56:17] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:56:17] Game state from vision:  The image shows a Pokémon Blue game screen. The top section displays the game's title, "NEW GAME", and the option "OPTION". Below this, a blue border frames the screen. The background is a light pink color. The bottom section shows a simple, pixelated environment with a cave and dark cave. The screen also displays the game's title, "Pok\u00e9mon Blue", and the option "Character and NPC positions".
+[2025-03-01 00:56:17] Brought mGBA window to the front.
+[2025-03-01 00:56:17] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:17] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:17] Pressing gamepad button: UP (vJoy Button 3)
+[2025-03-01 00:56:18] Pressed gamepad button: UP
+[2025-03-01 00:56:19] Brought mGBA window to the front.
+[2025-03-01 00:56:19] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:19] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:19] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:19] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:19] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:56:19] Brought mGBA window to the front.
+[2025-03-01 00:56:19] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:19] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:19] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:19] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:19] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:56:19] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:56:20] Brought mGBA window to the front.
+[2025-03-01 00:56:20] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:20] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:20] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:20] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:20] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:56:20] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:56:20] Game state from vision:  The image shows a Pokémon Blue game screen. The top section displays the game's title, "NEW GAME", and the option "OPTION". Below this, a blue border frames the screen. The background is a light pink color. The bottom section shows a simple, pixelated environment with a cave and dark cave. The screen also displays the game's title, "Pok\u00e9mon Blue", and the option "Character and NPC positions".
+[2025-03-01 00:56:20] Changing direction in dark cave from UP to RIGHT
+[2025-03-01 00:56:20] Brought mGBA window to the front.
+[2025-03-01 00:56:20] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:20] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:20] Pressing gamepad button: RIGHT (vJoy Button 6)
+[2025-03-01 00:56:20] Pressed gamepad button: RIGHT
+[2025-03-01 00:56:21] Brought mGBA window to the front.
+[2025-03-01 00:56:21] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:21] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:21] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:21] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:21] Saved frame: C:\Projects\OmniPoke\logs\frames\post_action.png
+[2025-03-01 00:56:21] Brought mGBA window to the front.
+[2025-03-01 00:56:21] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:21] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:21] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:21] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:21] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:56:21] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:56:22] Brought mGBA window to the front.
+[2025-03-01 00:56:22] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:22] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:22] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:22] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:22] Bright screen detected (brightness: 215.1). Interpreting as walking through a cave.
+[2025-03-01 00:56:22] Using cached frame description (environment: DARK_CAVE)
+[2025-03-01 00:56:22] Game state from vision:  The image shows a Pokémon Blue game screen. The top section displays the game's title, "NEW GAME", and the option "OPTION". Below this, a blue border frames the screen. The background is a light pink color. The bottom section shows a simple, pixelated environment with a cave and dark cave. The screen also displays the game's title, "Pok\u00e9mon Blue", and the option "Character and NPC positions".
+[2025-03-01 00:56:22] Brought mGBA window to the front.
+[2025-03-01 00:56:22] Updated mGBA window region to: (1344, 418, 368, 300)
+[2025-03-01 00:56:22] Saved debug capture: C:\Projects\OmniPoke\logs\frames\window_debug.png
+[2025-03-01 00:56:22] Pressing gamepad button: RIGHT (vJoy Button 6)
+[2025-03-01 00:56:22] Pressed gamepad button: RIGHT
